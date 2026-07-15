@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+secrets.yaml
+secrets.json
+*.pem
+*.key
+
+# Local outputs (项目内独立运行时落盘)
+out/
+tmp/
+.log
+*.log
+
+# OS
+*.swp
+*~
+.bash_history
+
+# Obsidian / spec-workflow 工具缓存
+.obsidian/
+.spec-workflow/
+
+# 本地 Word2PDF / Office PDF 工具 zip（与代码无关的本地运行包）
+office-pdf-toolkit.zip
+word2pdf.zip
+
+# 历史中文引号 / UTF-8 BOM / 重要旧资产暂不入仓（公司资产保留在工作区不在仓库）
+海联智达-商务版*.pptx
+海联智达-商务版*.pdf
+海联智达-数据底座*.pptx
+海联智达-数据底座*.pdf

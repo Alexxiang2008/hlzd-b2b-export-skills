@@ -1,0 +1,31 @@
+Estimado proveedor,
+
+Buen día. Estamos interesados en adquirir Tubería de acero sin soldadura (ASTM A106 Gr.B) para un proyecto de refinería en Talara, Perú.
+
+Especificaciones:
+- Material: ASTM A106 Grade B
+- Diámetro: 8 inch (219.1 mm)
+- Espesor: schedule 40
+- Cantidad: 300 toneladas métricas
+- Puerto de destino: Paita, Perú
+- INCOTERMS: CIF Paita
+- Precio objetivo: USD 850 por tonelada
+- Plazo de entrega: antes de diciembre 2026
+
+Aplicación: planta de procesos petroquímicos (sour service - H2S parcial 0.3 psi).
+Certificaciones requeridas: ASTM A106, ASME B31.3, EN 10204-3.1.
+
+Proyecto: Refinería Talara - Modernización Fase II (operador: Petroperú)
+Ingeniería: Técnicas Reunidas
+Tender ref: PETRO-TAL-2026-007
+
+Por favor enviar cotización formal con hojas técnicas y trazabilidad.
+
+Atentamente,
+Ing. Carlos Mendoza
+Gerente de Compras
+Mendoza Industrial S.A.C.
+Av. Industrial 1234, Talara, Perú
+Email: c.mendoza@mendozaindustrial.example.com
+Teléfono: +51 73 123456
+LinkedIn: https://linkedin.com/in/carlosmendozaperu

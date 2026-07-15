@@ -1,0 +1,10 @@
+# HLZD Inquiry Parser — requirements
+#
+# 核心脚本零依赖（仅用 Python 3.10+ 标准库）。
+# 下列为可选依赖，用于：
+# - 严格 schema 校验（pydantic）
+# - 单元测试（pytest）
+
+pydantic>=2.6.0
+pytest>=8.0.0
+pytest-cov>=5.0.0

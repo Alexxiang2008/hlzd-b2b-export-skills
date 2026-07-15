@@ -1,0 +1,93 @@
+[
+  {
+    "id": "RF-001",
+    "category": "advance-payment-fraud",
+    "severity": "HIGH",
+    "patterns": [
+      "100% advance",
+      "advance payment to personal account",
+      "full advance",
+      "wire transfer to personal"
+    ],
+    "action": "Escalate to compliance; require LC or 30/70 TT before ship."
+  },
+  {
+    "id": "RF-002",
+    "category": "suspicious-payment-method",
+    "severity": "HIGH",
+    "patterns": [
+      "western union",
+      "money gram",
+      "worldremit",
+      "paypal only"
+    ],
+    "action": "Reject as commercial scam signal; do not engage."
+  },
+  {
+    "id": "RF-003",
+    "category": "urgency-pressure",
+    "severity": "MEDIUM",
+    "patterns": [
+      "very urgent",
+      "asap",
+      "immediate shipment",
+      "urgent urgent"
+    ],
+    "action": "Lower inquiry grade; verify project context."
+  },
+  {
+    "id": "RF-004",
+    "category": "low-quality-vague",
+    "severity": "MEDIUM",
+    "patterns": [
+      "we are very serious buyer",
+      "very serious",
+      "final buyer",
+      "end buyer direct"
+    ],
+    "action": "Common scam phrasing; cross-verify with LinkedIn / company registry."
+  },
+  {
+    "id": "RF-005",
+    "category": "free-mail-only",
+    "severity": "MEDIUM",
+    "patterns": [
+      "@gmail.com",
+      "@yahoo.com",
+      "@hotmail.com",
+      "@outlook.com",
+      "@qq.com",
+      "@163.com"
+    ],
+    "action": "Inferior D4 score (3->1); require business email confirmation."
+  },
+  {
+    "id": "RF-006",
+    "category": "dual-use-trigger",
+    "severity": "HIGH",
+    "patterns": [
+      "OCTG for re-export",
+      "dual-use",
+      "two-use",
+      "encryption module",
+      "high-strength steel 1500 MPa",
+      "maraging steel 350"
+    ],
+    "action": "Mandatory export license check; route to hlzd-trade-compliance."
+  },
+  {
+    "id": "RF-007",
+    "category": "sanctioned-jurisdiction",
+    "severity": "HIGH",
+    "patterns": [
+      "North Korea",
+      "Iran",
+      "Syria",
+      "Cuba",
+      "Crimea",
+      "Donetsk",
+      "Luhansk"
+    ],
+    "action": "Block - automatic compliance failure; do not quote."
+  }
+]

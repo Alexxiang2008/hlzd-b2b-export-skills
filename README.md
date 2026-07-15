@@ -1,0 +1,135 @@
+# HLZD-B2B 工业品出海 Agent Skill 集
+
+> Cross-Border B2B Industrial Export Agent Skills for Claude / Codex / Cursor / Windsurf.
+>
+> 由 [海联智达 HLZD](https://hlzd.example.com) 与 [海良数科](https://hlzd.example.com) 团队开发。
+>
+> 配套战略文档：[docs/出海技能集规划.md](docs/出海技能集规划.md) ·
+> 业务规划：[B2B工业品外贸 AI Sales Agent 全流程设计.md](B2B工业品外贸 AI Sales Agent 全流程设计.md)
+
+---
+
+## 这是什么
+
+一组 **Agent Skill** —— 把"中国工业品卖到全球"这件事拆成 21 个可被 AI Agent 直接调用的 Skill，覆盖「市场调研 → 找买家 → 触达 → 询盘评估 → 报价谈判 → 履约合规」全链路。
+
+| 维度 | 同行（`coreyhaines31/marketingskills`） | HLZD 出海（这里） |
+|---|---|---|
+| 决策周期 | 分钟/小时（冲动消费） | **3~18 个月**（项目驱动） |
+| 买家画像 | 普通消费者 | **采购商/工程师/EPC/OEM** |
+| 核心数据源 | GA4 / Mixpanel / Stripe | **UN Comtrade / Volza / HS / Tenders** |
+| 信任支柱 | 评论 + UGC | **认证体系 + 技术参数 + 案例** |
+| 合规 | GDPR（隐私协议） | **多边贸易合规 + 制裁名单 + 出口管制** |
+| 转化路径 | 加购物车 → 付款 | **询盘 → 报价 → 打样 → PO → 履约** |
+
+> GitHub 上 B2B 工业品出海赛道**完全空白**（多关键词搜索 0 结果），HLZD 立志抢赛道首发。
+
+---
+
+## 当前已发布 Skills
+
+| # | Skill | Status | 说明 |
+|---|---|---|---|
+| 01 | `hlzd-inquiry-qualify` | **v0.1.0** ✅ | 询盘评估：5 维评分 + 多语种抽取 + 合规粗筛 |
+
+其余 20 个 Skill 路线图见 [docs/出海技能集规划.md](docs/出海技能集规划.md#四skill-集合架构21-个-skill-分两期上线)。
+
+---
+
+## 快速开始
+
+### 安装（Claude Code）
+
+```bash
+# 1. 添加 marketplace
+/plugin marketplace add HLZD/cross-border-b2b-skills
+
+# 2. 安装 inquiry-qualify
+/plugin install hlzd-inquiry-qualify
+```
+
+### 安装（npx skills — 通用）
+
+```bash
+npx skills add HLZD/cross-border-b2b-skills --skill hlzd-inquiry-qualify
+```
+
+### 克隆到本地
+
+```bash
+git clone https://github.com/HLZD/cross-border-b2b-skills.git
+cp -r cross-border-b2b-skills/skills/* .agents/skills/
+```
+
+---
+
+## 快速演示：评分一封沙特 OCTG 询盘
+
+```bash
+cd skills/hlzd-inquiry-qualify
+py scripts/inquiry_parser.py --input assets/inquiry_samples/01-saudi-rfq.txt --pretty
+```
+
+输出（截选）：
+
+```json
+{
+  "detected_language": "en",
+  "extracted": {
+    "product": {
+      "name": "OCTG",
+      "specifications": ["NACE MR0175", "L80", "5/8 inch"],
+      "quantity": "5000 meters",
+      "hs_code_suggestion": "730429"
+    },
+    "customer": {
+      "company_name": "Saudi Aramco Trading Co",
+      "country": "Saudi Arabia"
+    }
+  },
+  "scoring": { "total": 85, "grade": "B" },
+  "compliance_check": { "two_use_items": true, "passed": true },
+  "recommended_next_skill": "hlzd-customer-due-diligence"
+}
+```
+
+更多样本（噪音 / 西班牙 / 欺诈）见 `skills/hlzd-inquiry-qualify/assets/inquiry_samples/`。
+
+---
+
+## 路线图
+
+| 周次 | 交付 |
+|---|---|
+| **W1** | ✅ 样板 Skill：hlzd-inquiry-qualify（本期已完成） |
+| W2-3 | 接入已有素材：b2b-research / buyer-finder / market-report / industrial-design |
+| W4-5 | customer-due-diligence + cold-outreach + followup-sequencer |
+| W6-7 | solution-match + quotation-gen + negotiation-playbook |
+| W8 | trade-compliance（合规护栏，必做） |
+| W9 | 完整文档 + 4 渠道安装验证 |
+| W10 | 内部种子客户试跑 |
+| W11 | GitHub 私有发布 + 公开提交 |
+
+---
+
+## 贡献
+
+所有 Skill 都欢迎 PR。请先读 [CONTRIBUTING.md](CONTRIBUTING.md) 与 [AGENTS.md](AGENTS.md)，遵守命名规范与 frontmatter 约束。
+
+---
+
+## 安全与免责声明
+
+- 本 Skill 提供**第一道粗筛**，不替代专业贸易合规官。
+- 制裁名单为静态快照（每季度更新）。
+- 真实交易请人工复核工商 / 海关 / 银行渠道。
+
+---
+
+## 协议
+
+[MIT](LICENSE) — 自由使用、修改、商用。
+
+---
+
+*Crafted for B2B industrial exporters · HLZD 2026.*

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agentskills.io/schemas/marketplace/v1.json",
+  "name": "hlzd-cross-border-b2b",
+  "displayName": "HLZD Cross-Border B2B Industrial Export",
+  "description": "Agent skills for B2B industrial exporters — market research, lead finding, inquiry qualification, quotation, compliance and more. By 海联智达 (HLZD) / 海良数科.",
+  "version": "0.1.0",
+  "metadata": {
+    "author": "HLZD (海联智达 / 海良数科)",
+    "homepage": "https://github.com/HLZD/cross-border-b2b-skills",
+    "license": "MIT",
+    "industry": "cross-border-b2b",
+    "first_release": "2026-07-15"
+  },
+  "plugins": [
+    {
+      "name": "hlzd-inquiry-qualify",
+      "description": "Parse B2B industrial RFQ emails and score across 5 dimensions (A/B/C/D), generate clarification questions, and route to next skill. Multi-language (en/zh/es/ar/ru/pt) extraction. Zero-dependency Python CLI.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-inquiry-qualify",
+      "category": "lead-qualification",
+      "keywords": [
+        "b2b",
+        "inquiry",
+        "rfq",
+        "lead-scoring",
+        "industrial-export",
+        "multi-language"
+      ]
+    }
+  ]
+}
