@@ -1,5 +1,54 @@
 # VERSIONS
 
+## v0.6.0 — 2026-07-15
+
+Sixth Skills batch. Repo version bumped 0.4.0 → 0.6.0 (2 new Skills added). End-to-end closed loop achieved.
+
+### Skills
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-inquiry-qualify` | 0.1.0 | No change. 40 tests. |
+| `hlzd-b2b-research` | 0.1.0 | No change. 31 tests. |
+| `hlzd-buyer-finder` | 0.1.0 | No change. 45 tests. |
+| `hlzd-market-report` | 0.1.0 | No change. 41 tests. |
+| `hlzd-customer-due-diligence` | 0.1.0 | NEW. 5-dim scoring (real-company / size / customer-type / procurement / risk) + OFAC SDN static 20-name subset + sanctioned-country + dual-use + fraud coarse-screen. 57 tests. Auto-routes to hlzd-cold-outreach or hlzd-trade-compliance. |
+| `hlzd-cold-outreach` | 0.1.0 | NEW. 6 buyer-type templates (Manufacturer / EPC / Distributor / OEM / End User / Trader) x 2 languages (en/es). Variable substitution + Day 7/Day 14 followup sequence. 35 tests. |
+
+### Closed-loop B2B export pipeline
+
+First end-to-end working chain:
+
+```
+hlzd-b2b-research      →  HS + market size + trends
+hlzd-buyer-finder      →  importers list
+hlzd-customer-due-...  →  grade A/B → halt route to compliance
+hlzd-cold-outreach     →  email drafts + followup
+```
+
+W4-5 (touch outreach layer) milestone complete: 2 of 3 Skills shipped; followup-sequencer deferred to v0.6.1.
+
+### Architecture evolution
+
+- **OFAC SDN static subset pattern** — v0.1 hardcodes 20 high-priority entity names; upgrade path to OFAC SDN API noted in SKILL.md
+- **Variable preservation rule** — fill_template leaves unknown `{{var}}` as-is + tracks in `missing_variables[]` for human review (no silent defaults)
+- **Word-limit advisory** — `within_word_limit` field is non-blocking; human review flag, not hard fail
+- **Multi-language strategy** — v0.1 es (Latin America / Spain); ar / zh / ru / pt planned v0.2
+
+### Verification
+
+- `py validate_skills.py` → 6/6 OK
+- Per-skill pytest (cumulative):
+  - `hlzd-inquiry-qualify`: 40/40
+  - `hlzd-b2b-research`: 31/31
+  - `hlzd-buyer-finder`: 45/45
+  - `hlzd-market-report`: 41/41
+  - `hlzd-customer-due-diligence`: 57/57
+  - `hlzd-cold-outreach`: 35/35
+- **Cumulative across all 6 Skills: 249 tests PASSED**
+
+---
+
 ## v0.4.0 — 2026-07-15
 
 Fourth Skills batch. Repo version bumped 0.3.0 → 0.4.0 (new Skill added). W2-3 milestone now complete (4 of 21 Skills shipped).

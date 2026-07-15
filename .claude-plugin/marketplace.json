@@ -3,7 +3,7 @@
   "name": "hlzd-cross-border-b2b",
   "displayName": "HLZD Cross-Border B2B Industrial Export",
   "description": "Agent skills for B2B industrial exporters — market research, lead finding, inquiry qualification, quotation, compliance and more. By 海联智达 (HLZD) / 海良数科.",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "metadata": {
     "author": "HLZD (海联智达 / 海良数科)",
     "homepage": "https://github.com/Alexxiang2008/hlzd-b2b-export-skills",
@@ -78,6 +78,39 @@
         "markdown-report",
         "market-intelligence",
         "voice-contract",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-customer-due-diligence",
+      "description": "5-dimension customer back-ground check (real-company / size / customer-type / procurement / risk) scoring A/B/C/D + OFAC SDN static subset + sanctioned-country + dual-use + fraud signal coarse-screening. Auto-route to hlzd-cold-outreach or hlzd-trade-compliance.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-customer-due-diligence",
+      "category": "customer-validation",
+      "keywords": [
+        "b2b",
+        "due-diligence",
+        "kyc",
+        "ofac",
+        "sanctions",
+        "lead-scoring",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-cold-outreach",
+      "description": "Cold email + Day 7/Day 14 follow-up sequence generator for B2B buyers. 6 buyer-type templates (Manufacturer / EPC / Distributor / OEM / End User / Trader) x 2 languages (en/es). Variable substitution + word-limit checks. Receives outputs from hlzd-customer-due-diligence.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-cold-outreach",
+      "category": "outreach",
+      "keywords": [
+        "b2b",
+        "cold-outreach",
+        "cold-email",
+        "follow-up-sequence",
+        "sales-automation",
         "industrial-export"
       ]
     }
