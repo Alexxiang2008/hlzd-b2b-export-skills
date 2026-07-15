@@ -3,7 +3,7 @@
   "name": "hlzd-cross-border-b2b",
   "displayName": "HLZD Cross-Border B2B Industrial Export",
   "description": "Agent skills for B2B industrial exporters — market research, lead finding, inquiry qualification, quotation, compliance and more. By 海联智达 (HLZD) / 海良数科.",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "metadata": {
     "author": "HLZD (海联智达 / 海良数科)",
     "homepage": "https://github.com/HLZD/cross-border-b2b-skills",
@@ -62,6 +62,23 @@
         "customs-data",
         "industrial-export",
         "supplier-competitor"
+      ]
+    },
+    {
+      "name": "hlzd-market-report",
+      "description": "9-section self-contained HTML market intelligence report generator for B2B industrial export. Cover + TOC + signals + platforms + comparison + actions + methodology + sources. Inputs from hlzd-b2b-research JSON or raw web signals. Voice contract LAWS enforced.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-market-report",
+      "category": "report-generation",
+      "keywords": [
+        "b2b",
+        "market-report",
+        "html-report",
+        "markdown-report",
+        "market-intelligence",
+        "voice-contract",
+        "industrial-export"
       ]
     }
   ]

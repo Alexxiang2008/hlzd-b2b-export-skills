@@ -104,7 +104,7 @@ py scripts/inquiry_parser.py --input assets/inquiry_samples/01-saudi-rfq.txt --p
 | 周次 | 交付 |
 |---|---|
 | **W1** | ✅ 样板 Skill：hlzd-inquiry-qualify（已完成） |
-| **W2-3** | 🚧 接入已有素材：b2b-research（✅ done）/ buyer-finder（✅ done）/ market-report / industrial-design |
+| **W2-3** | ✅ 接入已有素材：b2b-research / buyer-finder / market-report（**全部完成**）|
 | W4-5 | customer-due-diligence + cold-outreach + followup-sequencer |
 | W6-7 | solution-match + quotation-gen + negotiation-playbook |
 | W8 | trade-compliance（合规护栏，必做） |

@@ -1,5 +1,54 @@
 # VERSIONS
 
+## v0.4.0 — 2026-07-15
+
+Fourth Skills batch. Repo version bumped 0.3.0 → 0.4.0 (new Skill added). W2-3 milestone now complete (4 of 21 Skills shipped).
+
+### Skills
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-inquiry-qualify` | 0.1.0 | No change. 40 tests. |
+| `hlzd-b2b-research` | 0.1.0 | No change. 31 tests. |
+| `hlzd-buyer-finder` | 0.1.0 | No change. 45 tests. |
+| `hlzd-market-report` | 0.1.0 | New. 9-section self-contained HTML report + 8-section Markdown. Voice contract LAWS (7 rules) implemented as executable checks in `lib.py` (offline-testable). `from_b2b_research()` adapter bridges hlzd-b2b-research JSON output to report schema. 41 tests. |
+
+### Pipeline integration milestone
+
+`hlzd-buyer-finder → hlzd-market-report` end-to-end flow now demonstrable:
+
+```bash
+# 1. Run market research (4-step pipeline)
+py ../hlzd-b2b-research/scripts/run_research.py \
+    --product "OCTG casing" --markets "UAE Saudi" \
+    --output-json b2b-output.json
+
+# 2. Convert to HTML report
+py scripts/pipeline.py --topic "auto" \
+    --from-research b2b-output.json \
+    --output-html report.html --output-md report.md
+```
+
+### Architecture evolution
+
+- `lib.py` introduces **executable LAWS** (functions like `check_law_1`, `check_law_2`, `validate_voice_contract`) — business rules now live alongside code, both usable by pipeline and by runtime validation
+- `render_html.py` ships a **self-contained CSS** design system inspired by b2b-overseas-market-report's 63KB template but rebuilt for HLZD industrial-export aesthetic (deep blue + cyan accent)
+- `assemble_report()` is **deterministic assembler** (no LLM); LLM enhancement (curated signals from raw) is left to upper-layer Agent
+- `render_html.py` produces ~14 KB self-contained HTML (no external CSS / fonts / CDN)
+
+### Verification
+
+- `py validate_skills.py` → 4/4 OK
+- Per-skill pytest:
+  - `hlzd-inquiry-qualify`: 40/40
+  - `hlzd-b2b-research`: 31/31
+  - `hlzd-buyer-finder`: 45/45
+  - `hlzd-market-report`: 41/41
+- **Cumulative W2-3: 157 tests PASSED**
+- Live `pipeline.run()` smoke test → produces valid 11-section report dictionary; renders 14 KB HTML + 4 KB Markdown on disk
+
+---
+
 ## v0.3.0 — 2026-07-15
 
 Third Skills batch. Repo version bumped from 0.2.0 → 0.3.0 (new Skill added).
