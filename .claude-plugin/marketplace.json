@@ -27,6 +27,24 @@
         "industrial-export",
         "multi-language"
       ]
+    },
+    {
+      "name": "hlzd-b2b-research",
+      "description": "End-to-end B2B industrial export market research pipeline: HS code lookup (hsbianma.com) + UN Comtrade market size + Google Trends demand heat + DDGS buyer leads + tender tracking. Outputs structured JSON and Markdown report.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-b2b-research",
+      "category": "market-research",
+      "keywords": [
+        "b2b",
+        "market-research",
+        "hs-code",
+        "comtrade",
+        "google-trends",
+        "buyer-leads",
+        "industrial-export",
+        "tender-tracking"
+      ]
     }
   ]
 }
