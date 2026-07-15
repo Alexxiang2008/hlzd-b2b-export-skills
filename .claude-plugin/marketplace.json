@@ -45,6 +45,24 @@
         "industrial-export",
         "tender-tracking"
       ]
+    },
+    {
+      "name": "hlzd-buyer-finder",
+      "description": "3-link buyer finding pipeline (Alibaba + Volza + public directory) for B2B industrial export. Auto-discover Chinese competitors on Alibaba, then find their overseas importers via Volza customs data. Outputs structured JSON with dedup-by-company + value-sorted importers.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-buyer-finder",
+      "category": "lead-generation",
+      "keywords": [
+        "b2b",
+        "buyer-leads",
+        "importers",
+        "alibaba",
+        "volza",
+        "customs-data",
+        "industrial-export",
+        "supplier-competitor"
+      ]
     }
   ]
 }

@@ -1,0 +1,70 @@
+[
+  {
+    "id": "PB-001",
+    "pattern": "alibaba.com",
+    "category": "B2B-platform",
+    "rationale": "Alibaba 是中国供应商平台，不是买家目标，跳过"
+  },
+  {
+    "id": "PB-002",
+    "pattern": "made-in-china.com",
+    "category": "B2B-platform"
+  },
+  {
+    "id": "PB-003",
+    "pattern": "globalsources.com",
+    "category": "B2B-platform"
+  },
+  {
+    "id": "PB-004",
+    "pattern": "indiamart.com",
+    "category": "B2B-platform"
+  },
+  {
+    "id": "PB-005",
+    "pattern": "ec21.com",
+    "category": "B2B-platform"
+  },
+  {
+    "id": "PB-006",
+    "pattern": "tradekey.com",
+    "category": "B2B-platform"
+  },
+  {
+    "id": "PB-007",
+    "pattern": "ecplaza.net",
+    "category": "B2B-platform"
+  },
+  {
+    "id": "PB-008",
+    "pattern": "homedepot.com",
+    "category": "retail",
+    "rationale": "建材零售，不是工业买家"
+  },
+  {
+    "id": "PB-009",
+    "pattern": "lowes.com",
+    "category": "retail"
+  },
+  {
+    "id": "PB-010",
+    "pattern": "amazon.com",
+    "category": "retail"
+  },
+  {
+    "id": "PB-011",
+    "pattern": "ebay.com",
+    "category": "retail"
+  },
+  {
+    "id": "PB-012",
+    "pattern": "pinterest.com",
+    "category": "social-media",
+    "rationale": "装饰图，无采购价值"
+  },
+  {
+    "id": "PB-013",
+    "pattern": "wikipedia.org",
+    "category": "encyclopedia"
+  }
+]

@@ -1,5 +1,37 @@
 # VERSIONS
 
+## v0.3.0 — 2026-07-15
+
+Third Skills batch. Repo version bumped from 0.2.0 → 0.3.0 (new Skill added).
+
+### Skills
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-inquiry-qualify` | 0.1.0 | No change (v0.1.0 from W1). 40 tests / 85% coverage. |
+| `hlzd-b2b-research` | 0.1.0 | No change (v0.1.0 from W2). 31 tests. |
+| `hlzd-buyer-finder` | 0.1.0 | New. 3-link pipeline (Alibaba auto-discover competitors → Volza customs data → public directory fallback). 45 tests. Quotable determinism via Volza blocked-body detection (offline-testable). Cross-CLI quota persisted in `~/.cache/hlzd-buyer-finder/rate_state.json`. |
+
+### Architecture evolution
+
+- `lib.py` introduces two additive primitives: `RateLimiter` (interval + daily quota with state persistence) and `classify_volza_response` (deterministic 11055-byte detector for Volza anti-bot)
+- All 3 source adapters (`alibaba.py` / `volza.py` / `keyword.py`) accept injectable `http_get` for testability
+- `pipeline.py` exposes `volza_quota_override` / `alibaba_quota_override` / `alibaba_searcher` / `volza_searcher` kwargs for testing
+- Money-string tolerant dedup: `_parse_money()` handles `"$1,234"`, `100 USD`, `500.0` etc.
+- Mock target convention: tests patch `sources.X.Y` (not `pipeline.X.Y`) since pipeline uses lazy imports
+
+### Verification
+
+- `py validate_skills.py` → 3/3 OK
+- Per-skill pytest:
+  - `hlzd-inquiry-qualify`: 40/40
+  - `hlzd-b2b-research`: 31/31
+  - `hlzd-buyer-finder`: 45/45
+- `cli.py --help` renders cleanly
+- Live smoke test against real Alibaba + Volza: both blocked/captcha as expected; pipeline returns `warnings[]` and exits 1 (correct: "no importers found")
+
+---
+
 ## v0.2.0 — 2026-07-15
 
 Second Skills batch. Repo version bumped from 0.1.0 → 0.2.0 (new Skill added).

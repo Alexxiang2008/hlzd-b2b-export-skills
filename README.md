@@ -32,8 +32,9 @@
 |---|---|---|---|
 | 01 | `hlzd-inquiry-qualify` | **v0.1.0** ✅ | 询盘评估：5 维评分 + 多语种抽取 + 合规粗筛 |
 | 02 | `hlzd-b2b-research` | **v0.1.0** ✅ | B2B 海外调研：HS + Comtrade + Trends + 买家 + 招标 4 步 pipeline |
+| 03 | `hlzd-buyer-finder` | **v0.1.0** ✅ | 海外买家挖掘：阿里 + Volza + 公开目录 3 链路 |
 
-其余 19 个 Skill 路线图见 [docs/出海技能集规划.md](docs/出海技能集规划.md#四skill-集合架构21-个-skill-分两期上线)。
+其余 18 个 Skill 路线图见 [docs/出海技能集规划.md](docs/出海技能集规划.md#四skill-集合架构21-个-skill-分两期上线)。
 
 ---
 
@@ -103,7 +104,7 @@ py scripts/inquiry_parser.py --input assets/inquiry_samples/01-saudi-rfq.txt --p
 | 周次 | 交付 |
 |---|---|
 | **W1** | ✅ 样板 Skill：hlzd-inquiry-qualify（已完成） |
-| **W2-3** | 🚧 接入已有素材：b2b-research（✅ done）/ buyer-finder / market-report / industrial-design |
+| **W2-3** | 🚧 接入已有素材：b2b-research（✅ done）/ buyer-finder（✅ done）/ market-report / industrial-design |
 | W4-5 | customer-due-diligence + cold-outreach + followup-sequencer |
 | W6-7 | solution-match + quotation-gen + negotiation-playbook |
 | W8 | trade-compliance（合规护栏，必做） |
