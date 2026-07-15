@@ -44,7 +44,7 @@
 
 ```bash
 # 1. 添加 marketplace
-/plugin marketplace add HLZD/cross-border-b2b-skills
+/plugin marketplace add Alexxiang2008/hlzd-b2b-export-skills
 
 # 2. 安装 inquiry-qualify
 /plugin install hlzd-inquiry-qualify
@@ -53,13 +53,13 @@
 ### 安装（npx skills — 通用）
 
 ```bash
-npx skills add HLZD/cross-border-b2b-skills --skill hlzd-inquiry-qualify
+npx skills add Alexxiang2008/hlzd-b2b-export-skills --skill hlzd-inquiry-qualify
 ```
 
 ### 克隆到本地
 
 ```bash
-git clone https://github.com/HLZD/cross-border-b2b-skills.git
+git clone https://github.com/Alexxiang2008/hlzd-b2b-export-skills.git
 cp -r cross-border-b2b-skills/skills/* .agents/skills/
 ```
 

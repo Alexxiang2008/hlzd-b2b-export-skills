@@ -11,7 +11,7 @@
 ## 仓库概览
 
 ```
-HLZD/cross-border-b2b-skills/
+Alexxiang2008/hlzd-b2b-export-skills/
 ├── .claude-plugin/
 │   └── marketplace.json            # Claude Code plugin marketplace 清单
 ├── skills/
