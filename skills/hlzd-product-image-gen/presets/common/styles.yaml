@@ -1,0 +1,29 @@
+# 通用风格 preset
+
+category: common_styles
+description: 通用视觉风格
+
+styles:
+  photorealistic:
+    name_zh: 实物摄影
+    name_en: photorealistic
+    prompt_en: photorealistic, high-resolution photography, real materials, accurate textures, lifelike details
+    negative_prompt_en: cartoon, anime, painting, drawing, artificial, stylized
+
+  catalog:
+    name_zh: 目录商品图
+    name_en: catalog product photo
+    prompt_en: clean catalog product photo, isolated on white background, commercial advertising style, sharp focus
+    negative_prompt_en: clutter, people, hands, text, watermark, lifestyle, environmental context
+
+  technical:
+    name_zh: 技术图纸
+    name_en: technical illustration
+    prompt_en: technical illustration, isometric or orthographic projection, dimensional annotations, blueprint aesthetic
+    negative_prompt_en: artistic, painterly, blurry, decorative, low detail
+
+  3d-render:
+    name_zh: 3D 渲染
+    name_en: 3D render
+    prompt_en: high-quality 3D render, octane or unreal engine style, sharp materials, clean lighting, accurate reflections
+    negative_prompt_en: photographic, low-poly, stylized, flat shading

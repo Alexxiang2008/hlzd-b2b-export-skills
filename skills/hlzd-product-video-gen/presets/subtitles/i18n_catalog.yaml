@@ -1,0 +1,225 @@
+# HLZD-视频生成 - 中英字幕对照表
+# 设计原则：
+#   1. 默认输出英文（出海场景优先）
+#   2. 中文版作为对照保留，供国内/双语场景调用
+#   3. 新增产品时：在对应类别下追加 zh/en 即可
+#   4. 调用方可用 subtitle_lang=zh/en/bilingual 切换
+
+# ============ 通用工业品术语 ============
+common:
+  quality_assured:
+    zh: 质量保证
+    en: Quality Assured
+  factory_direct:
+    zh: 工厂直供
+    en: Factory Direct
+  worldwide_shipping:
+    zh: 全球发货
+    en: Worldwide Shipping
+  ce_certified:
+    zh: CE认证
+    en: CE Certified
+  iso_certified:
+    zh: ISO认证
+    en: ISO Certified
+  custom_service:
+    zh: 定制服务
+    en: Custom Service
+  hot_sale:
+    zh: 热销产品
+    en: Hot Sale
+  new_arrival:
+    zh: 新品上市
+    en: New Arrival
+
+# ============ 按产品类别分组 ============
+products:
+  oil_casing:
+    name:
+      zh: 石油套管
+      en: OCTG Oil Casing
+    tags:
+      - zh: API 5CT 认证
+        en: API 5CT Certified
+      - zh: 高强度抗腐蚀
+        en: High Strength Corrosion Resistant
+      - zh: 油田钻井专用
+        en: Oilfield Drilling Grade
+
+  valve:
+    name:
+      zh: 工业阀门
+      en: Industrial Valve
+    tags:
+      - zh: 耐高压耐腐蚀
+        en: High Pressure Corrosion Resistant
+      - zh: 多规格可选
+        en: Multiple Specifications Available
+      - zh: 工业级品质
+        en: Industrial Grade Quality
+
+  bearing:
+    name:
+      zh: 工业轴承
+      en: Industrial Bearing
+    tags:
+      - zh: 高精度低噪音
+        en: High Precision Low Noise
+      - zh: 长寿命设计
+        en: Long Service Life
+      - zh: 多种型号可选
+        en: Multiple Models Available
+
+  fastener:
+    name:
+      zh: 紧固件
+      en: Industrial Fastener
+    tags:
+      - zh: 高强度材质
+        en: High Strength Material
+      - zh: 精密螺纹
+        en: Precision Thread
+      - zh: 表面防腐处理
+        en: Anti-corrosion Surface
+
+  hand_tool:
+    name:
+      zh: 手工具
+      en: Hand Tool
+    tags:
+      - zh: 人体工学设计
+        en: Ergonomic Design
+      - zh: 坚固耐用
+        en: Durable and Sturdy
+      - zh: 工厂批发价
+        en: Factory Wholesale Price
+
+  shipping_container:
+    name:
+      zh: 海运集装箱
+      en: Shipping Container
+    tags:
+      - zh: ISO 标准规格
+        en: ISO Standard
+      - zh: 全新/二手可选
+        en: New/Used Available
+      - zh: 全球港口直发
+        en: Direct Shipping from Global Ports
+
+  excavator:
+    name:
+      zh: 工程挖掘机
+      en: Excavator
+    tags:
+      - zh: 高效节能
+        en: High Efficiency Energy Saving
+      - zh: 多种配置可选
+        en: Multiple Configurations
+      - zh: 工程首选
+        en: Construction Industry Choice
+
+  generator:
+    name:
+      zh: 工业发电机
+      en: Industrial Generator
+    tags:
+      - zh: 静音低油耗
+        en: Silent Low Fuel Consumption
+      - zh: 大功率稳定输出
+        en: High Power Stable Output
+      - zh: 全自动控制
+        en: Fully Automatic Control
+
+  steel_structure:
+    name:
+      zh: 钢结构
+      en: Steel Structure
+    tags:
+      - zh: 高强度抗震
+        en: High Strength Seismic Resistant
+      - zh: 工厂预制
+        en: Factory Prefabricated
+      - zh: 安装便捷
+        en: Easy Installation
+
+  aluminum_profile:
+    name:
+      zh: 铝合金型材
+      en: Aluminum Profile
+    tags:
+      - zh: 表面阳极氧化
+        en: Anodized Surface
+      - zh: 多种截面可选
+        en: Multiple Cross-sections
+      - zh: 建筑工业通用
+        en: Construction Industrial Use
+
+  plastic_pipe:
+    name:
+      zh: 塑料管
+      en: Plastic Pipe
+    tags:
+      - zh: 耐腐蚀无毒
+        en: Corrosion Resistant Non-toxic
+      - zh: 安装便捷
+        en: Easy Installation
+      - zh: 50年使用寿命
+        en: 50 Years Service Life
+
+  steel_pipe:
+    name:
+      zh: 钢管
+      en: Steel Pipe
+    tags:
+      - zh: 多种规格
+        en: Multiple Specifications
+      - zh: 表面防腐
+        en: Anti-corrosion Surface
+      - zh: 建筑工业通用
+        en: Construction Industrial Use
+
+  rebar:
+    name:
+      zh: 钢筋
+      en: Rebar
+    tags:
+      - zh: 高强度抗震
+        en: High Strength Seismic
+      - zh: 工厂直供
+        en: Factory Direct Supply
+      - zh: 现货批发
+        en: In Stock Wholesale
+
+  glass_panel:
+    name:
+      zh: 玻璃面板
+      en: Glass Panel
+    tags:
+      - zh: 钢化安全
+        en: Tempered Safety
+      - zh: 多厚度可选
+        en: Multiple Thicknesses
+      - zh: 幕墙首选
+        en: Curtain Wall Preferred
+
+# ============ 平台/场景标签 ============
+scenes:
+  alibaba_main:
+    zh: 阿里巴巴国际站热销
+    en: Alibaba International Hot Sale
+
+  tiktok_demo:
+    zh: 工厂实拍演示
+    en: Factory Live Demo
+
+  website_hero:
+    zh: 官网主推
+    en: Website Featured
+
+  email_promo:
+    zh: 限时优惠
+    en: Limited Time Offer
+
+  exhibition:
+    zh: 展会精选
+    en: Exhibition Selection

@@ -1,0 +1,38 @@
+# HLZD-视频生成 - Git 忽略清单
+# 防止敏感凭证和临时产物进入版本控制
+
+# ============ 敏感凭证（最高优先级） ============
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# ============ Python 临时文件 ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# ============ 输出产物（可独立管理） ============
+outputs/videos/
+outputs/history/
+outputs/test/
+*.mp4
+*.tmp
+
+# ============ 临时调试 ============
+debug/
+*.log
+.pytest_cache/
+.tox/
+
+# ============ 工具相关 ============
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

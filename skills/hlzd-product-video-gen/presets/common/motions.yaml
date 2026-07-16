@@ -1,0 +1,83 @@
+# HLZD-视频生成 - 视频动作预设
+# 决定镜头如何运动 + 产品如何展示
+
+motions:
+  # ===== 静态展示类（适合白底主图延伸） =====
+  orbit:
+    name_zh: 360°环绕
+    name_en: orbit
+    prompt_en: "slow 360 degree orbit camera, smooth rotation, studio lighting, cinematic motion"
+    negative_prompt_en: "fast motion, shaky camera, blur, distortion"
+    use_for: ["白底产品展示", "阿里国际站主图", "产品细节"]
+    quality_note: "⚠️ 旋转时 3D 圆柱体可能变形（管子变扁）。如变形严重，改用 push_in 或 static。"
+
+  static:
+    name_zh: 静态特写
+    name_en: static close-up
+    prompt_en: "slow subtle motion, slight camera drift, focus on product details, soft lighting"
+    negative_prompt_en: "fast motion, scene change, multiple objects"
+    use_for: ["产品细节图", "材质展示", "工艺特写"]
+    quality_note: "✅ 几何稳定性最高，推荐 B2B 工业品默认动作。"
+
+  # ===== 推拉类（适合工艺/细节展示） =====
+  push_in:
+    name_zh: 镜头推近
+    name_en: dolly in
+    prompt_en: "slow dolly in toward the product, revealing intricate details, cinematic depth of field, maintaining original perspective"
+    negative_prompt_en: "fast zoom, jump cut, blur, distortion, flat objects, square cross-section"
+    use_for: ["工艺细节", "材质纹理", "技术参数可视化", "管材类推近特写"]
+    quality_note: "✅ B2B 管材/型材推荐（避免 360 度旋转导致的几何变形）。"
+
+  pull_out:
+    name_zh: 镜头拉远
+    name_en: dolly out
+    prompt_en: "slow dolly out revealing full product context, establishing shot, professional framing"
+    negative_prompt_en: "fast zoom out, shaky camera"
+    use_for: ["产品全貌", "应用场景", "工厂环境"]
+
+  # ===== 应用场景类（适合工厂/工地演示） =====
+  factory_run:
+    name_zh: 工厂运转
+    name_en: factory operation
+    prompt_en: "industrial machinery in operation, factory environment, workers, production line, authentic industrial atmosphere"
+    negative_prompt_en: "toy, miniature, unrealistic, cartoon, watermark, text overlay"
+    use_for: ["工厂实拍风", "生产线演示", "设备运转"]
+
+  site_demo:
+    name_zh: 工地演示
+    name_en: construction site
+    prompt_en: "heavy equipment working at construction site, dust particles, daytime lighting, professional workers in safety gear"
+    negative_prompt_en: "toy, miniature, unrealistic, people in casual clothing"
+    use_for: ["工程机械作业", "建材安装", "现场演示"]
+
+  # ===== 物流/港口类（适合集装箱/大宗物流） =====
+  port_logistics:
+    name_zh: 港口物流
+    name_en: port logistics
+    prompt_en: "shipping containers at busy port, cranes loading, cargo trucks, ocean in background, daytime, professional logistics atmosphere"
+    negative_prompt_en: "toy, miniature, unrealistic, watermark"
+    use_for: ["集装箱", "物流运输", "港口装卸"]
+
+  # ===== 多镜头拼接类（适合教程/对比） =====
+  transition:
+    name_zh: 镜头切换
+    name_en: scene transition
+    prompt_en: "smooth cinematic transition between scenes, professional video editing style"
+    negative_prompt_en: "hard cut, jump cut, glitch"
+    use_for: ["多段拼接", "前后对比", "工艺流程"]
+
+  # ===== 安装/使用演示 =====
+  installation:
+    name_zh: 安装演示
+    name_en: installation demo
+    prompt_en: "professional installation demonstration, step-by-step assembly, clear visual instructions, workshop environment"
+    negative_prompt_en: "messy, unprofessional, unclear"
+    use_for: ["设备安装", "产品装配", "使用教程"]
+
+  # ===== 材质/工艺特写 =====
+  material_macro:
+    name_zh: 材质微距
+    name_en: material macro
+    prompt_en: "extreme macro close-up of industrial material texture, surface details, professional product photography lighting"
+    negative_prompt_en: "blurry, out of focus, distortion"
+    use_for: ["建材纹理", "金属表面", "材料工艺"]

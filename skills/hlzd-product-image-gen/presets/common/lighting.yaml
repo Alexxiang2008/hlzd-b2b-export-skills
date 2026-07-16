@@ -1,0 +1,25 @@
+# 通用光照 preset
+
+category: common_lighting
+description: 通用光照预设
+
+lighting:
+  studio:
+    name_zh: 棚拍光
+    name_en: studio lighting
+    prompt_en: professional studio lighting, softbox, even illumination, no harsh shadows, commercial product photography
+
+  natural:
+    name_zh: 自然光
+    name_en: natural daylight
+    prompt_en: natural daylight, outdoor ambient light, soft shadows, realistic environment
+
+  dramatic:
+    name_zh: 戏剧化光
+    name_en: dramatic lighting
+    prompt_en: dramatic cinematic lighting, strong rim light, dark background, high contrast
+
+  softbox:
+    name_zh: 柔光箱
+    name_en: softbox product light
+    prompt_en: softbox product photography lighting, even soft white light, no glare, neutral color temperature
