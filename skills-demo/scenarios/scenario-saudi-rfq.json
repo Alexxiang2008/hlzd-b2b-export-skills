@@ -1,0 +1,72 @@
+{
+  "$schema": "hlzd/demo/v1",
+  "scenario_id": "scenario-saudi-rfq",
+  "description": "Saudi Aramco Trading Co. - OCTG Casing tender inquiry (Phase 3 of South Ghawar Field Expansion)",
+  "language": "en",
+  "expected_outcome": "Grade B inquiry; legitimate buyers from Volza; best_match = OCTG-L80-PREMIUM; quotation FOB=$780K; healthy profit; accept_round_2 outcome",
+  "real_world_origin": "Adapted from skills/hlzd-inquiry-qualify/assets/inquiry_samples/01-saudi-rfq.txt",
+
+  "inquiry": {
+    "raw_text": "Dear Sir/Madam,\n\nGood day. We are interested in sourcing API 5CT OCTG Casing for our upstream operations in Saudi Arabia.\n\nProduct: API 5CT L80 Casing, 9-5/8 inch, BTC connection, suitable for sour service (NACE MR0175 required).\nQuantity: 5000 meters, delivery in two batches.\nPort: CIF Jeddah Islamic Port, Saudi Arabia\nTarget unit price: around USD 1450 per meter, budget flexible for qualified suppliers.\nExpected delivery: Q4 2026, first batch by October 2026.\n\nThis inquiry is for South Ghawar Field Expansion Phase 3. We are acting as procurement on behalf of Saudi Aramco Trading Co. (EPC contractor: Technicas Reunidas).\n\nTender reference: ARAMCO-TR-2026-Q3-OCTG-007\nProject timeline: first shipment by 2026-10, final delivery 2026-12-31.\n\nPlease send your quotation with technical compliance statement, mill test certificates, and sour-service qualification. We need full traceability per Saudi Aramco Standards.\n\nBest regards,\nMr. Ahmed Al-Rashid\nSenior Procurement Manager\nSaudi Aramco Trading Co. (SATC)\nP.O. Box 5000, Dhahran 31311, Saudi Arabia\nEmail: ahmed.alrashid@aramco-trading.example.com\nPhone: +966 13 872 1234\nWhatsApp: +966 50 123 4567\nLinkedIn: https://linkedin.com/in/ahmedalrashid"
+  },
+
+  "mock_buyers": [
+    {
+      "importer_name": "Aramco Trading Co.",
+      "country": "Saudi Arabia",
+      "contact_email": "trade@aramco-trading.example.com",
+      "linkedin": "https://linkedin.com/company/aramco-trading",
+      "snippet": "Saudi Aramco Trading Company is a major energy infrastructure procurement firm, 25000 employees, USD 400B annual revenue.",
+      "usd_history": 8500000,
+      "customer_type": "End User"
+    },
+    {
+      "importer_name": "Saudi Industrial Services Co.",
+      "country": "Saudi Arabia",
+      "contact_email": "info@sisco.example.com",
+      "linkedin": "https://linkedin.com/company/sisco",
+      "snippet": "Saudi Industrial Services provides pipe and equipment to Saudi Aramco JV partners, 3000 employees, USD 800M revenue.",
+      "usd_history": 3200000,
+      "customer_type": "Distributor"
+    },
+    {
+      "importer_name": "Ghawar Energy Procurement LLC",
+      "country": "Saudi Arabia",
+      "contact_email": "procure@ghawar-energy.example.com",
+      "linkedin": "https://linkedin.com/company/ghawar-energy",
+      "snippet": "Specialized energy procurement for Ghawar field operators, 500 employees, USD 200M revenue.",
+      "usd_history": 1500000,
+      "customer_type": "Distributor"
+    },
+    {
+      "importer_name": "Hezbollah Procurement Front",
+      "country": "Lebanon",
+      "contact_email": "front@hezbollah-procurement.example",
+      "snippet": "We need 100% advance payment to personal account to start tender.",
+      "customer_type": "Trader"
+    }
+  ],
+
+  "product_context": {
+    "product": "OCTG casing",
+    "product_category": "OCTG",
+    "hs_code": "730429",
+    "capacity": "1500 tons/month"
+  },
+
+  "redlines": {
+    "min_acceptable_price": 1320,
+    "max_lead_time_days": 30,
+    "min_advance_pct": 30
+  },
+
+  "sender_context": {
+    "sender_company": "HLZD",
+    "sender_name": "Alex Xiang",
+    "sender_title": "International Sales Manager",
+    "sender_email": "alex.xiang@hlzd-b2b.example",
+    "sender_phone": "+86 138 0001 9999"
+  },
+
+  "competitor_risk": false
+}

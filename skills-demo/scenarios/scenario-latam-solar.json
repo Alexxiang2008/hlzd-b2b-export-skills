@@ -1,0 +1,65 @@
+{
+  "$schema": "hlzd/demo/v1",
+  "scenario_id": "scenario-latam-solar",
+  "description": "Latin American solar EPC - 50MW utility-scale project in Chile",
+  "language": "es",
+  "expected_outcome": "Grade B Spanish-language inquiry; mock Latin American EPC buyers; solar module catalog match; quotation CIF with USD pricing; Round-2 accept path",
+  "real_world_origin": "Constructed for demo - common LatAm B2B industrial scenario",
+
+  "inquiry": {
+    "raw_text": "Estimado proveedor,\n\nEstamos buscando paneles solares de alto rendimiento para un proyecto EPC de 50MW en el desierto de Atacama, Chile.\n\nEspecificaciones:\n- Tipo: Monocristalino, 450W minimo\n- Certificaciones: IEC 61215 + IEC 61730 + UL 1703\n- Cantidad: 110000 paneles (50MW a 450W)\n- Puerto destino: Arica, Chile (CIF)\n- Incoterm: CIF Arica\n- Precio objetivo: USD 0.18 por Watt o menos\n- Plazo de entrega: Julio 2026, primera entrega 25,000 paneles\n\nProyecto: Parque Solar Atacama 50MW Fase 1\nOperador: Sol del Desierto S.A.\nIngeniera: SunPower Chile\nTender ref: ATACAMA-SOL-2026-015\nPlazo: Primera entrega 2026-07-15, completa 2026-12-30\n\nPor favor enviar cotizacion formal con hojas tecnicas, garantias, y referencias de proyectos similares (>10MW).\n\nAtentamente,\nIng. Maria Fernanda Lopez\nGerente de Compras\nSol del Desierto S.A.\nAv. Solar 1234, Santiago, Chile\nEmail: m.lopez@soldeldesierto.example\nTelefono: +56 2 2345 6789\nLinkedIn: https://linkedin.com/in/marialopez-chile"
+  },
+
+  "mock_buyers": [
+    {
+      "importer_name": "Sol del Desierto S.A.",
+      "country": "Chile",
+      "contact_email": "compras@soldeldesierto.example",
+      "linkedin": "https://linkedin.com/company/sol-del-desierto",
+      "snippet": "Solar farm operator in Atacama, 800 employees, USD 250M revenue across 5 projects.",
+      "usd_history": 12000000,
+      "customer_type": "End User"
+    },
+    {
+      "importer_name": "SunPower Chile SpA",
+      "country": "Chile",
+      "contact_email": "operations@sunpower-chile.example",
+      "linkedin": "https://linkedin.com/company/sunpower-chile",
+      "snippet": "EPC contractor for utility-scale solar, 5000 employees, USD 1.2B revenue.",
+      "usd_history": 48000000,
+      "customer_type": "EPC"
+    },
+    {
+      "importer_name": "Enel Distribucion Chile",
+      "country": "Chile",
+      "contact_email": "suppliers@enel-d.example",
+      "linkedin": "https://linkedin.com/company/enel-distribucion",
+      "snippet": "Major Latin American utility, 15000 employees, USD 8B regional revenue.",
+      "usd_history": 26000000,
+      "customer_type": "End User"
+    }
+  ],
+
+  "product_context": {
+    "product": "Solar PV module",
+    "product_category": "Solar Panel",
+    "hs_code": "8541",
+    "capacity": "5MW monthly"
+  },
+
+  "redlines": {
+    "min_acceptable_price": 0.16,
+    "max_lead_time_days": 90,
+    "min_advance_pct": 30
+  },
+
+  "sender_context": {
+    "sender_company": "HLZD Solar",
+    "sender_name": "Alex Xiang",
+    "sender_title": "Solar Export Manager",
+    "sender_email": "alex.xiang@hlzd-solar.example",
+    "sender_phone": "+86 138 0001 9999"
+  },
+
+  "competitor_risk": true
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "hlzd/demo/v1",
+  "scenario_id": "scenario-fraud-blocked",
+  "description": "Suspected fraud inquiry - demonstrates compliance halt before any outreach",
+  "language": "en",
+  "expected_outcome": "Compliant-down signal: multiple fraud flags + dual-use, recommendation = halt to hlzd-trade-compliance (no outreach, no quotation)",
+  "real_world_origin": "Adapted from skills/hlzd-inquiry-qualify/assets/inquiry_samples/04-fraud-ish.txt",
+
+  "inquiry": {
+    "raw_text": "HELLO\n\nWe are very serious buyer we want to order 20000 pieces solar panel please send quotation.\n\n100% advance payment to personal account OK.\n\nVery urgent please reply fast wire transfer western union accepted.\n\nMr. John\nEmail: johnsmith9900@gmail.com"
+  },
+
+  "mock_buyers": [],
+
+  "product_context": {
+    "product": "Solar panel",
+    "product_category": "Solar Panel",
+    "hs_code": "8541"
+  },
+
+  "redlines": {},
+
+  "sender_context": {
+    "sender_company": "HLZD"
+  },
+
+  "competitor_risk": false,
+  "expected_to_halt_reason": "demonstrate compliance halt (sanctions / fraud / dual-use) before any outreach"
+}
