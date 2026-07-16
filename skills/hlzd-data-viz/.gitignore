@@ -1,0 +1,30 @@
+# 敏感信息
+.env
+.env.local
+
+# 运行时产物
+outputs/
+outputs/dashboards/
+outputs/history/
+*.log
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node.js（如果用）
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+
+# 系统
+.DS_Store
+Thumbs.db
+# 测试覆盖率
+.coverage
+htmlcov/
