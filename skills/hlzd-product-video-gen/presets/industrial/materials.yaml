@@ -1,0 +1,79 @@
+# HLZD-视频生成 - 建材类工业品视频preset
+
+products:
+  steel_structure:
+    name_zh: 钢结构
+    name_en: steel structure
+    keywords_zh: [钢结构, 钢构件, 钢架]
+    keywords_en: [steel structure, steel frame, structural steel]
+    hs_code: "730890"
+    default_scene_preset: outdoor_site
+    default_scene_motion: site_demo
+    default_duration: 12
+    default_aspect_ratio: "16:9"
+
+  aluminum_profile:
+    name_zh: 铝合金型材
+    name_en: aluminum profile
+    keywords_zh: [铝合金, 铝型材, 铝挤压]
+    keywords_en: [aluminum profile, aluminum extrusion, aluminum alloy]
+    hs_code: "760421"
+    default_scene_preset: studio_white
+    default_scene_motion: push_in
+    default_duration: 8
+    default_aspect_ratio: "1:1"
+
+  plastic_pipe:
+    name_zh: 塑料管
+    name_en: plastic pipe
+    keywords_zh: [塑料管, PVC管, PE管, PPR管]
+    keywords_en: [plastic pipe, PVC pipe, PE pipe, PPR pipe]
+    hs_code: "391721"
+    default_scene_preset: studio_neutral
+    default_scene_motion: orbit
+    default_duration: 8
+    default_aspect_ratio: "16:9"
+
+  precast_concrete:
+    name_zh: 预制构件
+    name_en: precast concrete
+    keywords_zh: [预制构件, 预制混凝土, PC构件]
+    keywords_en: [precast concrete, precast component, PC component]
+    hs_code: "681091"
+    default_scene_preset: outdoor_site
+    default_scene_motion: site_demo
+    default_duration: 12
+    default_aspect_ratio: "16:9"
+
+  steel_pipe:
+    name_zh: 钢管
+    name_en: steel pipe
+    keywords_zh: [钢管, 无缝钢管, 焊接钢管]
+    keywords_en: [steel pipe, seamless pipe, welded pipe]
+    hs_code: "730630"
+    default_scene_preset: outdoor_site
+    default_scene_motion: factory_run
+    default_duration: 10
+    default_aspect_ratio: "16:9"
+
+  rebar:
+    name_zh: 钢筋
+    name_en: rebar
+    keywords_zh: [钢筋, 螺纹钢, 建筑钢筋]
+    keywords_en: [rebar, reinforcing steel, deformed bar]
+    hs_code: "721420"
+    default_scene_preset: outdoor_site
+    default_scene_motion: orbit
+    default_duration: 8
+    default_aspect_ratio: "16:9"
+
+  glass_panel:
+    name_zh: 玻璃面板
+    name_en: glass panel
+    keywords_zh: [玻璃, 钢化玻璃, 夹层玻璃, 幕墙玻璃]
+    keywords_en: [glass panel, tempered glass, laminated glass, curtain wall glass]
+    hs_code: "700529"
+    default_scene_preset: studio_white
+    default_scene_motion: push_in
+    default_duration: 8
+    default_aspect_ratio: "16:9"

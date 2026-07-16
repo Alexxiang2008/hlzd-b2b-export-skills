@@ -1,0 +1,83 @@
+# HLZD-视频生成 - 机械类工业品视频preset
+# 与HLZD-图片生成同名preset保持产品词表一致
+
+products:
+  oil_casing:
+    name_zh: 石油套管
+    name_en: OCTG oil casing pipe
+    keywords_zh: [套管, 石油套管, 油管, 钻井管]
+    keywords_en: [casing, OCTG, oil pipe, drilling pipe]
+    hs_code: "730429"
+    default_scene_preset: oil_field
+    default_scene_motion: push_in
+    default_duration: 10
+    default_aspect_ratio: "16:9"
+    extra_negative_en: "no text overlay, no labels, no watermarks, no logos, OCTG must be four letters only"
+
+  valve:
+    name_zh: 阀门
+    name_en: industrial valve
+    keywords_zh: [阀门, 球阀, 闸阀, 截止阀, 蝶阀]
+    keywords_en: [valve, ball valve, gate valve, globe valve, butterfly valve]
+    hs_code: "848180"
+    default_scene_preset: industrial_workshop
+    default_scene_motion: push_in
+    default_duration: 8
+    default_aspect_ratio: "1:1"
+    extra_negative_en: "deformed valve body, melted metal, asymmetric"
+
+  bearing:
+    name_zh: 轴承
+    name_en: industrial bearing
+    keywords_zh: [轴承, 滚珠轴承, 滚子轴承, 圆锥滚子]
+    keywords_en: [bearing, ball bearing, roller bearing, tapered roller]
+    hs_code: "848210"
+    default_scene_preset: studio_white
+    default_scene_motion: push_in
+    default_duration: 6
+    default_aspect_ratio: "1:1"
+    extra_negative_en: "deformed rings, non-circular shape"
+
+  fastener:
+    name_zh: 紧固件
+    name_en: industrial fastener
+    keywords_zh: [螺栓, 螺母, 螺丝, 紧固件]
+    keywords_en: [bolt, nut, screw, fastener]
+    hs_code: "731815"
+    default_scene_preset: studio_neutral
+    default_scene_motion: static
+    default_duration: 5
+    default_aspect_ratio: "1:1"
+
+  hand_tool:
+    name_zh: 手工具
+    name_en: hand tool
+    keywords_zh: [扳手, 钳子, 螺丝刀, 锤子, 工具]
+    keywords_en: [wrench, pliers, screwdriver, hammer, hand tool]
+    hs_code: "820412"
+    default_scene_preset: studio_neutral
+    default_scene_motion: orbit
+    default_duration: 8
+    default_aspect_ratio: "1:1"
+
+  hydraulic_cylinder:
+    name_zh: 液压油缸
+    name_en: hydraulic cylinder
+    keywords_zh: [液压, 油缸, 液压缸]
+    keywords_en: [hydraulic, cylinder, hydraulic ram]
+    hs_code: "841221"
+    default_scene_preset: industrial_workshop
+    default_scene_motion: factory_run
+    default_duration: 10
+    default_aspect_ratio: "16:9"
+
+  gear:
+    name_zh: 齿轮
+    name_en: industrial gear
+    keywords_zh: [齿轮, 传动齿轮]
+    keywords_en: [gear, transmission gear, spur gear]
+    hs_code: "848340"
+    default_scene_preset: industrial_workshop
+    default_scene_motion: factory_run
+    default_duration: 8
+    default_aspect_ratio: "1:1"

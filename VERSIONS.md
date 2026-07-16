@@ -1,5 +1,22 @@
 # VERSIONS
 
+## v0.10.0 — 2026-07-16
+
+Eighth Skills batch. Added `hlzd-product-video-gen` (slot 11/21): B2B 工业品营销视频（I2V/拼接 18 秒/BGM/字幕）生成，Agnes Video V2.0 + FFmpeg。
+
+### Skill added
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-product-video-gen` | 0.1.0 | NEW. B2B 工业品营销视频（I2V/拼接 18 秒/BGM/字幕）生成，Agnes Video V2.0 + FFmpeg。 |
+
+### Verification
+
+- `py validate_skills.py` → OK
+- `py -m pytest skills/hlzd-product-video-gen/tests/` → see PR
+
+---
+
 ## v0.9.0 — 2026-07-16
 
 Quotation engine ships: 3 new Skills (solution-match / quotation-gen / negotiation-playbook).

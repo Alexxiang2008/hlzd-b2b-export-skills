@@ -3,13 +3,14 @@
   "name": "hlzd-cross-border-b2b",
   "displayName": "HLZD Cross-Border B2B Industrial Export",
   "description": "Agent skills for B2B industrial exporters — market research, lead finding, inquiry qualification, quotation, compliance and more. By 海联智达 (HLZD) / 海良数科.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "metadata": {
     "author": "HLZD (海联智达 / 海良数科)",
     "homepage": "https://github.com/Alexxiang2008/hlzd-b2b-export-skills",
     "license": "MIT",
     "industry": "cross-border-b2b",
-    "first_release": "2026-07-15"
+    "first_release": "2026-07-15",
+    "last_release": "2026-07-16"
   },
   "plugins": [
     {
@@ -175,6 +176,24 @@
         "embargo",
         "eccn",
         "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-product-video-gen",
+      "description": "B2B 工业品营销视频生成 —— 图生视频（I2V）/ 多段拼接 18 秒 / BGM / 字幕。Agnes Video V2.0 + FFmpeg。6 种 preset（设备/机械/材料）+ i18n 字幕目录。",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-product-video-gen",
+      "category": "content-asset",
+      "keywords": [
+        "生视频",
+        "生成视频",
+        "文生视频",
+        "图生视频",
+        "T2V",
+        "I2V",
+        "产品视频",
+        "工业品视频"
       ]
     }
   ]

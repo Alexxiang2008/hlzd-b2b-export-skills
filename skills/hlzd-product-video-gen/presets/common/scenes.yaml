@@ -1,0 +1,55 @@
+# HLZD-视频生成 - 视频场景预设
+# 决定视频在什么环境下拍摄（背景/光照/氛围）
+
+scenes:
+  studio_white:
+    name_zh: 白底棚拍
+    name_en: studio white background
+    prompt_en: "pure white background, professional studio lighting, soft shadows, product photography style"
+    use_for: ["阿里国际站主图", "产品目录", "白底图延伸"]
+
+  studio_neutral:
+    name_zh: 中性灰棚拍
+    name_en: studio neutral gray
+    prompt_en: "neutral gray gradient background, professional studio lighting, subtle shadows, premium product feel"
+    use_for: ["高端产品展示", "品牌官网", "画册"]
+
+  industrial_workshop:
+    name_zh: 工业车间
+    name_en: industrial workshop
+    prompt_en: "industrial workshop environment, metal machinery background, warm tungsten lighting, authentic factory atmosphere"
+    use_for: ["机械设备演示", "工业品展示", "工厂实拍风"]
+
+  outdoor_site:
+    name_zh: 户外工地
+    name_en: outdoor construction site
+    prompt_en: "outdoor construction site, daylight, dust particles, heavy equipment in background, workers in safety helmets"
+    use_for: ["工程机械", "建材安装", "现场作业"]
+
+  port_yard:
+    name_zh: 港口堆场
+    name_en: port yard
+    prompt_en: "container port yard, stacked shipping containers, gantry cranes, ocean visible, daytime bright lighting"
+    use_for: ["集装箱", "物流运输", "大宗商品"]
+
+  oil_field:
+    name_zh: 油田作业
+    name_en: oil field
+    prompt_en: "oil drilling platform, desert environment, drilling rigs, pipes and equipment, bright daylight, professional industrial photography"
+    use_for: ["石油套管", "油气设备", "油田作业"]
+    market_locale:
+      UAE: "Middle East desert setting, golden sand, bright sunlight"
+      Saudi: "Saudi Arabia desert setting, modern drilling infrastructure"
+      US: "Texas oil field setting, broad daylight"
+
+  warehouse:
+    name_zh: 仓储环境
+    name_en: warehouse
+    prompt_en: "industrial warehouse interior, high ceiling, shelving units, forklift in background, even fluorescent lighting"
+    use_for: ["库存展示", "物流仓储", "大宗存储"]
+
+  office_modern:
+    name_zh: 现代办公
+    name_en: modern office
+    prompt_en: "modern corporate office, glass walls, professional lighting, business atmosphere"
+    use_for: ["商务演示", "客户拜访", "办公室环境"]

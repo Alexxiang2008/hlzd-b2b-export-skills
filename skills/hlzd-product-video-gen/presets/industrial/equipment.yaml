@@ -1,0 +1,80 @@
+# HLZD-视频生成 - 设备类工业品视频preset
+
+products:
+  shipping_container:
+    name_zh: 集装箱
+    name_en: shipping container
+    keywords_zh: [集装箱, 海运集装箱, 标准箱, 货柜]
+    keywords_en: [container, shipping container, cargo container, ISO container]
+    hs_code: "860900"
+    default_scene_preset: port_yard
+    default_scene_motion: pull_out
+    default_duration: 15
+    default_aspect_ratio: "16:9"
+    extra_negative_en: "warped container walls, non-rectangular shape"
+
+  excavator:
+    name_zh: 挖掘机
+    name_en: excavator
+    keywords_zh: [挖掘机, 挖机, 工程挖掘机]
+    keywords_en: [excavator, digger, hydraulic excavator]
+    hs_code: "842952"
+    default_scene_preset: outdoor_site
+    default_scene_motion: factory_run
+    default_duration: 15
+    default_aspect_ratio: "16:9"
+
+  generator:
+    name_zh: 发电机
+    name_en: generator
+    keywords_zh: [发电机, 柴油发电机, 工业发电机]
+    keywords_en: [generator, diesel generator, industrial generator]
+    hs_code: "850211"
+    default_scene_preset: industrial_workshop
+    default_scene_motion: factory_run
+    default_duration: 10
+    default_aspect_ratio: "16:9"
+
+  crane:
+    name_zh: 起重机
+    name_en: crane
+    keywords_zh: [起重机, 塔吊, 龙门吊, 桥式起重机]
+    keywords_en: [crane, tower crane, gantry crane, bridge crane]
+    hs_code: "842641"
+    default_scene_preset: port_yard
+    default_scene_motion: factory_run
+    default_duration: 12
+    default_aspect_ratio: "16:9"
+
+  loader:
+    name_zh: 装载机
+    name_en: wheel loader
+    keywords_zh: [装载机, 铲车, 轮式装载机]
+    keywords_en: [loader, wheel loader, front loader]
+    hs_code: "842951"
+    default_scene_preset: outdoor_site
+    default_scene_motion: factory_run
+    default_duration: 12
+    default_aspect_ratio: "16:9"
+
+  production_line:
+    name_zh: 成套产线
+    name_en: production line
+    keywords_zh: [生产线, 产线, 成套设备, 自动化产线]
+    keywords_en: [production line, assembly line, automated line]
+    hs_code: "847989"
+    default_scene_preset: industrial_workshop
+    default_scene_motion: pull_out
+    default_duration: 18
+    default_aspect_ratio: "16:9"
+
+  forklift:
+    name_zh: 叉车
+    name_en: forklift
+    keywords_zh: [叉车, 电动叉车, 内燃叉车]
+    keywords_en: [forklift, electric forklift, diesel forklift]
+    hs_code: "842710"
+    default_scene_preset: warehouse
+    default_scene_motion: factory_run
+    default_duration: 10
+    default_aspect_ratio: "16:9"
