@@ -41,8 +41,18 @@
 | 09 | `hlzd-negotiation-playbook` | **v0.1.0** ✅ | 让步推演：3 轮 × 3 维 + 红线 + 决策路由 |
 | 10 | `hlzd-trade-compliance` | **v0.1.0** ✅ | 5 道检查 + 三态路由 + 审计 trail（OFAC + EU + BIS + 国别 + ECCN）|
 | 11 | `hlzd-daily-report` | **v0.1.0** ✅ | B2B 业务员日报自动化（事件采集 + LLM 摘要 + 飞书卡片推送 + 次日早会）。 |
+| 12 | `hlzd-customer-profile` | **v0.1.0** ✅ | 客户 360° 画像：4 层字段 + 5 维评级 + AI 跟进建议 |
+| 13 | `hlzd-rfp-response` | **v0.1.0** ✅ | 邮件自动响应：8 大邮箱矩阵 + OAuth + 飞书配置 |
+| 14 | `hlzd-logistics-planner` | **v0.1.0** ✅ | 物流装箱：3D 装箱 + INCOTERMS 2020 + 3 家比价 |
+| 15 | `hlzd-finance-risk` | **v0.1.0** ✅ | 信用证审单：UCP 600 / ISBP 745 / ISP98 / URDG 758 |
+| 16 | `hlzd-data-viz` | **v0.1.0** ✅ | 数据可视化：销售漏斗 + 看板 + 7 类 D3 图表 |
+| 17 | `hlzd-product-video-gen` | **v0.1.0** ✅ | 视频生成：Agnes Video + FFmpeg + 6 类 preset + i18n 字幕 |
+| 18 | `hlzd-product-image-gen` | **v0.1.0** ✅ | 图片生成：Agnes Image + rembg + 白底抠图 + 阿里主图 |
+| 19 | `hlzd-followup-sequencer` | **v0.1.0** ✅ | 邮件跟进：Day 7 / 14 / 21 阶段判定 + en/es 双语草稿 |
+| 20 | `hlzd-knowledge-graph` | **v0.1.0** ✅ | 知识图谱：实体抽取 + BFS 查询 + DOT 导出 |
+| 21 | `hlzd-pipeline-viz` | **v0.1.0** ✅ | 链路仪表盘：8 KPI + 4 图表 + halt 警报 self-contained HTML |
 
-闭环演示 — 调研 → 买家 → 背调 → 邮件 → 方案 → 报价 → 让步 → 合规拦截。共 10 / 21 Skill。
+闭环演示 — 调研 → 买家 → 背调 → 邮件 → 方案 → 报价 → 让步 → 合规拦截 → 跟进 → 知识图谱 → 仪表盘。**21 / 21 Skill 全闭环**。
 
 ---
 
