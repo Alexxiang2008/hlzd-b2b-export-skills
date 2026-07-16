@@ -40,6 +40,7 @@
 | 08 | `hlzd-quotation-gen` | **v0.1.0** ✅ | 自动报价：FOB/CIF/DDP 3 套 + 利润健康 + 账期建议 |
 | 09 | `hlzd-negotiation-playbook` | **v0.1.0** ✅ | 让步推演：3 轮 × 3 维 + 红线 + 决策路由 |
 | 10 | `hlzd-trade-compliance` | **v0.1.0** ✅ | 5 道检查 + 三态路由 + 审计 trail（OFAC + EU + BIS + 国别 + ECCN）|
+| 11 | `hlzd-finance-risk` | **v0.1.0** ✅ | B2B L/C + 备用 L/C + 见索即付保函审单，UCP 600 / ISBP 745 / ISP98 / URDG 758 自动适配。 |
 
 闭环演示 — 调研 → 买家 → 背调 → 邮件 → 方案 → 报价 → 让步 → 合规拦截。共 10 / 21 Skill。
 

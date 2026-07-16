@@ -3,13 +3,14 @@
   "name": "hlzd-cross-border-b2b",
   "displayName": "HLZD Cross-Border B2B Industrial Export",
   "description": "Agent skills for B2B industrial exporters — market research, lead finding, inquiry qualification, quotation, compliance and more. By 海联智达 (HLZD) / 海良数科.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "metadata": {
     "author": "HLZD (海联智达 / 海良数科)",
     "homepage": "https://github.com/Alexxiang2008/hlzd-b2b-export-skills",
     "license": "MIT",
     "industry": "cross-border-b2b",
-    "first_release": "2026-07-15"
+    "first_release": "2026-07-15",
+    "last_release": "2026-07-16"
   },
   "plugins": [
     {
@@ -175,6 +176,24 @@
         "embargo",
         "eccn",
         "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-finance-risk",
+      "description": "B2B 信用证 + 备用信用证 + 见索即付保函审单 —— UCP 600 / ISBP 745 / ISP98 / URDG 758 四套规则库自动适配，软条款 + 不符点 + 制裁国 + 银行国别风险 CRITICAL 提示。",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-finance-risk",
+      "category": "finance",
+      "keywords": [
+        "信用证审单",
+        "L/C审单",
+        "UCP 600",
+        "ISBP 745",
+        "ISP98",
+        "URDG 758",
+        "备用信用证",
+        "见索即付保函"
       ]
     }
   ]

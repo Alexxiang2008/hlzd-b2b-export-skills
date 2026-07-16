@@ -1,5 +1,22 @@
 # VERSIONS
 
+## v0.10.0 — 2026-07-16
+
+Eighth Skills batch. Added `hlzd-finance-risk` (slot 16/21): B2B L/C + 备用 L/C + 见索即付保函审单，UCP 600 / ISBP 745 / ISP98 / URDG 758 自动适配。
+
+### Skill added
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-finance-risk` | 0.1.0 | NEW. B2B L/C + 备用 L/C + 见索即付保函审单，UCP 600 / ISBP 745 / ISP98 / URDG 758 自动适配。 |
+
+### Verification
+
+- `py validate_skills.py` → OK
+- `py -m pytest skills/hlzd-finance-risk/tests/` → see PR
+
+---
+
 ## v0.9.0 — 2026-07-16
 
 Quotation engine ships: 3 new Skills (solution-match / quotation-gen / negotiation-playbook).
