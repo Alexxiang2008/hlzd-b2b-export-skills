@@ -3,7 +3,7 @@
   "name": "hlzd-cross-border-b2b",
   "displayName": "HLZD Cross-Border B2B Industrial Export",
   "description": "Agent skills for B2B industrial exporters — market research, lead finding, inquiry qualification, quotation, compliance and more. By 海联智达 (HLZD) / 海良数科.",
-  "version": "0.6.0",
+  "version": "0.9.0",
   "metadata": {
     "author": "HLZD (海联智达 / 海良数科)",
     "homepage": "https://github.com/Alexxiang2008/hlzd-b2b-export-skills",
@@ -111,6 +111,51 @@
         "cold-email",
         "follow-up-sequence",
         "sales-automation",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-solution-match",
+      "description": "B2B industrial inquiry solution matcher — input inquiry (product + qty + certs + application + lead time) + product catalog -> 3 plans (best_match / alternative / cost_effective) with 5-dim match scoring (spec / qty / lead / price-tier / risk) + risk flags.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-solution-match",
+      "category": "solution-matching",
+      "keywords": [
+        "b2b",
+        "solution-match",
+        "sku-matching",
+        "3-tier-recommendation",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-quotation-gen",
+      "description": "Industrial B2B quotation generator — input SKU + qty + target country + incoterm -> 3 incoterm prices (FOB / CIF / DDP) with cost breakdown + profit health check + payment terms suggestion. Multi-currency + region-aware freight estimation.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-quotation-gen",
+      "category": "quotation",
+      "keywords": [
+        "b2b",
+        "quotation",
+        "fob-cif-ddp",
+        "profit-margin",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-negotiation-playbook",
+      "description": "B2B price concession simulator — input initial quote + customer counter-offer + redlines -> 3-round concession path (price / lead-time / payment) with breach alerts + decision recommendation (accept_round_2 / counter / counter_with_freight / walk_away / accept_round_3).",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-negotiation-playbook",
+      "category": "negotiation",
+      "keywords": [
+        "b2b",
+        "negotiation",
+        "concession",
+        "counter-offer",
         "industrial-export"
       ]
     }

@@ -1,5 +1,64 @@
 # VERSIONS
 
+## v0.9.0 — 2026-07-16
+
+Quotation engine ships: 3 new Skills (solution-match / quotation-gen / negotiation-playbook).
+Repo version bumped 0.6.0 → 0.9.0 (3 new Skills added).
+
+### Skills
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-inquiry-qualify` | 0.1.0 | No change. 40 tests. |
+| `hlzd-b2b-research` | 0.1.0 | No change. 31 tests. |
+| `hlzd-buyer-finder` | 0.1.0 | No change. 45 tests. |
+| `hlzd-market-report` | 0.1.0 | No change. 41 tests. |
+| `hlzd-customer-due-diligence` | 0.1.0 | No change. 57 tests. |
+| `hlzd-cold-outreach` | 0.1.0 | No change. 35 tests. |
+| `hlzd-solution-match` | 0.1.0 | NEW. 5-dim SKU matching (spec / qty / lead / price-tier / risk) + 3 plans (best/alt/cost-effective). Hardcoded 5-SKU catalog with OCTG / Solar / Steel. 31 tests. |
+| `hlzd-quotation-gen` | 0.1.0 | NEW. FOB / CIF / DDP 3 incoterm calc + profit health (HEALTHY / BELOW_HEALTHY / LOW / HIGH) + payment terms suggestion. Static FX + region freight + customs duty 6% stub. 28 tests. |
+| `hlzd-negotiation-playbook` | 0.1.0 | NEW. 3-round concession path × 3 axes (price / lead / payment) + breach detection + decision matrix (accept_round_2 / counter / counter_with_freight / walk_away / accept_round_3). 28 tests. |
+
+### Closed-loop B2B export pipeline
+
+End-to-end chain now spans 9 Skills:
+
+```
+research (b2b-research)
+  -> buyers (buyer-finder)
+  -> diligence (customer-due-diligence)
+  -> outreach (cold-outreach)
+  -> solution (solution-match)
+  -> quote (quotation-gen)
+  -> negotiate (negotiation-playbook)
+```
+
+W6-7 milestone complete: 3 of 3 Skills shipped (solution-match / quotation-gen / negotiation-playbook).
+
+### Architecture evolution
+
+- **Catalog + cost model** — solution-match ships with 5-SKU hardcoded catalog; quotation-gen ships with static FX rate dict + region-based freight heuristic + 6% customs duty stub. Both have v0.2 upgrade paths to ERP / FX API / real customs table.
+- **Profit health bands** — quotation-gen uses 4-tier health (HEALTHY 15-25% / LOW <10% / BELOW_HEALTHY 10-15% / HIGH >25%) with explicit `warning` text per band.
+- **Concession table** — negotiation-playbook defaults to 5% / 3% / 2% price, 0d / 5d / 10d lead, 30/70 -> 20/80 -> 10/90 payment. CLI --redline-price / --redline-lead overrides.
+- **Decision matrix** — automatic routing based on (price_breach, lead_breach, competitor_risk) tuple.
+
+### Verification
+
+- `py validate_skills.py` → 9/9 OK
+- Per-skill pytest (cumulative):
+  - `hlzd-inquiry-qualify`: 40/40
+  - `hlzd-b2b-research`: 31/31
+  - `hlzd-buyer-finder`: 45/45
+  - `hlzd-market-report`: 41/41
+  - `hlzd-customer-due-diligence`: 57/57
+  - `hlzd-cold-outreach`: 35/35
+  - `hlzd-solution-match`: 31/31
+  - `hlzd-quotation-gen`: 28/28
+  - `hlzd-negotiation-playbook`: 28/28
+- **Cumulative across all 9 Skills: 336 tests PASSED**
+
+---
+
 ## v0.6.0 — 2026-07-15
 
 Sixth Skills batch. Repo version bumped 0.4.0 → 0.6.0 (2 new Skills added). End-to-end closed loop achieved.

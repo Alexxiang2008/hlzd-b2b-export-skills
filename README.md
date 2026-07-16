@@ -36,8 +36,11 @@
 | 04 | `hlzd-market-report` | **v0.1.0** ✅ | 9 节 HTML + 8 节 Markdown 报告生成（Voice Contract 强制）|
 | 05 | `hlzd-customer-due-diligence` | **v0.1.0** ✅ | 客户背调：5 维评分 + OFAC SDN + 制裁 + dual-use 粗筛 |
 | 06 | `hlzd-cold-outreach` | **v0.1.0** ✅ | 邮件触达：6 类模板 × 双语 + Day 7/14 跟进 |
+| 07 | `hlzd-solution-match` | **v0.1.0** ✅ | 方案匹配：5 维评分 + 3 套推荐 (best/alt/cost)|
+| 08 | `hlzd-quotation-gen` | **v0.1.0** ✅ | 自动报价：FOB/CIF/DDP 3 套 + 利润健康 + 账期建议 |
+| 09 | `hlzd-negotiation-playbook` | **v0.1.0** ✅ | 让步推演：3 轮 × 3 维 + 红线 + 决策路由 |
 
-闭环演示 — 调研 → 买家 → 背调 → 邮件。其余 16 个 Skill 路线图见 [docs/出海技能集规划.md](docs/出海技能集规划.md#四skill-集合架构21-个-skill-分两期上线)。
+闭环演示 — 调研 → 买家 → 背调 → 邮件 → 方案 → 报价 → 让步。共 9 / 21 Skill。
 
 ---
 
@@ -107,9 +110,9 @@ py scripts/inquiry_parser.py --input assets/inquiry_samples/01-saudi-rfq.txt --p
 | 周次 | 交付 |
 |---|---|
 | **W1** | ✅ 样板 Skill：hlzd-inquiry-qualify（已完成） |
-| **W2-3** | ✅ 接入已有素材：b2b-research / buyer-finder / market-report（**全部完成**）|
-| **W4-5** | 🚧 customer-due-diligence（✅） / cold-outreach（✅） / followup-sequencer（下一波）|
-| W6-7 | solution-match + quotation-gen + negotiation-playbook |
+| **W2-3** | ✅ 接入已有素材：b2b-research / buyer-finder / market-report |
+| **W4-5** | ✅ customer-due-diligence + cold-outreach（touch 链路完工）|
+| **W6-7** | ✅ solution-match + quotation-gen + negotiation-playbook（**报价引擎完工**）|
 | W8 | trade-compliance（合规护栏，必做） |
 | W9 | 完整文档 + 4 渠道安装验证 |
 | W10 | 内部种子客户试跑 |
