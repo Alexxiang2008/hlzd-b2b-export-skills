@@ -1,0 +1,30 @@
+# 通用视角 preset（所有工业品 preset 可引用）
+
+category: common_angles
+description: 通用视角预设
+
+angles:
+  front:
+    name_zh: 正面平铺
+    name_en: front view
+    prompt_en: front view, dead-on angle, flat composition, no perspective distortion
+
+  45deg:
+    name_zh: 45 度立体
+    name_en: 45-degree angle
+    prompt_en: 45-degree three-quarter angle, dimensional, showing depth and form
+
+  overhead:
+    name_zh: 俯视鸟瞰
+    name_en: overhead bird's eye view
+    prompt_en: top-down bird's eye view, overhead shot, orthographic projection
+
+  cutaway:
+    name_zh: 剖面展示
+    name_en: cutaway view
+    prompt_en: cutaway section view, internal structure visible, technical diagram style
+
+  detail:
+    name_zh: 局部细节
+    name_en: macro detail
+    prompt_en: extreme close-up macro detail, sharp focus, shallow depth of field, fine texture visible

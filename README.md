@@ -40,6 +40,7 @@
 | 08 | `hlzd-quotation-gen` | **v0.1.0** ✅ | 自动报价：FOB/CIF/DDP 3 套 + 利润健康 + 账期建议 |
 | 09 | `hlzd-negotiation-playbook` | **v0.1.0** ✅ | 让步推演：3 轮 × 3 维 + 红线 + 决策路由 |
 | 10 | `hlzd-trade-compliance` | **v0.1.0** ✅ | 5 道检查 + 三态路由 + 审计 trail（OFAC + EU + BIS + 国别 + ECCN）|
+| 11 | `hlzd-product-image-gen` | **v0.1.0** ✅ | B2B 工业品产品图（T2I/I2I/抠图/阿里国际站主图）生成，Agnes Image 2.1 Flash + rembg。 |
 
 闭环演示 — 调研 → 买家 → 背调 → 邮件 → 方案 → 报价 → 让步 → 合规拦截。共 10 / 21 Skill。
 

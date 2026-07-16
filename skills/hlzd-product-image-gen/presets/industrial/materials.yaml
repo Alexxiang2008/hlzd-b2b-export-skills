@@ -1,0 +1,50 @@
+# 建材类工业品 preset
+# 覆盖：钢结构/铝合金/钢管/塑料管等
+
+category: materials
+category_zh: 建材类
+
+products:
+  steel_structure:
+    name_zh: 钢结构
+    name_en: steel structure
+    keywords_zh: [钢结构, 钢梁, 钢柱, 钢框架, 钢结构建筑, H 型钢]
+    keywords_en: [steel structure, steel beam, steel column, steel frame, H-beam, structural steel]
+    typical_scene: [建筑工地, 厂房, 桥梁, 仓库]
+    default_angle: overhead
+    default_style: 3d-render
+    default_scene: 3D render of steel structure building frame
+
+  aluminum_profile:
+    name_zh: 铝合金型材
+    name_en: aluminum profile
+    keywords_zh: [铝合金, 铝型材, 工业铝, 铝合金框架]
+    keywords_en: [aluminum profile, industrial aluminum, aluminum extrusion, aluminum frame]
+    typical_scene: [工厂车间, 样品展示, 幕墙工程]
+    default_angle: detail
+    default_style: catalog
+    default_scene: aluminum profile cross-section on white background
+
+  steel_pipe:
+    name_zh: 钢管
+    name_en: steel pipe
+    keywords_zh: [钢管, 无缝钢管, 焊接钢管, 镀锌钢管]
+    keywords_en: [steel pipe, seamless pipe, welded pipe, galvanized pipe]
+    typical_scene: [工地, 管道工程, 油气输送]
+    default_angle: 45deg
+    default_style: catalog
+    default_scene: steel pipes stacked in warehouse
+
+  plastic_pipe:
+    name_zh: 塑料管
+    name_en: plastic pipe
+    keywords_zh: [塑料管, PVC 管, PE 管, PPR 管, 复合管]
+    keywords_en: [plastic pipe, PVC pipe, PE pipe, PPR pipe, composite pipe]
+    typical_scene: [工厂车间, 管道工程, 给排水工程]
+    default_angle: detail
+    default_style: catalog
+    default_scene: plastic pipe fittings on white background
+
+default_lighting: studio
+default_size: 1024x1024
+recommended_capability: t2i

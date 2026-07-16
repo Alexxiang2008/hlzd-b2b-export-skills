@@ -1,5 +1,22 @@
 # VERSIONS
 
+## v0.10.0 — 2026-07-16
+
+Eighth Skills batch. Added `hlzd-product-image-gen` (slot 10/21): B2B 工业品产品图（T2I/I2I/抠图/阿里国际站主图）生成，Agnes Image 2.1 Flash + rembg。
+
+### Skill added
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-product-image-gen` | 0.1.0 | NEW. B2B 工业品产品图（T2I/I2I/抠图/阿里国际站主图）生成，Agnes Image 2.1 Flash + rembg。 |
+
+### Verification
+
+- `py validate_skills.py` → OK
+- `py -m pytest skills/hlzd-product-image-gen/tests/` → see PR
+
+---
+
 ## v0.9.0 — 2026-07-16
 
 Quotation engine ships: 3 new Skills (solution-match / quotation-gen / negotiation-playbook).

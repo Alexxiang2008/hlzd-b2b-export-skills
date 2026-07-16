@@ -1,0 +1,50 @@
+# 机械类工业品 preset
+# 覆盖：套管/阀门/轴承/工具等
+
+category: machinery
+category_zh: 机械类
+
+products:
+  casing:
+    name_zh: 石油套管
+    name_en: OCTG oil casing pipe
+    keywords_zh: [套管, 钻探套管, 油管, 接箍, 石油管]
+    keywords_en: [OCTG, oil casing, oil country tubular goods, seamless pipe, oilfield pipe]
+    typical_scene: [油田, 钻井平台, 管道运输, 工厂车间]
+    default_angle: 45deg
+    default_style: catalog
+    default_scene: white background product shot of industrial OCTG casing
+
+  valve:
+    name_zh: 阀门
+    name_en: industrial valve
+    keywords_zh: [阀门, 球阀, 蝶阀, 闸阀, 法兰, 截止阀]
+    keywords_en: [valve, ball valve, butterfly valve, gate valve, flange valve, industrial valve]
+    typical_scene: [工厂车间, 管道系统, 工业现场, 化工厂]
+    default_angle: detail
+    default_style: technical
+    default_scene: technical illustration of industrial valve on workshop background
+
+  bearing:
+    name_zh: 轴承
+    name_en: industrial bearing
+    keywords_zh: [轴承, 滚珠轴承, 圆锥滚子, 滑动轴承]
+    keywords_en: [bearing, ball bearing, roller bearing, industrial bearing, slewing bearing]
+    typical_scene: [工厂车间, 拆解展示, 机械装配]
+    default_angle: cutaway
+    default_style: technical
+    default_scene: technical cutaway view of bearing structure
+
+  tool:
+    name_zh: 工具
+    name_en: hand tool or power tool
+    keywords_zh: [工具, 手工具, 电动工具, 扳手, 钳子]
+    keywords_en: [tool, hand tool, power tool, wrench, pliers, industrial tool]
+    typical_scene: [车间, 作业现场, 工具箱]
+    default_angle: 45deg
+    default_style: catalog
+    default_scene: industrial hand tool on white background
+
+default_lighting: studio
+default_size: 1024x1024
+recommended_capability: t2i

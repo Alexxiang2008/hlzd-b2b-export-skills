@@ -1,0 +1,50 @@
+# 设备类工业品 preset
+# 覆盖：集装箱/工程机械/发电机/产线等
+
+category: equipment
+category_zh: 设备类
+
+products:
+  container_house:
+    name_zh: 集装箱房屋
+    name_en: container house modular building
+    keywords_zh: [集装箱房屋, 预制建筑, 模块化房屋, 工人营地, 集装箱改造]
+    keywords_en: [container house, prefab house, modular building, worker camp, container modification]
+    typical_scene: [建筑工地, 矿山营地, 灾后安置, 海外项目, 油田营地]
+    default_angle: 45deg
+    default_style: photorealistic
+    default_scene: container house on construction site background
+
+  generator:
+    name_zh: 发电机
+    name_en: diesel generator
+    keywords_zh: [发电机, 柴油发电机, 工业发电机, 备用电源, 发电机组]
+    keywords_en: [diesel generator, industrial generator, backup power, genset, power generator]
+    typical_scene: [工厂车间, 户外工地, 机房, 应急现场]
+    default_angle: 45deg
+    default_style: catalog
+    default_scene: diesel generator set in industrial environment
+
+  construction_machinery:
+    name_zh: 工程机械
+    name_en: construction machinery
+    keywords_zh: [工程机械, 挖掘机, 推土机, 装载机, 起重机]
+    keywords_en: [construction machinery, excavator, bulldozer, loader, crane]
+    typical_scene: [工地, 施工现场, 矿山, 港口]
+    default_angle: 45deg
+    default_style: catalog
+    default_scene: construction machinery on construction site
+
+  production_line:
+    name_zh: 成套产线
+    name_en: production line
+    keywords_zh: [成套产线, 生产线, 装配线, 自动化设备]
+    keywords_en: [production line, assembly line, automated equipment, manufacturing line]
+    typical_scene: [工厂车间, 展览, 工业园区]
+    default_angle: overhead
+    default_style: 3d-render
+    default_scene: 3D render of production line in modern factory
+
+default_lighting: studio
+default_size: 1024x1024
+recommended_capability: t2i

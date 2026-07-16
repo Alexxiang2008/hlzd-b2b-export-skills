@@ -1,0 +1,20 @@
+# HLZD-图片生成 - Python 依赖
+# 安装：pip install -r requirements.txt
+
+# Agnes HTTP 调用（标准库 requests 即可，无需专用 SDK）
+requests>=2.31.0
+
+# rembg 本地抠图（开源库，pip 安装即可使用）
+rembg>=2.0.50
+
+# PIL 图像处理（rembg 依赖，自动安装；显式列出便于版本控制）
+Pillow>=10.0.0
+
+# YAML preset 解析
+PyYAML>=6.0.1
+
+# onnxruntime（rembg 推理依赖，rembg 会自动安装）
+onnxruntime>=1.16.0
+
+# .env 文件读取（可选，避免硬依赖；如不需要可注释掉）
+python-dotenv>=1.0.0
