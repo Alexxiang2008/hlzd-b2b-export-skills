@@ -2,7 +2,7 @@
 
 - 日志
 - 错误归类
-- 制裁粗筛（国家 + 实体 + dual-use）
+- 制裁粗筛（国家 + 实体 + dual-use）→ 在 v0.1.1 改为调用 hlzd-trade-compliance
 - 5 维评分引擎
 - Schema validation
 - 同名公司 dedup
@@ -10,6 +10,7 @@
 """
 from __future__ import annotations
 
+import importlib.util
 import json
 import logging
 import os
@@ -35,6 +36,118 @@ def get_logger(name: str = "hlzd-customer-due-diligence") -> logging.Logger:
         logger.setLevel(os.getenv("HLZD_LOG_LEVEL", "INFO").upper())
         logger.propagate = False
     return logger
+
+
+# ================================================================
+# 0.5 Trade Compliance Bridge (W8 integration)
+# ================================================================
+#
+# diligence v0.1.0 用 20 行 OFAC 静态子集做合规粗筛。
+# W8 hlzd-trade-compliance 上线后, 这个 Skill 用作合规护栏
+# 的 source-of-truth —— diligence 不再 hardcode 制裁表。
+#
+# 此处动态 import trade-compliance/scripts；失败时降级到本地
+# inline 列表（向后兼容 + 离线可用）。
+
+_TC_SCRIPTS = Path(__file__).resolve().parent.parent.parent / "hlzd-trade-compliance" / "scripts"
+_tc_check = None
+_TC_BRIDGE_LOG = get_logger("hlzd-customer-due-diligence.tc_bridge")
+
+
+def _try_load_trade_compliance_logging_helpers():
+    """Logging initializer placed early (auto-redirects when called lazily)."""
+    return _try_load_trade_compliance()
+
+
+def _try_load_trade_compliance():
+    """动态 import trade-compliance/scripts 的 check 模块。
+
+    严格按依赖顺序: sources/__init__  -> sources/ofac_sdn etc -> check.
+    """
+    global _tc_check
+    if _tc_check is not None:
+        return _tc_check
+    if not _TC_SCRIPTS.exists():
+        return None
+    try:
+        sys.path.insert(0, str(_TC_SCRIPTS))
+
+        # 1) load trade-compliance lib (top-level)
+        lib_spec = importlib.util.spec_from_file_location(
+            "_hlzd_tc_lib", str(_TC_SCRIPTS / "lib.py"))
+        lib_mod = importlib.util.module_from_spec(lib_spec)
+        sys.modules["_hlzd_tc_lib"] = lib_mod
+        lib_spec.loader.exec_module(lib_mod)
+
+        # 2) load sources package + each adapter
+        sources_dir = _TC_SCRIPTS / "sources"
+        sys.path.insert(0, str(sources_dir))
+        from importlib.machinery import SourceFileLoader
+        spec_pkg = importlib.util.spec_from_file_location(
+            "_hlzd_tc_sources", str(sources_dir / "__init__.py"))
+        sources_pkg = importlib.util.module_from_spec(spec_pkg)
+        sys.modules["_hlzd_tc_sources"] = sources_pkg
+        spec_pkg.loader.exec_module(sources_pkg)
+        for f in ("ofac_sdn", "eu_consolidated", "bis_entity",
+                  "country_embargo", "dual_use"):
+            f_spec = importlib.util.spec_from_file_location(
+                f"_hlzd_tc_sources.{f}", str(sources_dir / f"{f}.py"))
+            f_mod = importlib.util.module_from_spec(f_spec)
+            sys.modules[f"_hlzd_tc_sources.{f}"] = f_mod
+            f_spec.loader.exec_module(f_mod)
+
+        # 3) make 'lib' alias visible to check.py imports
+        sys.modules["lib"] = lib_mod
+
+        # 4) load check.py — it does `import lib` and `from sources import (...)`
+        chk_spec = importlib.util.spec_from_file_location(
+            "_hlzd_tc_check", str(_TC_SCRIPTS / "check.py"))
+        chk_mod = importlib.util.module_from_spec(chk_spec)
+        sys.modules["_hlzd_tc_check"] = chk_mod
+        chk_spec.loader.exec_module(chk_mod)
+
+        _tc_check = chk_mod
+        return _tc_check
+    except Exception as exc:
+        _TC_BRIDGE_LOG.warning("trade-compliance bridge load failed: %s", exc)
+        return None
+
+
+def compliance_clearance_via_trade_compliance(
+    buyer_name: str, buyer_country: str, product: str = ""
+) -> Optional[Dict[str, Any]]:
+    """调用 hlzd-trade-compliance.run_compliance_check。
+
+    Returns dict {clearance, violations[], passed} 或 None（TC 未加载）。
+    """
+    tc = _try_load_trade_compliance()
+    if tc is None:
+        return None
+    try:
+        tx = {
+            "buyer_name": buyer_name,
+            "buyer_country": buyer_country,
+            "product": product or "industrial equipment",
+        }
+        cr = tc.run_compliance_check(tx)
+        d = cr.to_dict()
+        violations = []
+        for chk in d.get("check_results", []):
+            for f in chk.get("flags", []):
+                violations.append({
+                    "rule_id": f.get("rule_id"),
+                    "severity": f.get("severity"),
+                    "source": f.get("source"),
+                    "evidence": f.get("evidence"),
+                })
+        return {
+            "clearance": d.get("clearance"),
+            "violations": violations,
+            "passed": d.get("clearance") == "CLEARED",
+            "rationale": d.get("rationale"),
+        }
+    except Exception:
+        return None
 
 
 # ================================================================
@@ -388,7 +501,11 @@ def recommend(grade: str, compliance_violations: List[str], fraud_terms: List[st
 # ================================================================
 
 def evaluate_buyer(buyer: Dict[str, Any]) -> Dict[str, Any]:
-    """评估单个 buyer：合规粗筛 → 评分 → 推荐。"""
+    """评估单个 buyer：合规粗筛 → 评分 → 推荐。
+
+    Compliance 优先委托给 hlzd-trade-compliance (W8).
+    若 TC 不可用 (offline 等) 降级用本地静态 + fraud 启发式.
+    """
     assert_buyer_shape(buyer)
 
     text_blob = " ".join(filter(None, [
@@ -397,18 +514,45 @@ def evaluate_buyer(buyer: Dict[str, Any]) -> Dict[str, Any]:
         buyer.get("country", ""),
     ]))
 
+    # 1) Trade-Compliance Bridge (W8) — primary path
+    tc_result = compliance_clearance_via_trade_compliance(
+        buyer_name=buyer.get("importer_name", ""),
+        buyer_country=buyer.get("country", ""),
+        product=buyer.get("product", ""),
+    )
+
     compliance_violations: List[str] = []
-    if is_sanctioned_country(buyer.get("country", "")):
-        compliance_violations.append(f"country_sanctioned:{buyer.get('country')}")
-    if is_sanctioned_entity(buyer.get("importer_name", ""), buyer.get("snippet", "")):
-        compliance_violations.append(f"sdn_match:{buyer.get('importer_name')}")
-    if has_dual_use_term(text_blob):
-        compliance_violations.append("dual_use_term_detected")
+    compliance_source: str = ""
+    if tc_result is not None:
+        compliance_source = "hlzd-trade-compliance"
+        for v in tc_result.get("violations", []):
+            sev = v.get("severity", "REVIEW")
+            rid = v.get("rule_id", "?")
+            evi = v.get("evidence", "")
+            sev_tag = "high" if sev == "BLOCK" else ("medium" if sev == "REVIEW" else "low")
+            compliance_violations.append(f"{sev_tag}:{rid}:{evi}")
+    else:
+        # 2) Fallback: local inline static check
+        compliance_source = "inline_fallback"
+        if is_sanctioned_country(buyer.get("country", "")):
+            compliance_violations.append(f"high:country_sanctioned:{buyer.get('country')}")
+        if is_sanctioned_entity(buyer.get("importer_name", ""), buyer.get("snippet", "")):
+            compliance_violations.append(f"high:sdn_match:{buyer.get('importer_name')}")
+        if has_dual_use_term(text_blob):
+            compliance_violations.append("medium:dual_use_term_detected")
 
     fraud_terms = has_fraud_term(text_blob)
 
+    # Compliance passed = 没有 BLOCK 级别 violation
+    compliance_blocked = any(v.startswith(("high:BLOCK", "high:country",
+                                            "high:sdn_match"))
+                              for v in compliance_violations) or tc_result is None and any(
+                              v.startswith("high:") for v in compliance_violations)
+    compliance_passed = not compliance_blocked and tc_result is not None
+    if tc_result is None and not compliance_violations:
+        compliance_passed = True  # fallback clean
+
     scoring = score_dimensional(buyer)
-    # 重复 scoring 一次 inside evaluate 因为 score_dimensional 已经做了 is_sanctioned_country 检测 — 重复不重复不影响 D5
     rec = recommend(scoring["grade"], compliance_violations, fraud_terms)
 
     return {
@@ -419,8 +563,10 @@ def evaluate_buyer(buyer: Dict[str, Any]) -> Dict[str, Any]:
         "scoring": scoring,
         "compliance": {
             "violations": compliance_violations,
-            "passed": len(compliance_violations) == 0,
+            "passed": compliance_passed,
             "fraud_terms_detected": fraud_terms,
+            "source": compliance_source,
+            "final_action": (tc_result or {}).get("rationale", ""),
         },
         "recommendation": rec,
     }

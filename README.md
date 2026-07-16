@@ -146,7 +146,11 @@ py skills-demo/run_full_demo.py --all     # 跑 3 个场景
 
 ## 贡献
 
-所有 Skill 都欢迎 PR。请先读 [CONTRIBUTING.md](CONTRIBUTING.md) 与 [AGENTS.md](AGENTS.md)，遵守命名规范与 frontmatter 约束。
+所有 Skill 都欢迎 PR。请先读 [CONTRIBUTING.md](CONTRIBUTING.md) 与 [AGENTS.md](AGENTS.md)，遵守命名规范与 frontmatter约束。
+
+## 安装
+
+[docs/install.md](docs/install.md) — 4 渠道详细命令：npx skills / Plugin / Submodule / Clone。
 
 ---
 

@@ -34,6 +34,159 @@ try:
 except ImportError:  # pragma: no cover
     PYDANTIC_AVAILABLE = False
 
+
+# ================================================================
+# 0.5 Trade-Compliance Bridge (W8 integration)
+# ================================================================
+# v0.1.1: 合规粗筛委托给 hlzd-trade-compliance (W8 后的 source-of-truth).
+# 本地 OFFAC_SDN_STATIC_NAMES / SANCTIONED_COUNTRIES 等仍保留为
+# offline fallback (TC 路径不可用时).
+
+_TC_SCRIPTS = Path(__file__).resolve().parent.parent.parent / "hlzd-trade-compliance" / "scripts"
+_tc_check = None
+
+
+def _try_load_trade_compliance():
+    """Dynamic load of hlzd-trade-compliance/scripts/check.py."""
+    global _tc_check
+    if _tc_check is not None:
+        return _tc_check
+    if not _TC_SCRIPTS.exists():
+        return None
+    try:
+        sys.path.insert(0, str(_TC_SCRIPTS))
+        lib_spec = importlib.util.spec_from_file_location(
+            "_hlzd_iq_tc_lib", str(_TC_SCRIPTS / "lib.py"))
+        lib_mod = importlib.util.module_from_spec(lib_spec)
+        sys.modules["_hlzd_iq_tc_lib"] = lib_mod
+        lib_spec.loader.exec_module(lib_mod)
+        sources_dir = _TC_SCRIPTS / "sources"
+        sys.path.insert(0, str(sources_dir))
+        spec_pkg = importlib.util.spec_from_file_location(
+            "_hlzd_iq_tc_sources", str(sources_dir / "__init__.py"))
+        sources_pkg = importlib.util.module_from_spec(spec_pkg)
+        sys.modules["_hlzd_iq_tc_sources"] = sources_pkg
+        spec_pkg.loader.exec_module(sources_pkg)
+        for f in ("ofac_sdn", "eu_consolidated", "bis_entity",
+                  "country_embargo", "dual_use"):
+            f_spec = importlib.util.spec_from_file_location(
+                f"_hlzd_iq_tc_sources.{f}", str(sources_dir / f"{f}.py"))
+            f_mod = importlib.util.module_from_spec(f_spec)
+            sys.modules[f"_hlzd_iq_tc_sources.{f}"] = f_mod
+            f_spec.loader.exec_module(f_mod)
+        sys.modules["lib"] = lib_mod
+        chk_spec = importlib.util.spec_from_file_location(
+            "_hlzd_iq_tc_check", str(_TC_SCRIPTS / "check.py"))
+        chk_mod = importlib.util.module_from_spec(chk_spec)
+        sys.modules["_hlzd_iq_tc_check"] = chk_mod
+        chk_spec.loader.exec_module(chk_mod)
+        _tc_check = chk_mod
+        return _tc_check
+    except Exception:
+        return None
+
+
+def _compliance_through_tc(buyer_name: str, buyer_country: str,
+                              product: str = "") -> Optional[Dict[str, Any]]:
+    """Call hlzd-trade-compliance.run_compliance_check.
+
+    Returns dict {clearance, violations[]} or None if TC bridge fails.
+    """
+    tc = _try_load_trade_compliance()
+    if tc is None:
+        return None
+    try:
+        tx = {
+            "buyer_name": buyer_name,
+            "buyer_country": buyer_country,
+            "product": product or "industrial equipment",
+        }
+        cr = tc.run_compliance_check(tx)
+        d = cr.to_dict()
+        return {
+            "clearance": d.get("clearance"),
+            "violations": [
+                f"{f.get('severity','REVIEW')}:{f.get('source','?')}:{f.get('rule_id','?')}:{f.get('evidence','')[:60]}"
+                for chk in d.get("check_results", []) for f in chk.get("flags", [])
+            ],
+        }
+    except Exception:
+        return None
+
+
+# ================================================================
+# W8 Trade-Compliance Bridge
+# ================================================================
+_TC_SCRIPTS = Path(__file__).resolve().parent.parent.parent / "hlzd-trade-compliance" / "scripts"
+_tc_check = None
+
+
+def _try_load_trade_compliance():
+    """动态 import hlzd-trade-compliance check module (与 diligence 同款桥接)."""
+    global _tc_check
+    if _tc_check is not None:
+        return _tc_check
+    if not _TC_SCRIPTS.exists():
+        return None
+    try:
+        sys.path.insert(0, str(_TC_SCRIPTS))
+        lib_spec = importlib.util.spec_from_file_location(
+            "_hlzd_iq_tc_lib", str(_TC_SCRIPTS / "lib.py"))
+        lib_mod = importlib.util.module_from_spec(lib_spec)
+        sys.modules["_hlzd_iq_tc_lib"] = lib_mod
+        lib_spec.loader.exec_module(lib_mod)
+        sources_dir = _TC_SCRIPTS / "sources"
+        sys.path.insert(0, str(sources_dir))
+        spec_pkg = importlib.util.spec_from_file_location(
+            "_hlzd_iq_tc_sources", str(sources_dir / "__init__.py"))
+        sources_pkg = importlib.util.module_from_spec(spec_pkg)
+        sys.modules["_hlzd_iq_tc_sources"] = sources_pkg
+        spec_pkg.loader.exec_module(sources_pkg)
+        for f in ("ofac_sdn", "eu_consolidated", "bis_entity",
+                  "country_embargo", "dual_use"):
+            f_spec = importlib.util.spec_from_file_location(
+                f"_hlzd_iq_tc_sources.{f}", str(sources_dir / f"{f}.py"))
+            f_mod = importlib.util.module_from_spec(f_spec)
+            sys.modules[f"_hlzd_iq_tc_sources.{f}"] = f_mod
+            f_spec.loader.exec_module(f_mod)
+        sys.modules["lib"] = lib_mod
+        chk_spec = importlib.util.spec_from_file_location(
+            "_hlzd_iq_tc_check", str(_TC_SCRIPTS / "check.py"))
+        chk_mod = importlib.util.module_from_spec(chk_spec)
+        sys.modules["_hlzd_iq_tc_check"] = chk_mod
+        chk_spec.loader.exec_module(chk_mod)
+        _tc_check = chk_mod
+        return _tc_check
+    except Exception:
+        return None
+
+
+def _compliance_through_tc(buyer_name: str, buyer_country: str,
+                              product: str = "") -> Optional[Dict[str, Any]]:
+    """Return dict {clearance, violations[]} from hlzd-trade-compliance.
+    Returns None if TC bridge fails.
+    """
+    tc = _try_load_trade_compliance()
+    if tc is None:
+        return None
+    try:
+        tx = {
+            "buyer_name": buyer_name,
+            "buyer_country": buyer_country,
+            "product": product or "industrial equipment",
+        }
+        cr = tc.run_compliance_check(tx)
+        d = cr.to_dict()
+        return {
+            "clearance": d.get("clearance"),
+            "violations": [
+                f"{f.get('severity','REVIEW')}:{f.get('source','?')}:{f.get('rule_id','?')}:{f.get('evidence','')[:60]}"
+                for chk in d.get("check_results", []) for f in chk.get("flags", [])
+            ],
+        }
+    except Exception:
+        return None
+
 __version__ = "0.1.0"
 SCHEMA_VERSION = "hlzd/inquiry-qualify/v1"
 
