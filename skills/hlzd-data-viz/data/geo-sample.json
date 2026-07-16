@@ -1,0 +1,10 @@
+{
+  "points": [
+    {"country": "UAE", "count": 50, "lat": 24.4539, "lng": 54.3773},
+    {"country": "Saudi Arabia", "count": 30, "lat": 24.7136, "lng": 46.6753},
+    {"country": "USA", "count": 25, "lat": 38.9072, "lng": -77.0369},
+    {"country": "Germany", "count": 20, "lat": 52.5200, "lng": 13.4050},
+    {"country": "India", "count": 15, "lat": 28.6139, "lng": 77.2090},
+    {"country": "Russia", "count": 10, "lat": 55.7558, "lng": 37.6173}
+  ]
+}

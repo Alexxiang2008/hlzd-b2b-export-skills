@@ -1,0 +1,14 @@
+# HLZD-D3可视化 - 开发依赖
+# 安装：py -m pip install -r requirements-dev.txt
+
+# 运行时依赖
+-r requirements.txt
+
+# 测试框架
+pytest>=7.4.0
+pytest-cov>=4.1.0          # 覆盖率报告
+
+# 代码质量（可选）
+# flake8>=6.0.0
+# black>=23.0.0
+# isort>=5.12.0

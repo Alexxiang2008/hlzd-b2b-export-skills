@@ -1,0 +1,12 @@
+{
+  "stages": [
+    {"stage": "询盘", "value": 1000, "conversion_rate": 1.0},
+    {"stage": "报价", "value": 500, "conversion_rate": 0.5},
+    {"stage": "谈判", "value": 200, "conversion_rate": 0.4},
+    {"stage": "成交", "value": 80, "conversion_rate": 0.4}
+  ],
+  "total_inquiries": 1000,
+  "total_deals": 80,
+  "overall_conversion": 0.08,
+  "period": "2026-07"
+}

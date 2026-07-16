@@ -1,0 +1,53 @@
+{
+  "funnel": {
+    "stages": [
+      {"stage": "询盘", "value": 1000, "conversion_rate": 1.0},
+      {"stage": "报价", "value": 500, "conversion_rate": 0.5},
+      {"stage": "谈判", "value": 200, "conversion_rate": 0.4},
+      {"stage": "成交", "value": 80, "conversion_rate": 0.4}
+    ],
+    "total_inquiries": 1000,
+    "total_deals": 80,
+    "overall_conversion": 0.08,
+    "period": "2026-07"
+  },
+  "kpi": [
+    {"label": "总询盘", "value": "1,000", "color": "#1890FF", "trend": 12},
+    {"label": "总成交", "value": "80", "color": "#52C41A", "trend": 8},
+    {"label": "整体转化", "value": "8.0%", "color": "#13C2C2"}
+  ],
+  "trend": [
+    {"date": "07-01", "value": 30}, {"date": "07-02", "value": 35}, {"date": "07-03", "value": 28},
+    {"date": "07-04", "value": 42}, {"date": "07-05", "value": 38}, {"date": "07-06", "value": 50},
+    {"date": "07-07", "value": 45}, {"date": "07-08", "value": 55}, {"date": "07-09", "value": 48},
+    {"date": "07-10", "value": 62}, {"date": "07-11", "value": 58}, {"date": "07-12", "value": 70},
+    {"date": "07-13", "value": 65}, {"date": "07-14", "value": 72}, {"date": "07-15", "value": 80},
+    {"date": "07-16", "value": 75}, {"date": "07-17", "value": 88}, {"date": "07-18", "value": 82},
+    {"date": "07-19", "value": 95}, {"date": "07-20", "value": 90}, {"date": "07-21", "value": 100},
+    {"date": "07-22", "value": 92}, {"date": "07-23", "value": 105}, {"date": "07-24", "value": 98},
+    {"date": "07-25", "value": 110}, {"date": "07-26", "value": 105}, {"date": "07-27", "value": 115},
+    {"date": "07-28", "value": 108}, {"date": "07-29", "value": 120}, {"date": "07-30", "value": 115}
+  ],
+  "source": [
+    {"source": "阿里国际站", "value": 400},
+    {"source": "谷歌搜索", "value": 250},
+    {"source": "LinkedIn", "value": 180},
+    {"source": "展会", "value": 120},
+    {"source": "老客户", "value": 50}
+  ],
+  "conversion": [
+    {"stage": "询盘→报价", "rate": 0.50},
+    {"stage": "报价→谈判", "rate": 0.40},
+    {"stage": "谈判→成交", "rate": 0.40}
+  ],
+  "geo": {
+    "points": [
+      {"country": "UAE", "count": 50, "lat": 24.4539, "lng": 54.3773},
+      {"country": "Saudi Arabia", "count": 30, "lat": 24.7136, "lng": 46.6753},
+      {"country": "USA", "count": 25, "lat": 38.9072, "lng": -77.0369},
+      {"country": "Germany", "count": 20, "lat": 52.5200, "lng": 13.4050},
+      {"country": "India", "count": 15, "lat": 28.6139, "lng": 77.2090}
+    ]
+  },
+  "period": "2026-07"
+}

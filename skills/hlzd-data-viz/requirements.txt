@@ -1,0 +1,7 @@
+# HLZD-D3可视化 - Python 依赖
+# 实际无新 pip 依赖（jinja2 已在 HLZD-办公文档 requirements 中）
+# 此文件仅作为完整性占位
+
+jinja2>=3.1.2
+# 可选：HTML → PNG 截图
+# playwright>=1.40.0
