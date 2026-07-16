@@ -39,8 +39,9 @@
 | 07 | `hlzd-solution-match` | **v0.1.0** ✅ | 方案匹配：5 维评分 + 3 套推荐 (best/alt/cost)|
 | 08 | `hlzd-quotation-gen` | **v0.1.0** ✅ | 自动报价：FOB/CIF/DDP 3 套 + 利润健康 + 账期建议 |
 | 09 | `hlzd-negotiation-playbook` | **v0.1.0** ✅ | 让步推演：3 轮 × 3 维 + 红线 + 决策路由 |
+| 10 | `hlzd-trade-compliance` | **v0.1.0** ✅ | 5 道检查 + 三态路由 + 审计 trail（OFAC + EU + BIS + 国别 + ECCN）|
 
-闭环演示 — 调研 → 买家 → 背调 → 邮件 → 方案 → 报价 → 让步。共 9 / 21 Skill。
+闭环演示 — 调研 → 买家 → 背调 → 邮件 → 方案 → 报价 → 让步 → 合规拦截。共 10 / 21 Skill。
 
 ---
 
@@ -136,7 +137,7 @@ py skills-demo/run_full_demo.py --all     # 跑 3 个场景
 | **W2-3** | ✅ 接入已有素材：b2b-research / buyer-finder / market-report |
 | **W4-5** | ✅ customer-due-diligence + cold-outreach（touch 链路完工）|
 | **W6-7** | ✅ solution-match + quotation-gen + negotiation-playbook（**报价引擎完工**）|
-| W8 | trade-compliance（合规护栏，必做） |
+| **W8** | ✅ trade-compliance（合规护栏：**5 道检查 + 三态路由 + 审计 trail**）|
 | W9 | 完整文档 + 4 渠道安装验证 |
 | W10 | 内部种子客户试跑 |
 | W11 | GitHub 私有发布 + 公开提交 |

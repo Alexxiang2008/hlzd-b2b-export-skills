@@ -1,0 +1,34 @@
+name,program,type,remarks,alias_names
+Russian National Commercial Bank,UKRAINE-EO13662,Entity,SDN - 31 CFR 589,RNKB|Joint Stock Company Russian National Commercial Bank
+Wagner Group,RUSSIA-EO14024,Entity,SDN - 31 CFR 587,PMC Wagner|ChVK Wagner|Gruppa Vagnera
+Bank Saderat Iran,IRAN-HR-13871,Entity,SDN - 31 CFR 560,BSI|Joint Stock Company Bank Saderat Iran
+Hezbollah,SDGT,Organization,SDN - 31 CFR 594,Party of God|Hizbollah|Hizbullah
+Hamas,SDGT,Organization,SDN - 31 CFR 597,Islamic Resistance Movement|Harakat al-Muqawama
+Islamic State of Iraq and the Levant,SDGT,Organization,SDN - 31 CFR 599,ISIL|ISIS|Daesh
+Tornado Cash,SYMBOL,Entity,SDN - OFAC Ethereum mixer designation,
+Lazarus Group,CYBER2,Entity,SDN - DPRK cyber,
+Fancy Bear,CYBER2,Entity,SDN - Russian GRU cyber,
+Cozy Bear,CYBER2,Entity,SDN - Russian SVR cyber,
+Pyongyang University of Science and Technology,DPRK4,Entity,SDN - 31 CFR 510,PUST
+Iran Aircraft Manufacturing Industrial Co,IFCA,Entity,SDN - 31 CFR 560,IAMA|HESA
+Tanker Pacific,IRAN-HR-13871,Entity,Vessel designation,
+Islamic Revolutionary Guard Corps,SDGT,Organization,SDN - 31 CFR 594,IRGC|Pasdaran
+Navalny Anticorruption Foundation,RUSSIA-EO14024,Entity,SDN - 31 CFR 587,FBK
+Al-Shabaab,SDGT,Organization,SDN - Somalia sanctions,
+Boko Haram,SDGT,Organization,SDN - Nigeria sanctions,
+Taliban,SDGT,Organization,SDN - Afghanistan EO13224,
+Donetsk People's Republic,UKRAINE-EO13662,Entity,SDN - 31 CFR 590,DPR
+Luhansk People's Republic,UKRAINE-EO13662,Entity,SDN - 31 CFR 590,LPR
+Bank Melli Iran,IRAN-HR-13871,Entity,SDN - 31 CFR 560,BMI
+Islamic Revolutionary Guard Corps Qods Force,SDGT,Organization,SDN - 31 CFR 594,IRGC-QF
+Huawei Technologies Company,IFCA,Entity,Subject to Entity List restrictions,Huawei
+Poly Technologies Inc,IFCA,Entity,Subject to Entity List restrictions,
+China Academy of Space Technology,TDOJ,Entity,Entity List (Chinese defense),
+Zhang Yulin,NPWMD,Individual,SDN - WMD proliferator,
+Karat Industrial Group,IFCA,Entity,Entity List,
+Norinco,NPWMD,Entity,China North Industries Group,
+Teknic Engineering,IFCA,Entity,Entity List,
+Tornado Cash Mixer,SYMBOL,Entity,OFAC crypto mixer,
+Yukom Comm,IRAN-HR-13871,Entity,SDN - Iran telecom company,
+Sarmad Exchange,IRAN-HR-13871,Entity,SDN - Iran financial,
+Trident Vision,IFCA,Entity,Subject to Entity List restrictions,

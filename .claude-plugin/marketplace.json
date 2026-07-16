@@ -3,7 +3,7 @@
   "name": "hlzd-cross-border-b2b",
   "displayName": "HLZD Cross-Border B2B Industrial Export",
   "description": "Agent skills for B2B industrial exporters — market research, lead finding, inquiry qualification, quotation, compliance and more. By 海联智达 (HLZD) / 海良数科.",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "metadata": {
     "author": "HLZD (海联智达 / 海良数科)",
     "homepage": "https://github.com/Alexxiang2008/hlzd-b2b-export-skills",
@@ -156,6 +156,24 @@
         "negotiation",
         "concession",
         "counter-offer",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-trade-compliance",
+      "description": "B2B trade compliance guardrail - 4+1 checks (OFAC SDN / EU Consolidated / BIS Entity List / Country-Based Embargo / ECCN dual-use keyword) producing CLEARED / PENDING_REVIEW / BLOCKED clearance with full audit trail and Markdown report. Static subsets of OFAC/EU/BIS sanctions (80 entries) ready for production API swap to real-time feeds (OFAC SDN.csv / EU CFSP / BIS CSL).",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-trade-compliance",
+      "category": "trade-compliance",
+      "keywords": [
+        "b2b",
+        "trade-compliance",
+        "ofac-sdn",
+        "eu-consolidated",
+        "bis-entity-list",
+        "embargo",
+        "eccn",
         "industrial-export"
       ]
     }

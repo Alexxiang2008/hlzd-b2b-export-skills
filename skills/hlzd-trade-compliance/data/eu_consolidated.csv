@@ -1,0 +1,18 @@
+name,program,type,remarks,alias_names
+Russian Armed Forces,RUSSIA,Entity,EU sanctions,Russian Federation Armed Forces
+Wagner Group,RUSSIA,Organization,EU Council Decision 2014/145,
+Federal Security Service,RUSSIA,Entity,FSB - EU sanctions,
+Main Intelligence Directorate,RUSSIA,Entity,GRU - EU sanctions,
+Islamic Revolutionary Guard Corps,IRAN,Organization,EU sanctions against Iran,
+Hezbollah Military Wing,LEBANON,Organization,EU sanctions,Hezbollah|Party of God|Hizbollah
+Al-Shabaab,SOMALIA,Organization,EU sanctions,
+ISIL/Daesh,TERRORISM,Organization,EU sanctions,
+Boko Haram,NIGERIA,Organization,EU sanctions,
+Tornado Cash,CRYPTO,Entity,EU sanctions crypto,
+Lazarus Group,DPRK,Organization,EU cyber sanctions,
+Kim Il-Sung,DPRK,Individual,Former DPRK leader - EU sanctions,
+Iran Aircraft Manufacturing Industrial Co,IRAN,Entity,EU Iran sanctions,
+Huawei Technologies,ENTITY,Entity,EU restrictive measures,
+Syrian Air Force Intelligence,IRAN-SYRIA,Entity,EU Syria sanctions,
+Bank Saderat Iran,IRAN,Entity,EU Iran sanctions,
+Tanker Pacific,IRAN,Entity,Vessel EU sanctions,

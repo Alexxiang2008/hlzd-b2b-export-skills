@@ -237,3 +237,39 @@ First public release.
 ### Roadmap (next 12 weeks)
 
 See [docs/出海技能集规划.md](docs/出海技能集规划.md#七上线节奏12-周-roadmap)
+
+## v1.0.0 — 2026-07-16
+
+First major version. Repo bumped 0.9.0 → 1.0.0 (W8 compliance shield ships; project crosses 10 Skill milestone).
+
+### Skills
+
+| Skill | Version | Notes |
+|---|---|---|
+|  | 0.1.0 | No change. 40 tests. |
+|  | 0.1.0 | No change. 31 tests. |
+|  | 0.1.0 | No change. 45 tests. |
+|  | 0.1.0 | No change. 41 tests. |
+|  | 0.1.0 | No change. 57 tests. |
+|  | 0.1.0 | No change. 35 tests. |
+|  | 0.1.0 | No change. 31 tests. |
+|  | 0.1.0 | No change. 28 tests. |
+|  | 0.1.0 | No change. 28 tests. |
+|  | 0.1.0 | NEW. 5 sanit-y checks (4 buyer-side: OFAC SDN / EU Consolidated / BIS Entity / Country-Based Embargo, plus 1 product-side: ECCN dual-use) -> CLEARED / PENDING_REVIEW / BLOCKED clearance with audit_trail. Static subsets (33 OFAC + 17 EU + 15 BIS = 65 rows). 4-tier fuzzy matching (exact / bidirectional substring / long-token share / stopword-filtered). 48 tests, 85% lib/sources coverage. |
+
+### v1.0 milestone
+
+- 10/10 Skills pass 
+- 384/384 tests pass (W8 adds 48)
+- Repo metadata version  (semver major because compliance is production-critical)
+- W2-3 / W4-5 / W6-7 / W8 milestones all complete
+- Roadmap now starts at W9 (CI / 4-channel install / seed-customer demo / GitHub publish)
+
+### v0.2 upgrade notes (planned for trade-compliance)
+
+- Plug in live OFAC SDN CSV via Treasury API (1.5 万 entries)
+- Plug in EU CFSP RSS feed for real-time Consolidated updates
+- Plug in BIS Entity List + Denied Persons List via commerce.gov CSV
+- Auto-classify HS code against ECCN (full CCL mapping)
+- Real time OFAC 50% rule check (secondary sanctions)
+
