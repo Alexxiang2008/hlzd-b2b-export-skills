@@ -26,36 +26,35 @@ jobs:
       - name: Install minimal deps
         run: |
           python -m pip install --upgrade pip
-          # 只装 pytest + minimal deps，其它 Skill 都是 stdlib
+          # 只装 pytest + pytest-cov，其它 Skill 都是 stdlib
           python -m pip install pytest pytest-cov
 
       - name: Validate SKILL.md frontmatter
         run: |
           python validate_skills.py
 
-      - name: Run all skill tests
+      - name: Run per-skill tests
         run: |
-          set -e
-          for skill in skills/*/; do
-            skill_name=$(basename "$skill")
-            echo "=== Testing $skill_name ==="
-            cd "$skill"
-            if [ -d "tests" ]; then
-              python -m pytest tests/ -q --cov=scripts --cov-report=term-missing || true
-            elif [ -f "scripts/test_*.py" ]; then
-              python -m pytest scripts/test_*.py -q || true
-            fi
-            cd ../..
-          done
+          set +e  # 允许单 skill 失败不阻塞其它
+          python -m pytest skills/hlzd-inquiry-qualify/scripts/test_inquiry_parser.py -q
+          python -m pytest skills/hlzd-b2b-research/tests/ -q
+          python -m pytest skills/hlzd-buyer-finder/tests/ -q
+          python -m pytest skills/hlzd-market-report/tests/ -q
+          python -m pytest skills/hlzd-customer-due-diligence/tests/ -q
+          python -m pytest skills/hlzd-cold-outreach/tests/ -q
+          python -m pytest skills/hlzd-solution-match/tests/ -q
+          python -m pytest skills/hlzd-quotation-gen/tests/ -q
+          python -m pytest skills/hlzd-negotiation-playbook/tests/ -q
+          python -m pytest skills/hlzd-trade-compliance/tests/ -q
 
       - name: Run demo orchestrator (smoke)
         run: |
           python skills-demo/run_full_demo.py --all
 
-  artifacts:
-    - name: demo-traces
-      path: skills-demo/outputs/
-
-  badge:
-    image: ci
-    branch: main
+      - name: Upload demo traces artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-traces
+          path: skills-demo/outputs/
+          if-no-files-found: ignore
