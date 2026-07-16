@@ -1,0 +1,738 @@
+<!-- 套餐与价格 (高级感字体版) -->
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>海联智达 - 价格方案</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#003527", "on-primary-fixed-variant": "#0b513d", "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed": "#002113", "on-tertiary-container": "#31c98f", "on-tertiary": "#ffffff", "surface-container-low": "#f1f3ff", "primary-container": "#064e3b", "on-primary-container": "#80bea6", "inverse-surface": "#293040", "inverse-primary": "#95d3ba", "on-primary": "#ffffff", error: "#ba1a1a", "on-surface": "#141b2b", "on-surface-variant": "#404944", "on-tertiary-fixed-variant": "#005236", "on-secondary": "#ffffff", "on-background": "#141b2b", "tertiary-fixed-dim": "#4edea3", "on-error": "#ffffff", "on-secondary-fixed": "#1a1c19", "outline-variant": "#bfc9c3", "surface-variant": "#dce2f7", "on-primary-fixed": "#002117", "secondary-fixed": "#e3e3de", surface: "#f9f9ff", outline: "#707974", tertiary: "#003623", "on-secondary-fixed-variant": "#454744", "tertiary-container": "#004f34", "surface-tint": "#2b6954", "surface-container": "#e9edff", "secondary-fixed-dim": "#c6c7c2", "surface-container-lowest": "#ffffff", "primary-fixed": "#b0f0d6", secondary: "#5d5f5b", "on-secondary-container": "#62635f", "secondary-container": "#e0e0db", "surface-bright": "#f9f9ff", "surface-container-highest": "#dce2f7", "surface-dim": "#d3daef", "error-container": "#ffdad6", "surface-container-high": "#e1e8fd", "inverse-on-surface": "#edf0ff", "on-error-container": "#93000a", "primary-fixed-dim": "#95d3ba", background: "#f9f9ff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {md: "24px", "margin-desktop": "40px", xl: "80px", lg: "48px", "margin-mobile": "16px", sm: "12px", gutter: "24px", base: "8px", xs: "4px"}, fontFamily: {"label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], headline: ["Comfortaa"], display: ["Comfortaa"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-sm": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "display-lg-mobile": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}]}}}};</script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50 flex justify-between items-center w-full px-gutter max-w-[1280px] mx-auto py-4">
+<div class="text-headline-md font-headline-md text-primary">海联智达</div>
+<nav class="hidden md:flex gap-md">
+<a class="text-secondary font-body-md hover:text-primary transition-colors duration-200" href="#">Industry Solutions</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#">Pricing</a>
+<a class="text-secondary font-body-md hover:text-primary transition-colors duration-200" href="#">About Us</a>
+</nav>
+<button class="bg-primary text-on-primary rounded font-label-sm text-label-sm px-6 py-2 hover:opacity-90 transition-opacity">Book a Demo</button>
+</header>
+<main class="max-w-[1280px] mx-auto px-gutter py-xl">
+<!-- Trust Banner -->
+<div class="bg-tertiary-fixed border border-outline-variant rounded-lg p-md mb-lg flex flex-col md:flex-row items-center justify-between shadow-sm">
+<div>
+<h2 class="text-headline-md font-headline-md text-primary mb-2">30/60 承诺保障</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-tertiary">30天搭建</span> 数据大脑及Bot-Agent，<span class="font-label-sm text-label-sm text-tertiary">60天见询盘</span>首批询盘产出。效果不达标，免费延期服务。白纸黑字写进合同。
+                </p>
+</div>
+<span class="material-symbols-outlined text-4xl text-tertiary mt-4 md:mt-0" style="font-variation-settings: 'FILL' 1;">contract</span>
+</div>
+<!-- Pricing Header -->
+<div class="text-center mb-xl">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary mb-sm">按需投入，小步快跑</h1>
+<p class="text-body-lg font-body-lg text-secondary max-w-3xl mx-auto">梯度升级设计，先跑通，再深化，后定制。让AI赋能外贸的风险完全可控。</p>
+</div>
+<!-- Pricing Matrix (Bento-ish Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+<!-- Tier 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col hover:border-primary transition-colors">
+<div class="mb-md">
+<h3 class="text-headline-md font-headline-md text-primary">入门版</h3>
+<p class="text-secondary font-body-md text-body-md mt-1">试水期/初创团队</p>
+<div class="mt-4 text-display-lg font-display-lg text-primary">¥59,800</div>
+</div>
+<div class="flex-grow">
+<ul class="space-y-sm mb-md">
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-primary-container mr-2 text-lg">check_circle</span>Bot-Agent 席位: 10 席</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-primary-container mr-2 text-lg">check_circle</span>独立部署 / 美国独立网络</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-primary-container mr-2 text-lg">check_circle</span>数字大脑: 自进化迭代</li>
+<li class="flex items-start text-body-md font-body-md text-outline"><span class="material-symbols-outlined text-outline mr-2 text-lg">cancel</span>上门服务: ❌</li>
+<li class="flex items-start text-body-md font-body-md text-outline"><span class="material-symbols-outlined text-outline mr-2 text-lg">cancel</span>企业级定制: ❌</li>
+</ul>
+</div>
+<button class="w-full bg-surface-container text-on-surface border border-outline-variant rounded py-3 font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">跑通 30/60 承诺</button>
+</div>
+<!-- Tier 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col hover:border-primary transition-colors">
+<div class="mb-md">
+<h3 class="text-headline-md font-headline-md text-primary">基础版</h3>
+<p class="text-secondary font-body-md text-body-md mt-1">成长期/标准化需求</p>
+<div class="mt-4 text-display-lg font-display-lg text-primary">¥99,800</div>
+</div>
+<div class="flex-grow">
+<ul class="space-y-sm mb-md">
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-primary-container mr-2 text-lg">check_circle</span>Bot-Agent 席位: 25 席</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-primary-container mr-2 text-lg">check_circle</span>美国高速 + 5 国可选</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-primary-container mr-2 text-lg">check_circle</span>数字大脑: 冷启动 (零到一)</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-primary-container mr-2 text-lg">check_circle</span>组织用户数: ≤10 人</li>
+<li class="flex items-start text-body-md font-body-md text-outline"><span class="material-symbols-outlined text-outline mr-2 text-lg">cancel</span>上门服务: ❌</li>
+</ul>
+</div>
+<button class="w-full bg-surface-container text-on-surface border border-outline-variant rounded py-3 font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">标准配置启动</button>
+</div>
+<!-- Tier 3 (Flagship) -->
+<div class="bg-surface-container-lowest border-2 border-primary rounded-xl p-md flex flex-col relative shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="absolute top-0 right-0 bg-primary text-on-primary text-label-sm font-label-sm px-3 py-1 rounded-bl-lg rounded-tr-lg">Most Popular</div>
+<div class="mb-md">
+<h3 class="text-headline-md font-headline-md text-primary">旗舰版</h3>
+<p class="text-secondary font-body-md text-body-md mt-1">成熟期/深度定制</p>
+<div class="mt-4 text-display-lg font-display-lg text-primary">¥188,000</div>
+</div>
+<div class="flex-grow">
+<ul class="space-y-sm mb-md">
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-tertiary mr-2 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>Bot-Agent 席位: 50 席</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-tertiary mr-2 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>美国高速 + 21 国可选</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-tertiary mr-2 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>数字大脑: 进阶启动 (10万词元)</li>
+<li class="flex items-start text-body-md font-body-md"><span class="material-symbols-outlined text-tertiary mr-2 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>定制企业级技能 + 工作流</li>
+<li class="flex items-start text-body-md font-body-md font-bold text-tertiary bg-tertiary-fixed p-1 rounded"><span class="material-symbols-outlined mr-2 text-lg">engineering</span>工程师团队上门服务</li>
+</ul>
+</div>
+<button class="w-full bg-primary text-on-primary rounded py-3 font-label-sm text-label-sm hover:opacity-90 transition-opacity">联系定制</button>
+</div>
+</div>
+<!-- Feature Matrix Table (High Density) -->
+<div class="overflow-x-auto mb-xl border border-outline-variant rounded-lg">
+<table class="w-full text-left border-collapse min-w-[800px]">
+<thead>
+<tr class="bg-surface-container text-on-surface">
+<th class="p-sm border-b border-outline-variant font-label-sm text-label-sm">核心维度</th>
+<th class="p-sm border-b border-outline-variant font-label-sm text-label-sm">入门版</th>
+<th class="p-sm border-b border-outline-variant font-label-sm text-label-sm">基础版</th>
+<th class="p-sm border-b border-outline-variant font-label-sm text-label-sm text-primary">旗舰版</th>
+</tr>
+</thead>
+<tbody class="text-body-md font-body-md">
+<tr class="border-b border-outline-variant bg-surface-container-lowest">
+<td class="p-sm font-semibold">高速模型</td>
+<td class="p-sm">标配</td>
+<td class="p-sm">标配</td>
+<td class="p-sm text-tertiary font-bold">可定制</td>
+</tr>
+<tr class="border-b border-outline-variant bg-surface-bright">
+<td class="p-sm font-semibold">行业专属插件</td>
+<td class="p-sm">✅</td>
+<td class="p-sm">✅</td>
+<td class="p-sm">✅</td>
+</tr>
+<tr class="border-b border-outline-variant bg-surface-container-lowest">
+<td class="p-sm font-semibold">7×24 专属支持</td>
+<td class="p-sm">✅</td>
+<td class="p-sm">✅</td>
+<td class="p-sm">✅</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- FAQ Section -->
+<div>
+<h2 class="text-headline-sm font-headline-sm text-primary mb-md border-b border-outline-variant pb-2">常见问题 (Q&amp;A)</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<h4 class="text-headline-md font-headline-md text-primary mb-2 flex items-center"><span class="material-symbols-outlined mr-2">help</span>投入多少钱合适？</h4>
+<p class="text-body-md font-body-md text-secondary">入门版 ¥59,800 起步——30天系统搭建、60天首批询盘。回本周期因行业而异，通常 6-12 个月。先小步快跑验证，OK 再升级到基础版或旗舰版。</p>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md text-primary mb-2 flex items-center"><span class="material-symbols-outlined mr-2">help</span>多久能见到效果？</h4>
+<p class="text-body-md font-body-md text-secondary">30天系统上线、60天首批询盘。这是写入合同的承诺。具体行业适配：机械/化工 60-90 天，纺织/电子 45-60 天。</p>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md text-primary mb-2 flex items-center"><span class="material-symbols-outlined mr-2">help</span>效果不达标怎么办？</h4>
+<p class="text-body-md font-body-md text-secondary">30天搭建 + 60天见询盘——这是合同承诺。达不到约定的询盘量，我们免费延期服务至达标。这是我们对效果的信心。</p>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md text-primary mb-2 flex items-center"><span class="material-symbols-outlined mr-2">help</span>数据安全吗？放在哪里？</h4>
+<p class="text-body-md font-body-md text-secondary">独立部署、物理隔离。入门版美国服务器，基础版 5 国可选，旗舰版 21 国可选。工程师看不到您的数据，全程加密。符合GDPR/《数据安全法》。</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant w-full py-xl px-gutter mt-xl">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div>
+<div class="text-headline-md font-headline-md font-bold text-primary mb-4">海联智达</div>
+<p class="text-body-md font-body-md text-secondary">© 2024 海联智达. All rights reserved. Industrial AI Excellence.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">Solutions</a>
+<a class="text-primary font-label-sm text-label-sm hover:text-primary transition-colors duration-200 underline" href="#">Pricing</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">About Us</a>
+<a class="text-secondary font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-secondary font-label-sm text-label-sm hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- 行业解决方案 (高级感字体版) -->
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>行业解决方案 - 海联智达</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {secondary: "#5d5f5b", "on-surface-variant": "#404944", "outline-variant": "#bfc9c3", "primary-fixed": "#b0f0d6", "secondary-fixed-dim": "#c6c7c2", "secondary-fixed": "#e3e3de", "tertiary-fixed": "#6ffbbe", error: "#ba1a1a", "inverse-primary": "#95d3ba", surface: "#f9f9ff", "primary-container": "#064e3b", "on-tertiary-container": "#31c98f", "primary-fixed-dim": "#95d3ba", "on-secondary": "#ffffff", "on-secondary-fixed": "#1a1c19", "on-tertiary-fixed": "#002113", "secondary-container": "#e0e0db", "inverse-on-surface": "#edf0ff", "surface-dim": "#d3daef", "surface-container-high": "#e1e8fd", "on-error-container": "#93000a", "inverse-surface": "#293040", "surface-container-lowest": "#ffffff", "surface-container": "#e9edff", "surface-variant": "#dce2f7", "on-surface": "#141b2b", primary: "#003527", tertiary: "#003623", "on-secondary-fixed-variant": "#454744", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-background": "#141b2b", "on-tertiary-fixed-variant": "#005236", outline: "#707974", "on-primary-container": "#80bea6", "tertiary-container": "#004f34", "error-container": "#ffdad6", background: "#f9f9ff", "tertiary-fixed-dim": "#4edea3", "surface-tint": "#2b6954", "on-secondary-container": "#62635f", "surface-bright": "#f9f9ff", "surface-container-low": "#f1f3ff", "on-primary-fixed-variant": "#0b513d", "surface-container-highest": "#dce2f7", "on-primary": "#ffffff", "on-primary-fixed": "#002117"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "16px", "container-max": "1440px", gutter: "24px", "margin-desktop": "40px", base: "4px", md: "24px", xl: "80px", lg: "48px", sm: "12px"}, fontFamily: {"label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], headline: ["Comfortaa"], display: ["Comfortaa"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-sm": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "display-lg-mobile": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}]}}}};</script>
+<style>
+        body { background-color: #f9f9f7; color: #1a1c1b; font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: #ffffff;
+            border: 1px solid #e2e3e0;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        h1, h2, h3, .font-headline-md, .font-headline-sm, .font-display-lg, .font-display-lg-mobile {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-label-sm, .font-body-md, .font-body-lg, .font-label-md, .font-body-sm {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-gutter max-w-7xl mx-auto py-4 bg-surface-container-lowest border-b border-surface-variant">
+<div class="text-headline-md font-bold text-primary">海联智达</div>
+<div class="hidden md:flex gap-6">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 text-label-sm" href="#">Industry Solutions</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Pricing</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">About Us</a>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-DEFAULT font-label-sm transition-all duration-200 hover:opacity-80">
+            Book a Demo
+        </button>
+</nav>
+<!-- Header Section -->
+<header class="w-full py-xl px-gutter max-w-7xl mx-auto text-center">
+<h1 class="text-display-lg-mobile md:text-display-lg text-primary mb-md">4 大行业深度 Know-How</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+            老板最怕"通用 AI 不懂我"。用 4 个行业矩阵证明"我们是为你这一行做的"。
+        </p>
+</header>
+<!-- Main Content Container -->
+<main class="w-full px-gutter max-w-7xl mx-auto pb-xl space-y-xl">
+<!-- Mechanical Industry -->
+<section class="relative group" id="mechanical">
+<div class="absolute inset-0 bg-secondary-container opacity-20 rounded-xl -z-10 transform -skew-y-1"></div>
+<div class="glass-card rounded-xl p-8 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-md">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h2 class="text-headline-md md:text-display-lg-mobile text-on-surface">机械制造</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">核心场景与痛点</h3>
+<p class="text-body-md text-on-surface-variant mb-4">数控机床、工业配件、定制设备</p>
+<div class="bg-surface-container-low p-4 rounded-lg border border-surface-variant mb-4">
+<span class="text-label-sm text-error flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span> 典型场景挑战
+                            </span>
+<p class="text-body-md text-secondary">德国客户询盘复杂，需要快速回复准确的技术规格、报价及 CE 认证状态，人工处理极易出错且效率低下。</p>
+</div>
+</div>
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">5 大专属能力</h3>
+<ul class="space-y-sm text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>技术规格精准翻译</strong>：图纸 / 工艺参数 / 公差标准 双向转换</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>询盘合规预审</strong>：客户 RFQ 自动匹配目标国准入标准</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>工业术语库</strong>：覆盖 30+ 工业子领域、海量词元</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>多语言技术文档</strong>：自动生成 CE/UL/RoHS 说明书</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>客户技术问答</strong>：24h 自动应答技术问题</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-md pt-md border-t border-surface-variant flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="speed">speed</span>
+<span class="text-label-sm text-secondary">典型耗时：从数天降至 1 小时</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-sm hover:opacity-90 transition-opacity">
+                        获取机械行业方案
+                    </button>
+</div>
+</div>
+</section>
+<!-- Textile Industry -->
+<section class="relative group" id="textile">
+<div class="absolute inset-0 bg-surface-container opacity-50 rounded-xl -z-10 transform skew-y-1"></div>
+<div class="glass-card rounded-xl p-8 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-md">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="styler">styler</span>
+<h2 class="text-headline-md md:text-display-lg-mobile text-on-surface">纺织服装</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg flex-row-reverse">
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">核心场景与痛点</h3>
+<p class="text-body-md text-on-surface-variant mb-4">面料、辅料、成衣定制</p>
+<div class="bg-surface-container-low p-4 rounded-lg border border-surface-variant mb-4">
+<span class="text-label-sm text-error flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span> 典型场景挑战
+                            </span>
+<p class="text-body-md text-secondary">ZARA 风格样衣需求，需在极短时间内推荐合适面料、提供工艺方案及精准报价，人工筛选海量 SKU 慢且易错。</p>
+</div>
+</div>
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">5 大专属能力</h3>
+<ul class="space-y-sm text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>面料 SKU 智能匹配</strong>：客户需求 → 库存面料精准推荐</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>流行趋势分析</strong>：抓取目标市场时装周 / 电商爆款数据</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>尺码智能转换</strong>：多区域尺码体系自动换算</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>可持续合规</strong>：BSCI / OEKO-TEX 等认证自动审核</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>多语言产品描述</strong>：8 国语言本地化文案生成</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-md pt-md border-t border-surface-variant flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="update">update</span>
+<span class="text-label-sm text-secondary">响应速度：24h 内完成推荐与报价</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-sm hover:opacity-90 transition-opacity">
+                        获取纺织行业方案
+                    </button>
+</div>
+</div>
+</section>
+<!-- Electronics Industry -->
+<section class="relative group" id="electronics">
+<div class="absolute inset-0 bg-secondary-container opacity-20 rounded-xl -z-10"></div>
+<div class="glass-card rounded-xl p-8 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-md">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="memory">memory</span>
+<h2 class="text-headline-md md:text-display-lg-mobile text-on-surface">电子电器</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">核心场景与痛点</h3>
+<p class="text-body-md text-on-surface-variant mb-4">消费电子、零部件、IoT</p>
+<div class="bg-surface-container-low p-4 rounded-lg border border-surface-variant mb-4">
+<span class="text-label-sm text-error flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span> 典型场景挑战
+                            </span>
+<p class="text-body-md text-secondary">北美零售商询盘，需迅速确认 FCC 认证状态，并提供多语言规格书与竞品对标分析，人工耗时过长错失商机。</p>
+</div>
+</div>
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">5 大专属能力</h3>
+<ul class="space-y-sm text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>认证标准匹配</strong>：FCC/CE等 30+ 认证自动识别</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>技术参数翻译</strong>：芯片规格/协议 中英互译</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>说明书自动生成</strong>：多语言 PDF 同步输出</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>客户技术问答</strong>：常见问题 7×24 自动应答</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>竞品分析</strong>：实时抓取各平台同类产品动态</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-md pt-md border-t border-surface-variant flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="bolt">bolt</span>
+<span class="text-label-sm text-secondary">响应速度：2h 极速输出</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-sm hover:opacity-90 transition-opacity">
+                        获取电子行业方案
+                    </button>
+</div>
+</div>
+</section>
+<!-- Chemical Industry -->
+<section class="relative group" id="chemical">
+<div class="absolute inset-0 bg-surface-container opacity-50 rounded-xl -z-10 transform -skew-y-1"></div>
+<div class="glass-card rounded-xl p-8 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-md">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="science">science</span>
+<h2 class="text-headline-md md:text-display-lg-mobile text-on-surface">化工材料</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg flex-row-reverse">
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">核心场景与痛点</h3>
+<p class="text-body-md text-on-surface-variant mb-4">工业原料、添加剂、涂料</p>
+<div class="bg-surface-container-low p-4 rounded-lg border border-surface-variant mb-4">
+<span class="text-label-sm text-error flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span> 典型场景挑战
+                            </span>
+<p class="text-body-md text-secondary">欧盟客户询盘，必须提供符合规范的 MSDS、REACH 注册状态及危险品运输方案，合规壁垒高，人工编撰风险大。</p>
+</div>
+</div>
+<div>
+<h3 class="text-headline-sm md:text-headline-md text-primary mb-sm border-b border-surface-variant pb-2">5 大专属能力</h3>
+<ul class="space-y-sm text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>MSDS 自动生成</strong>：符合 GHS 标准的安全说明书</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>危险品运输合规</strong>：IMDG/IATA 危险等级自动判定</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>REACH 注册辅助</strong>：欧盟化学品注册资料整理</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>工艺参数优化</strong>：基于历史数据推荐反应条件</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span><strong>客户合规审核</strong>：订单自动匹配目标国准入要求</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-md pt-md border-t border-surface-variant flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+<span class="text-label-sm text-secondary">合规输出：1h 搞定全套资料</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-sm hover:opacity-90 transition-opacity">
+                        获取化工行业方案
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Footer -->
+<footer class="w-full py-xl px-gutter max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-lg bg-surface-container-low border-t border-surface-variant">
+<div>
+<div class="text-headline-md font-bold text-primary mb-4">海联智达</div>
+<p class="text-body-md text-on-surface-variant">© 2024 海联智达. All rights reserved. Industrial AI Excellence.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-200" href="#">Solutions</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-200" href="#">Pricing</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-200" href="#">About Us</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-200" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</footer>
+</body></html>
+
+<!-- 预约演示 (高级感字体版) -->
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>预约演示 - 海联智达</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#003527", "on-primary-fixed-variant": "#0b513d", "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed": "#002113", "on-tertiary-container": "#31c98f", "on-tertiary": "#ffffff", "surface-container-low": "#f1f3ff", "primary-container": "#064e3b", "on-primary-container": "#80bea6", "inverse-surface": "#293040", "inverse-primary": "#95d3ba", "on-primary": "#ffffff", error: "#ba1a1a", "on-surface": "#141b2b", "on-surface-variant": "#404944", "on-tertiary-fixed-variant": "#005236", "on-secondary": "#ffffff", "on-background": "#141b2b", "tertiary-fixed-dim": "#4edea3", "on-error": "#ffffff", "on-secondary-fixed": "#1a1c19", "outline-variant": "#bfc9c3", "surface-variant": "#dce2f7", "on-primary-fixed": "#002117", "secondary-fixed": "#e3e3de", surface: "#f9f9ff", outline: "#707974", tertiary: "#003623", "on-secondary-fixed-variant": "#454744", "tertiary-container": "#004f34", "surface-tint": "#2b6954", "surface-container": "#e9edff", "secondary-fixed-dim": "#c6c7c2", "surface-container-lowest": "#ffffff", "primary-fixed": "#b0f0d6", secondary: "#5d5f5b", "on-secondary-container": "#62635f", "secondary-container": "#e0e0db", "surface-bright": "#f9f9ff", "surface-container-highest": "#dce2f7", "surface-dim": "#d3daef", "error-container": "#ffdad6", "surface-container-high": "#e1e8fd", "inverse-on-surface": "#edf0ff", "on-error-container": "#93000a", "primary-fixed-dim": "#95d3ba", background: "#f9f9ff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {md: "24px", "margin-desktop": "40px", xl: "80px", lg: "48px", "margin-mobile": "16px", sm: "12px", gutter: "24px", base: "8px", xs: "4px"}, fontFamily: {"label-sm": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-md": ["Inter"], headline: ["Comfortaa"], display: ["Comfortaa"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "600"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-xl": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(var(--tw-colors-outline-variant) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant py-4 px-gutter w-full z-50">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<a class="text-headline-md font-headline-md font-bold text-primary" href="/">海联智达</a>
+<a class="text-secondary text-label-sm font-label-sm hover:text-primary transition-colors flex items-center gap-1" href="/">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                返回官网
+            </a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex items-center justify-center py-xl px-gutter bg-pattern">
+<div class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 bg-surface-container-low rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<!-- Left Side: Value Proposition -->
+<div class="p-8 lg:p-12 bg-primary text-on-primary flex flex-col justify-between relative overflow-hidden">
+<!-- Decorative background accent -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed-dim opacity-10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+<div class="absolute bottom-0 left-0 w-80 h-80 bg-tertiary opacity-20 rounded-full translate-y-1/3 -translate-x-1/4"></div>
+<div class="relative z-10">
+<h1 class="text-headline-lg font-headline-lg mb-4 text-on-primary">
+                        让中国工厂做全世界的生意
+                    </h1>
+<p class="text-body-lg font-body-lg text-primary-fixed mb-8 opacity-90">
+                        大厂做宽，我们做深；大厂卖工具，我们给结果。用 AI 把新时代市场规则交到工厂手里。
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-2 rounded-lg text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-on-primary mb-1">30天搭建，60天见询盘</h3>
+<p class="text-body-md text-primary-fixed opacity-80">企业级AI数字大脑搭建，效果可白纸黑字写入合同。</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-2 rounded-lg text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-on-primary mb-1">银行级数据安全</h3>
+<p class="text-body-md text-primary-fixed opacity-80">独立部署，物理隔离，全程加密。您的数据只属于您自己。</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-2 rounded-lg text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-on-primary mb-1">重交付，7×24陪跑</h3>
+<p class="text-body-md text-primary-fixed opacity-80">工程师上门服务，定制专属Skill与工作流，从"卖工具"到"给结果"。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-primary-container relative z-10">
+<div class="flex items-center gap-4 mb-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Professional portrait of a B2B manufacturing executive in a modern factory setting. Clean lighting, confident expression, high quality corporate headshot style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxs4MEJONPkbjjUYgGVp3qwfDJeexjfaAXl-O1td9sbf7AsnUhXwDiapFMtoAZLgfM73h87HB_AvOg8VOzh7rVpNTy9kSNbSLxBdISr8BIdL0JAwaT6USyDr-YR_hT51HreNS9XG9_aYNIJ932mpLBZAtjlYKwV7bQrTo6ztCbyGYscfHZVSvM1SpnxeFYEQ9pT2bmkm67DgfYHrRdpd6hNxcxv2r0mvsoBoo_Vkd5YWIHN-FuknYsSjf9i0fOt0Y_kGLVQEu1rXmK"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Professional portrait of an industrial trading company manager in an office. Bright, natural lighting, trustworthy appearance, modern business attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmcuxDyhNdh5tH--0fJQzpMwwT2BhRviWnaKiofOg-f9_G-Ba7yrqzgDS9kWH9MIm4a5hrz7OMPMIdircM6W1YtcI6NcsUWtnoYfn1Rv4A3uG9BM9I0HcosuQglRXn0jIpGupZrlRXBzRLP4_tfWqFTNYGwKWTjjwZo6Ux0Bx7wHBBBbiSzHb3eUw6bPyJ06q97y7qG2elnMnHLsva6NQ4b_wqcdufrFnfXimkBxVxPkw0Mzb63sdme7rhEvy_x2HA1JoNT-4S_zsA"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Professional headshot of a factory owner in a well-lit production facility. Industrial background softly out of focus, projecting authority and success." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbEnznxP-HpeLWDdaePXKwb4v1fEWsVX_uF8IWMb--AjClxZXmdgx4o_5DN_oVnnoXSubHMu1h3DkZiJyz1yD2T3iEaV-0g5poLxjD06Xbx-alfyCLlBnK9WEB60027yHWg4RmyKz7F1PqXE9sXIqC1b1TXV-yGQ3j_FbS5pemX4eLohRyG8Ws0krhUwJ3xRuHH77V_B-Wj6zyf5lsiJvn5qvvxwpFY-iYqdYutHOG8z0Ns4yzQgnhpLKVmNIjL-iahqvA03wTCabJ"/>
+</div>
+<p class="text-label-sm font-label-sm text-primary-fixed">已助力 500+ 中国工厂出海</p>
+</div>
+<blockquote class="italic text-body-md text-primary-fixed opacity-90">
+                        "接入海联智达的数字大脑后，我们的询盘转化率提升了 40%，业务员每天能省下 3 小时跟进无效信息的时间。"
+                        <footer class="mt-2 text-label-sm font-label-sm not-italic">— 某机械制造企业 CEO</footer>
+</blockquote>
+</div>
+</div>
+<!-- Right Side: Lead Capture Form -->
+<div class="p-8 lg:p-12 flex flex-col justify-center">
+<div class="mb-8 text-center lg:text-left">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-2">免费获取专属出海方案</h2>
+<p class="text-body-md text-secondary">请填写您的企业信息，我们的解决方案专家将在 2 小时内与您联系，安排 1v1 线上演示。</p>
+</div>
+<form class="space-y-md" onsubmit="event.preventDefault(); alert('演示预约已提交，我们将尽快与您联系！');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<!-- Name -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="name">您的姓名 <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded text-body-md px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="name" name="name" placeholder="王先生/女士" required="" type="text"/>
+</div>
+<!-- Phone -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="phone">手机号码 <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded text-body-md px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="phone" name="phone" placeholder="138 0000 0000" required="" type="tel"/>
+</div>
+</div>
+<!-- Company -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="company">公司名称 <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded text-body-md px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="company" name="company" placeholder="请输入您的企业全称" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<!-- Industry -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="industry">所属行业 <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded text-body-md px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors appearance-none pr-10" id="industry" name="industry" required="">
+<option disabled="" selected="" value="">请选择所属行业</option>
+<option value="machinery">机械制造</option>
+<option value="textile">纺织服装</option>
+<option value="electronics">电子电器</option>
+<option value="chemicals">化工材料</option>
+<option value="other">其他</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-secondary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Revenue -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="revenue">外贸年营收预期</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded text-body-md px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors appearance-none pr-10" id="revenue" name="revenue">
+<option disabled="" selected="" value="">请选择规模</option>
+<option value="under_10m">1000万以下</option>
+<option value="10m_50m">1000万 - 5000万</option>
+<option value="50m_100m">5000万 - 1亿</option>
+<option value="over_100m">1亿以上</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-secondary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Privacy Agreement -->
+<div class="flex items-start gap-2 pt-2">
+<input class="mt-1 h-4 w-4 text-primary border-outline-variant rounded focus:ring-primary cursor-pointer" id="privacy" name="privacy" required="" type="checkbox"/>
+<label class="text-label-sm text-secondary cursor-pointer" for="privacy">
+                            我已阅读并同意 <a class="text-primary hover:underline" href="#">《隐私政策》</a>，允许海联智达通过电话或邮件联系我。
+                        </label>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:opacity-90 text-on-primary font-label-sm py-4 rounded shadow-sm transition-all flex justify-center items-center gap-2 mt-4" type="submit">
+                        提交并预约专家演示
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600;">arrow_forward</span>
+</button>
+<p class="text-center text-[12px] text-secondary mt-4">
+<span class="material-symbols-outlined text-[14px] align-middle mr-1">lock</span> 您的信息将被严格保密
+                    </p>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container py-6 px-gutter border-t border-outline-variant mt-auto">
+<div class="max-w-7xl mx-auto text-center">
+<p class="text-label-sm text-secondary">© 2024 海联智达. All rights reserved. Industrial AI Excellence.</p>
+</div>
+</footer>
+</body></html>
+
+<!-- 海联智达 - 首页 (高级感字体版) -->
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>海联智达｜外贸AI赋能方案</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#003527", "on-primary-fixed-variant": "#0b513d", "tertiary-fixed": "#6ffbbe", "on-tertiary-fixed": "#002113", "on-tertiary-container": "#31c98f", "on-tertiary": "#ffffff", "surface-container-low": "#f1f3ff", "primary-container": "#064e3b", "on-primary-container": "#80bea6", "inverse-surface": "#293040", "inverse-primary": "#95d3ba", "on-primary": "#ffffff", error: "#ba1a1a", "on-surface": "#141b2b", "on-surface-variant": "#404944", "on-tertiary-fixed-variant": "#005236", "on-secondary": "#ffffff", "on-background": "#141b2b", "tertiary-fixed-dim": "#4edea3", "on-error": "#ffffff", "on-secondary-fixed": "#1a1c19", "outline-variant": "#bfc9c3", "surface-variant": "#dce2f7", "on-primary-fixed": "#002117", "secondary-fixed": "#e3e3de", surface: "#f9f9ff", outline: "#707974", tertiary: "#003623", "on-secondary-fixed-variant": "#454744", "tertiary-container": "#004f34", "surface-tint": "#2b6954", "surface-container": "#e9edff", "secondary-fixed-dim": "#c6c7c2", "surface-container-lowest": "#ffffff", "primary-fixed": "#b0f0d6", secondary: "#5d5f5b", "on-secondary-container": "#62635f", "secondary-container": "#e0e0db", "surface-bright": "#f9f9ff", "surface-container-highest": "#dce2f7", "surface-dim": "#d3daef", "error-container": "#ffdad6", "surface-container-high": "#e1e8fd", "inverse-on-surface": "#edf0ff", "on-error-container": "#93000a", "primary-fixed-dim": "#95d3ba", background: "#f9f9ff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {md: "24px", "margin-desktop": "40px", xl: "80px", lg: "48px", "margin-mobile": "16px", sm: "12px", gutter: "24px", base: "8px", xs: "4px"}, fontFamily: {"label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], headline: ["Comfortaa"], display: ["Comfortaa"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-sm": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "display-lg-mobile": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", letterSpacing: "0em", fontWeight: "400"}]}}}};</script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f7; }
+    </style>
+</head>
+<body class="text-on-background bg-background min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline-variant sticky top-0 z-50 flex justify-between items-center w-full px-gutter max-w-[1280px] mx-auto py-4">
+<div class="flex items-center gap-4">
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">海联智达</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Industry Solutions</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Pricing</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">About Us</a>
+</div>
+<button class="bg-primary text-on-primary rounded px-4 py-2 font-label-md hover:opacity-80 transition-all duration-200">Book a Demo</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full py-xl px-gutter max-w-[1280px] mx-auto flex flex-col items-center text-center">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<!-- Simulated Animation Placeholder -->
+</div>
+<div class="z-10 flex flex-col items-center gap-md max-w-3xl">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary">让中国工厂做全世界的生意</h1>
+<p class="text-body-lg font-body-lg text-secondary">30天搭建 + 60天见询盘</p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">
+            海联智达 = 用 AI 把中国工业品产业链上的工厂连成联盟，把新时代市场规则（数据 / 流量 / AI）交到工厂手里。
+        </p>
+<div class="flex gap-4 mt-4">
+<button class="bg-primary text-on-primary rounded px-6 py-3 font-label-md shadow-md hover:opacity-90 transition-opacity">立即免费咨询</button>
+<button class="border border-outline-variant text-secondary rounded px-6 py-3 font-label-md hover:bg-surface-container transition-colors">了解方案</button>
+</div>
+<div class="flex gap-8 mt-lg border-t border-outline-variant pt-8 w-full justify-center">
+<div class="flex flex-col items-center">
+<span class="text-label-md font-label-md text-primary bg-primary-fixed px-2 py-1 rounded">80%</span>
+<span class="text-label-md font-label-md text-secondary mt-2">数据裸奔状态</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-label-md font-label-md text-primary bg-primary-fixed px-2 py-1 rounded">30天</span>
+<span class="text-label-md font-label-md text-secondary mt-2">大脑搭建提效100%</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-label-md font-label-md text-primary bg-primary-fixed px-2 py-1 rounded">60天</span>
+<span class="text-label-md font-label-md text-secondary mt-2">首批询盘产出</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Add more sections here based on JSON if effort was higher -->
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant dark:border-outline-variant w-full py-xl px-gutter max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-lg mt-auto">
+<div class="flex flex-col gap-4">
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">海联智达</span>
+<p class="text-body-md font-body-md text-on-surface dark:text-inverse-on-surface">© 2024 海联智达. All rights reserved. Industrial AI Excellence.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Solutions</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Pricing</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">About Us</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-sm hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海联智达 定价方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Hanken+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        heading: ['"Hanken Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#003527',
+                        'primary-container': '#064e3b',
+                        'on-primary-container': '#80bea6',
+                        surface: '#f8f9fa',
+                        'surface-dim': '#d9dadb',
+                        'surface-container': '#edeeef',
+                        'surface-container-high': '#e7e8e9',
+                        'surface-container-low': '#f3f4f5',
+                        'on-surface': '#191c1d',
+                        'vibrant-emerald': '#10B981',
+                        'soft-mint': '#ECFDF5',
+                        'slate-gray': '#4B5563',
+                        'border-light': '#e1e3e4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col font-sans bg-surface text-on-surface">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-md border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="hexagon" class="h-8 w-8 text-vibrant-emerald fill-current"></i>
+                    <span class="font-heading font-bold text-xl text-primary tracking-tight">海联智达</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-on-surface hover:text-primary transition-colors text-sm font-medium">核心能力</a>
+                    <a href="#" class="text-primary border-b-2 border-primary pb-1 text-sm font-medium">定价方案</a>
+                    <a href="#" class="text-on-surface hover:text-primary transition-colors text-sm font-medium">交付承诺</a>
+                    <a href="#" class="text-on-surface hover:text-primary transition-colors text-sm font-medium">联系支持</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button class="bg-primary hover:bg-primary-container text-white px-5 py-2 rounded text-sm font-medium transition-colors">
+                        立即咨询
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Pricing Cards -->
+        <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-heading font-bold text-primary mb-4">灵活的定价方案</h1>
+                <p class="text-slate-gray text-lg">满足从初创到集团企业的差异化AI部署需求</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+                <!-- Starter -->
+                <div class="relative rounded-xl flex flex-col bg-white border border-border-light shadow-sm mt-4">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-2 flex items-center gap-2">
+                            入门版
+                        </h3>
+                        <p class="text-slate-gray text-sm mb-6 min-h-[40px]">快速体验外贸AI基础功能，适合微型企业。3个Agent并发。</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-vibrant-emerald text-2xl font-bold">¥</span>
+                            <span class="text-primary text-4xl font-bold ml-1">59,800</span>
+                            <span class="text-slate-gray text-sm ml-1">/年</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">公有云部署 (Shared Server)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">基础数据大脑 (限500MB)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="text-slate-gray mt-0.5 shrink-0 opacity-50 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-slate-gray">暂不支持多智能体协作</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="text-slate-gray mt-0.5 shrink-0 opacity-50 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-slate-gray">无企业能力图谱</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-8 pt-0 mt-auto">
+                        <button class="w-full py-3 rounded font-medium transition-colors border bg-transparent hover:bg-surface text-vibrant-emerald border-vibrant-emerald">
+                            选择入门版
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Flagship (Recommended) -->
+                <div class="relative rounded-xl flex flex-col bg-white border border-vibrant-emerald shadow-xl transform md:-translate-y-4">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-vibrant-emerald text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                        <i data-lucide="crown" class="w-4 h-4"></i> 推荐方案
+                    </div>
+                    
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-2 flex items-center gap-2">
+                            <i data-lucide="crown" class="text-[#FFB800] fill-current w-6 h-6"></i>
+                            旗舰版
+                        </h3>
+                        <p class="text-slate-gray text-sm mb-6 min-h-[40px]">全栈级专属AI中枢，针对中大型外贸企业。无限制Agent坐席。</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-vibrant-emerald text-2xl font-bold">¥</span>
+                            <span class="text-primary text-4xl font-bold ml-1">188,800</span>
+                            <span class="text-slate-gray text-sm ml-1">/年</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">独立私有化部署 (Private Dedicated Server)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">企业级数据大脑 (无限容量接入)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">高级多智能体协作 (全流程覆盖)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">完整版企业能力图谱 (动态更新)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">专属业务顾问 1对1 实施交付</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-8 pt-0 mt-auto">
+                        <button class="w-full py-3 rounded font-medium transition-colors border bg-primary hover:bg-primary-container text-white border-primary">
+                            立即开启旗舰体验
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Basic -->
+                <div class="relative rounded-xl flex flex-col bg-white border border-border-light shadow-sm mt-4">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-2 flex items-center gap-2">
+                            基础版
+                        </h3>
+                        <p class="text-slate-gray text-sm mb-6 min-h-[40px]">标准智能化流程覆盖，适合成长型团队。10个Agent并发。</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-vibrant-emerald text-2xl font-bold">¥</span>
+                            <span class="text-primary text-4xl font-bold ml-1">99,800</span>
+                            <span class="text-slate-gray text-sm ml-1">/年</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">混合云部署环境</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">标准数据大脑 (限5GB)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="text-vibrant-emerald mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-on-surface">基础多智能体协作 (限营销/跟进)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="text-slate-gray mt-0.5 shrink-0 opacity-50 w-[18px] h-[18px]"></i>
+                                <span class="text-sm text-slate-gray">无企业能力图谱</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-8 pt-0 mt-auto">
+                        <button class="w-full py-3 rounded font-medium transition-colors border bg-transparent hover:bg-surface text-vibrant-emerald border-vibrant-emerald">
+                            选择基础版
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-heading font-bold text-primary mb-4">核心信息对比表</h2>
+                <p class="text-slate-gray">详细了解各版本功能差异</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                        <tr class="bg-surface-container-high border-b border-border-light">
+                            <th class="py-4 px-6 font-medium text-primary w-1/4">项目</th>
+                            <th class="py-4 px-6 font-medium text-primary w-1/4 text-center">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="rocket" class="text-red-400 w-[18px] h-[18px]"></i> 入门版
+                                </div>
+                            </th>
+                            <th class="py-4 px-6 font-medium text-primary w-1/4 text-center">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="briefcase" class="text-amber-700 w-[18px] h-[18px]"></i> 基础版
+                                </div>
+                            </th>
+                            <th class="py-4 px-6 font-medium text-primary w-1/4 text-center">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="crown" class="text-[#FFB800] fill-current w-[18px] h-[18px]"></i> 旗舰版
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Category: 基本信息 -->
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">价格</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">¥59,800</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">¥99,800</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">¥188,000</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">目标客户</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">试水期 / 初创团队</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">成长型 / 标准化需求</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">成熟期 / 深度定制</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">核心定位</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">轻量试用</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">专业起步</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">企业级全能</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">公司团队人数</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">≤ 6 人</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">≤ 15 人</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">15 人以上</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">Bot-Agent 席位</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">10 席</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">25 席</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">50 席</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">公司团队人数上限</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">—</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">≤ 10 人</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">定制</td>
+                        </tr>
+
+                        <!-- Category: 部署与网络 -->
+                        <tr class="bg-surface-container">
+                            <td colspan="4" class="py-3 px-6 font-bold text-primary border-b border-border-light relative">
+                                <div class="absolute left-0 top-0 bottom-0 w-1 bg-vibrant-emerald"></div>
+                                部署与网络
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">服务器环境</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">美国独立服务器+专线</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">美国高速 + 5 国可选</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">美国极速 + 21 国可选</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">数据隔离层级</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">大脑层</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">大脑层</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">大脑层 + 内容层</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">独立门户</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">Bot-Agent 基础版</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">Bot-Agent 增强版</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">Bot-Agent 旗舰版</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">独立站部署</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">标准版</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">定制</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">定制</td>
+                        </tr>
+
+                        <!-- Category: 核心能力 -->
+                        <tr class="bg-surface-container">
+                            <td colspan="4" class="py-3 px-6 font-bold text-primary border-b border-border-light relative">
+                                <div class="absolute left-0 top-0 bottom-0 w-1 bg-vibrant-emerald"></div>
+                                核心能力
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">数据大脑</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">自动化迭代（长期记忆 + 跨任务上下文 + 自进化）</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">冷启动（0→1全量数据整理）</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">进阶启动（10万词元额度）</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">Agent Team 协作</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 多智能体分工协同
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">多智能体路由</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 按任务类型 + Agent 能力智能分配
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">Skills-Map 企业能力图谱</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 动态注册与编排
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">数字大脑映射门户网站</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> + 自动建站 Bot-Agent
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 升级版
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 全功能版
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">企业级定制 Skill</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">—</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">—</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 定制 Skill + 自动化工作流
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">高速模型</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">标准</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">标配</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">可定制</td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">数据处理</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 含数据整理指导
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 含数据整理+数据清洗
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <div class="flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="text-vibrant-emerald w-4 h-4"></i> 含数据整理 + 数据清洗+行业自动化扩展
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">行业专属插件</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                            <td class="py-4 px-6 text-center text-slate-gray">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-border-light hover:bg-surface-container-low transition-colors">
+                            <td class="py-4 px-6 font-medium text-on-surface">行业专属数据包</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">—</td>
+                            <td class="py-4 px-6 text-center text-slate-gray">—</td>
+                            <td class="py-4 px-6 text-center font-medium text-primary">
+                                <i data-lucide="check" class="mx-auto text-vibrant-emerald w-5 h-5"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Delivery Commitment -->
+        <div class="bg-soft-mint py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                    <!-- Left Side -->
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-heading font-bold text-primary mb-4">坚实的交付承诺</h2>
+                        <p class="text-slate-gray mb-8">
+                            海联智达为您提供业内顶级的实施保障，确保AI系统无缝融入您的现有业务流。
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="bg-white/60 p-6 rounded-lg border border-vibrant-emerald/20">
+                                <div class="text-vibrant-emerald text-4xl font-bold font-heading mb-2">30天</div>
+                                <div class="text-sm font-medium text-primary">极速环境搭建与知识库初始化</div>
+                            </div>
+                            <div class="bg-white/60 p-6 rounded-lg border border-vibrant-emerald/20">
+                                <div class="text-vibrant-emerald text-4xl font-bold font-heading mb-2">60天</div>
+                                <div class="text-sm font-medium text-primary">保底独立访客(UV)流量引入转化</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side -->
+                    <div class="lg:w-[400px] bg-primary rounded-xl p-8 text-white flex flex-col justify-center relative overflow-hidden">
+                        <i data-lucide="headphones" class="absolute -right-4 -bottom-4 w-40 h-40 opacity-10"></i>
+                        
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-2xl font-heading font-bold">7x24 小时全天候服务</h3>
+                                <i data-lucide="headphones" class="text-vibrant-emerald w-8 h-8"></i>
+                            </div>
+                            
+                            <p class="text-on-primary-container text-sm mb-6 leading-relaxed">
+                                无论您的客户位于哪个时区，我们的系统和维护团队始终在线，保障业务不中断。
+                            </p>
+                            
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2 text-sm">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-vibrant-emerald mt-1.5 shrink-0"></div>
+                                    <span>定期模型微调升级</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-vibrant-emerald mt-1.5 shrink-0"></div>
+                                    <span>数据安全异地备份</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-vibrant-emerald mt-1.5 shrink-0"></div>
+                                    <span>专属客户成功经理驻场</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container py-8 border-t border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="hexagon" class="h-6 w-6 text-primary fill-current"></i>
+                    <span class="font-heading font-bold text-lg text-primary tracking-tight">海联智达</span>
+                </div>
+                
+                <div class="text-sm text-slate-gray text-center">
+                    &copy; 2024 海联智达 | 外贸AI赋能方案. All rights reserved.
+                </div>
+                
+                <div class="flex gap-6 text-sm text-slate-gray">
+                    <a href="#" class="hover:text-primary transition-colors">服务条款</a>
+                    <a href="#" class="hover:text-primary transition-colors">隐私政策</a>
+                    <a href="#" class="hover:text-primary transition-colors">关于我们</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

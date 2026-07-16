@@ -1,0 +1,260 @@
+- generic [active] [ref=f5e1]:
+  - heading "Directory listing for /" [level=1] [ref=f5e2]
+  - separator [ref=f5e3]
+  - list [ref=f5e4]:
+    - listitem [ref=f5e5]:
+      - link ".claude-plugin/" [ref=f5e6] [cursor=pointer]:
+        - /url: .claude-plugin/
+    - listitem [ref=f5e7]:
+      - link ".git/" [ref=f5e8] [cursor=pointer]:
+        - /url: .git/
+    - listitem [ref=f5e9]:
+      - link ".github/" [ref=f5e10] [cursor=pointer]:
+        - /url: .github/
+    - listitem [ref=f5e11]:
+      - link ".gitignore" [ref=f5e12] [cursor=pointer]:
+        - /url: .gitignore
+    - listitem [ref=f5e13]:
+      - link ".obsidian/" [ref=f5e14] [cursor=pointer]:
+        - /url: .obsidian/
+    - listitem [ref=f5e15]:
+      - link ".playwright-mcp/" [ref=f5e16] [cursor=pointer]:
+        - /url: .playwright-mcp/
+    - listitem [ref=f5e17]:
+      - link ".pytest_cache/" [ref=f5e18] [cursor=pointer]:
+        - /url: .pytest_cache/
+    - listitem [ref=f5e19]:
+      - link ".spec-workflow/" [ref=f5e20] [cursor=pointer]:
+        - /url: .spec-workflow/
+    - listitem [ref=f5e21]:
+      - link "98593e642f944454207108d771be48e0.jpg" [ref=f5e22] [cursor=pointer]:
+        - /url: 98593e642f944454207108d771be48e0.jpg
+    - listitem [ref=f5e23]:
+      - link "_preview.html" [ref=f5e24] [cursor=pointer]:
+        - /url: _preview.html
+    - listitem [ref=f5e25]:
+      - link "AGENTS.md" [ref=f5e26] [cursor=pointer]:
+        - /url: AGENTS.md
+    - listitem [ref=f5e27]:
+      - link "B2B工业品外贸 AI Sales Agent 全流程设计.md" [ref=f5e28] [cursor=pointer]:
+        - /url: B2B%E5%B7%A5%E4%B8%9A%E5%93%81%E5%A4%96%E8%B4%B8%20AI%20Sales%20Agent%20%E5%85%A8%E6%B5%81%E7%A8%8B%E8%AE%BE%E8%AE%A1.md
+    - listitem [ref=f5e29]:
+      - link "CONTRIBUTING.md" [ref=f5e30] [cursor=pointer]:
+        - /url: CONTRIBUTING.md
+    - listitem [ref=f5e31]:
+      - link "demo.html" [ref=f5e32] [cursor=pointer]:
+        - /url: demo.html
+    - listitem [ref=f5e33]:
+      - link "docs/" [ref=f5e34] [cursor=pointer]:
+        - /url: docs/
+    - listitem [ref=f5e35]:
+      - link "docx_to_pdf.ps1" [ref=f5e36] [cursor=pointer]:
+        - /url: docx_to_pdf.ps1
+    - listitem [ref=f5e37]:
+      - link "docx_to_pdf.py" [ref=f5e38] [cursor=pointer]:
+        - /url: docx_to_pdf.py
+    - listitem [ref=f5e39]:
+      - link "generate_ppt.py" [ref=f5e40] [cursor=pointer]:
+        - /url: generate_ppt.py
+    - listitem [ref=f5e41]:
+      - link "generate_ppt_business.py" [ref=f5e42] [cursor=pointer]:
+        - /url: generate_ppt_business.py
+    - listitem [ref=f5e43]:
+      - link "generate_ppt_v35_datahub.py" [ref=f5e44] [cursor=pointer]:
+        - /url: generate_ppt_v35_datahub.py
+    - listitem [ref=f5e45]:
+      - link "generate_ppt_v36_datahub.py" [ref=f5e46] [cursor=pointer]:
+        - /url: generate_ppt_v36_datahub.py
+    - listitem [ref=f5e47]:
+      - link "generate_quote_report.py" [ref=f5e48] [cursor=pointer]:
+        - /url: generate_quote_report.py
+    - listitem [ref=f5e49]:
+      - link "HLZD-战略共创综合分析-20260627.md" [ref=f5e50] [cursor=pointer]:
+        - /url: HLZD-%E6%88%98%E7%95%A5%E5%85%B1%E5%88%9B%E7%BB%BC%E5%90%88%E5%88%86%E6%9E%90-20260627.md
+    - listitem [ref=f5e51]:
+      - link "home.html" [ref=f5e52] [cursor=pointer]:
+        - /url: home.html
+    - listitem [ref=f5e53]:
+      - link "land_rig_analysis.html" [ref=f5e54] [cursor=pointer]:
+        - /url: land_rig_analysis.html
+    - listitem [ref=f5e55]:
+      - link "land_rig_analysis.md" [ref=f5e56] [cursor=pointer]:
+        - /url: land_rig_analysis.md
+    - listitem [ref=f5e57]:
+      - link "land_rig_tender.md" [ref=f5e58] [cursor=pointer]:
+        - /url: land_rig_tender.md
+    - listitem [ref=f5e59]:
+      - link "LICENSE" [ref=f5e60] [cursor=pointer]:
+        - /url: LICENSE
+    - listitem [ref=f5e61]:
+      - link "NebulaRec-PPT框架共创-Transfer.txt" [ref=f5e62] [cursor=pointer]:
+        - /url: NebulaRec-PPT%E6%A1%86%E6%9E%B6%E5%85%B1%E5%88%9B-Transfer.txt
+    - listitem [ref=f5e63]:
+      - link "NebulaRec-产品方案梳理-Summary.txt" [ref=f5e64] [cursor=pointer]:
+        - /url: NebulaRec-%E4%BA%A7%E5%93%81%E6%96%B9%E6%A1%88%E6%A2%B3%E7%90%86-Summary.txt
+    - listitem [ref=f5e65]:
+      - link "office-pdf-toolkit.zip" [ref=f5e66] [cursor=pointer]:
+        - /url: office-pdf-toolkit.zip
+    - listitem [ref=f5e67]:
+      - link "PPT初稿 - 副本 - 副本.md" [ref=f5e68] [cursor=pointer]:
+        - /url: PPT%E5%88%9D%E7%A8%BF%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC.md
+    - listitem [ref=f5e69]:
+      - link "PPT初稿 - 副本.md" [ref=f5e70] [cursor=pointer]:
+        - /url: PPT%E5%88%9D%E7%A8%BF%20-%20%E5%89%AF%E6%9C%AC.md
+    - listitem [ref=f5e71]:
+      - link "PPT初稿 1.md" [ref=f5e72] [cursor=pointer]:
+        - /url: PPT%E5%88%9D%E7%A8%BF%201.md
+    - listitem [ref=f5e73]:
+      - link "PPT初稿.md" [ref=f5e74] [cursor=pointer]:
+        - /url: PPT%E5%88%9D%E7%A8%BF.md
+    - listitem [ref=f5e75]:
+      - link "PPT梳理.md" [ref=f5e76] [cursor=pointer]:
+        - /url: PPT%E6%A2%B3%E7%90%86.md
+    - listitem [ref=f5e77]:
+      - link "price.html" [ref=f5e78] [cursor=pointer]:
+        - /url: price.html
+    - listitem [ref=f5e79]:
+      - link "pricing.html" [ref=f5e80] [cursor=pointer]:
+        - /url: pricing.html
+    - listitem [ref=f5e81]:
+      - link "README.md" [ref=f5e82] [cursor=pointer]:
+        - /url: README.md
+    - listitem [ref=f5e83]:
+      - link "setup_docx.py" [ref=f5e84] [cursor=pointer]:
+        - /url: setup_docx.py
+    - listitem [ref=f5e85]:
+      - link "skills/" [ref=f5e86] [cursor=pointer]:
+        - /url: skills/
+    - listitem [ref=f5e87]:
+      - link "skills-demo/" [ref=f5e88] [cursor=pointer]:
+        - /url: skills-demo/
+    - listitem [ref=f5e89]:
+      - link "solutions.html" [ref=f5e90] [cursor=pointer]:
+        - /url: solutions.html
+    - listitem [ref=f5e91]:
+      - link "validate_skills.py" [ref=f5e92] [cursor=pointer]:
+        - /url: validate_skills.py
+    - listitem [ref=f5e93]:
+      - link "VERSIONS.md" [ref=f5e94] [cursor=pointer]:
+        - /url: VERSIONS.md
+    - listitem [ref=f5e95]:
+      - link "VMT内容生产-白话SOP说明书-2026-07-02.md" [ref=f5e96] [cursor=pointer]:
+        - /url: VMT%E5%86%85%E5%AE%B9%E7%94%9F%E4%BA%A7-%E7%99%BD%E8%AF%9DSOP%E8%AF%B4%E6%98%8E%E4%B9%A6-2026-07-02.md
+    - listitem [ref=f5e97]:
+      - link "word2pdf.zip" [ref=f5e98] [cursor=pointer]:
+        - /url: word2pdf.zip
+    - listitem [ref=f5e99]:
+      - link "work_proof.docx" [ref=f5e100] [cursor=pointer]:
+        - /url: work_proof.docx
+    - listitem [ref=f5e101]:
+      - link "work_proof.pdf" [ref=f5e102] [cursor=pointer]:
+        - /url: work_proof.pdf
+    - listitem [ref=f5e103]:
+      - link "work_test.docx" [ref=f5e104] [cursor=pointer]:
+        - /url: work_test.docx
+    - listitem [ref=f5e105]:
+      - link "work_test.pdf" [ref=f5e106] [cursor=pointer]:
+        - /url: work_test.pdf
+    - listitem [ref=f5e107]:
+      - link "二维码.png" [ref=f5e108] [cursor=pointer]:
+        - /url: "%E4%BA%8C%E7%BB%B4%E7%A0%81.png"
+    - listitem [ref=f5e109]:
+      - link "产品梳理.md" [ref=f5e110] [cursor=pointer]:
+        - /url: "%E4%BA%A7%E5%93%81%E6%A2%B3%E7%90%86.md"
+    - listitem [ref=f5e111]:
+      - link "价格表.xlsx" [ref=f5e112] [cursor=pointer]:
+        - /url: "%E4%BB%B7%E6%A0%BC%E8%A1%A8.xlsx"
+    - listitem [ref=f5e113]:
+      - link "原始文档.md" [ref=f5e114] [cursor=pointer]:
+        - /url: "%E5%8E%9F%E5%A7%8B%E6%96%87%E6%A1%A3.md"
+    - listitem [ref=f5e115]:
+      - link "安哥拉招标.md" [ref=f5e116] [cursor=pointer]:
+        - /url: "%E5%AE%89%E5%93%A5%E6%8B%89%E6%8B%9B%E6%A0%87.md"
+    - listitem [ref=f5e117]:
+      - link "工具集使用手册.md" [ref=f5e118] [cursor=pointer]:
+        - /url: "%E5%B7%A5%E5%85%B7%E9%9B%86%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md"
+    - listitem [ref=f5e119]:
+      - link "报价单-副本.md" [ref=f5e120] [cursor=pointer]:
+        - /url: "%E6%8A%A5%E4%BB%B7%E5%8D%95-%E5%89%AF%E6%9C%AC.md"
+    - listitem [ref=f5e121]:
+      - link "报价单.md" [ref=f5e122] [cursor=pointer]:
+        - /url: "%E6%8A%A5%E4%BB%B7%E5%8D%95.md"
+    - listitem [ref=f5e123]:
+      - link "未命名.md" [ref=f5e124] [cursor=pointer]:
+        - /url: "%E6%9C%AA%E5%91%BD%E5%90%8D.md"
+    - listitem [ref=f5e125]:
+      - link "测试.txt" [ref=f5e126] [cursor=pointer]:
+        - /url: "%E6%B5%8B%E8%AF%95.txt"
+    - listitem [ref=f5e127]:
+      - link "海联智达-商务版-v3.1.pptx" [ref=f5e128] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.1.pptx"
+    - listitem [ref=f5e129]:
+      - link "海联智达-商务版-v3.2.pptx" [ref=f5e130] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.2.pptx"
+    - listitem [ref=f5e131]:
+      - link "海联智达-商务版-v3.5-原版备份.pptx" [ref=f5e132] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.5-%E5%8E%9F%E7%89%88%E5%A4%87%E4%BB%BD.pptx"
+    - listitem [ref=f5e133]:
+      - link "海联智达-商务版-v3.5-受保护.pdf" [ref=f5e134] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.5-%E5%8F%97%E4%BF%9D%E6%8A%A4.pdf"
+    - listitem [ref=f5e135]:
+      - link "海联智达-商务版-v3.5.pdf" [ref=f5e136] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.5.pdf"
+    - listitem [ref=f5e137]:
+      - link "海联智达-商务版-v3.5.pptx" [ref=f5e138] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.5.pptx"
+    - listitem [ref=f5e139]:
+      - link "海联智达-商务版-v3.6-受保护.pdf" [ref=f5e140] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.6-%E5%8F%97%E4%BF%9D%E6%8A%A4.pdf"
+    - listitem [ref=f5e141]:
+      - link "海联智达-商务版-v3.6.html" [ref=f5e142] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.6.html"
+    - listitem [ref=f5e143]:
+      - link "海联智达-商务版-v3.6.pdf" [ref=f5e144] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.6.pdf"
+    - listitem [ref=f5e145]:
+      - link "海联智达-商务版-v3.6.pptx" [ref=f5e146] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E5%95%86%E5%8A%A1%E7%89%88-v3.6.pptx"
+    - listitem [ref=f5e147]:
+      - link "海联智达-数据底座-v3.5-DataHub-受保护.pdf" [ref=f5e148] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E6%95%B0%E6%8D%AE%E5%BA%95%E5%BA%A7-v3.5-DataHub-%E5%8F%97%E4%BF%9D%E6%8A%A4.pdf"
+    - listitem [ref=f5e149]:
+      - link "海联智达-数据底座-v3.5-DataHub.pdf" [ref=f5e150] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E6%95%B0%E6%8D%AE%E5%BA%95%E5%BA%A7-v3.5-DataHub.pdf"
+    - listitem [ref=f5e151]:
+      - link "海联智达-数据底座-v3.5-DataHub.pptx" [ref=f5e152] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E6%95%B0%E6%8D%AE%E5%BA%95%E5%BA%A7-v3.5-DataHub.pptx"
+    - listitem [ref=f5e153]:
+      - link "海联智达-数据底座-v3.6-Enterprise-受保护.pdf" [ref=f5e154] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E6%95%B0%E6%8D%AE%E5%BA%95%E5%BA%A7-v3.6-Enterprise-%E5%8F%97%E4%BF%9D%E6%8A%A4.pdf"
+    - listitem [ref=f5e155]:
+      - link "海联智达-数据底座-v3.6-Enterprise.pdf" [ref=f5e156] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E6%95%B0%E6%8D%AE%E5%BA%95%E5%BA%A7-v3.6-Enterprise.pdf"
+    - listitem [ref=f5e157]:
+      - link "海联智达-数据底座-v3.6-Enterprise.pptx" [ref=f5e158] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E6%95%B0%E6%8D%AE%E5%BA%95%E5%BA%A7-v3.6-Enterprise.pptx"
+    - listitem [ref=f5e159]:
+      - link "海联智达-数据底座-v3.6.1-Enterprise.pptx" [ref=f5e160] [cursor=pointer]:
+        - /url: "%E6%B5%B7%E8%81%94%E6%99%BA%E8%BE%BE-%E6%95%B0%E6%8D%AE%E5%BA%95%E5%BA%A7-v3.6.1-Enterprise.pptx"
+    - listitem [ref=f5e161]:
+      - link "独立站报价单.html" [ref=f5e162] [cursor=pointer]:
+        - /url: "%E7%8B%AC%E7%AB%8B%E7%AB%99%E6%8A%A5%E4%BB%B7%E5%8D%95.html"
+    - listitem [ref=f5e163]:
+      - link "独立站报价单.md" [ref=f5e164] [cursor=pointer]:
+        - /url: "%E7%8B%AC%E7%AB%8B%E7%AB%99%E6%8A%A5%E4%BB%B7%E5%8D%95.md"
+    - listitem [ref=f5e165]:
+      - link "要点分析 1.md" [ref=f5e166] [cursor=pointer]:
+        - /url: "%E8%A6%81%E7%82%B9%E5%88%86%E6%9E%90%201.md"
+    - listitem [ref=f5e167]:
+      - link "要点分析.md" [ref=f5e168] [cursor=pointer]:
+        - /url: "%E8%A6%81%E7%82%B9%E5%88%86%E6%9E%90.md"
+    - listitem [ref=f5e169]:
+      - link "证明.md" [ref=f5e170] [cursor=pointer]:
+        - /url: "%E8%AF%81%E6%98%8E.md"
+    - listitem [ref=f5e171]:
+      - link "配图与配音执行清单.md" [ref=f5e172] [cursor=pointer]:
+        - /url: "%E9%85%8D%E5%9B%BE%E4%B8%8E%E9%85%8D%E9%9F%B3%E6%89%A7%E8%A1%8C%E6%B8%85%E5%8D%95.md"
+    - listitem [ref=f5e173]:
+      - link "阿里素材/" [ref=f5e174] [cursor=pointer]:
+        - /url: "%E9%98%BF%E9%87%8C%E7%B4%A0%E6%9D%90/"
+  - separator [ref=f5e175]

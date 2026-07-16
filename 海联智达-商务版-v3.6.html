@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海联智达 · 让中国工厂做全世界的生意</title>
+<meta name="description" content="海联智达 HLZD · 外贸 AI 赋能方案 — 数据大脑 + 重交付，30 天搭建，60 天见询盘">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Apple-Style Design System × HLZD 商务品牌
+   ============================================================ */
+:root {
+  /* Neutrals (Apple system) */
+  --black: #000000;
+  --white: #ffffff;
+  --gray-100: #f5f5f7;
+  --gray-200: #d2d2d7;
+  --gray-400: #86868b;
+  --gray-600: #6e6e73;
+  --gray-900: #1d1d1f;
+
+  /* HLZD Brand */
+  --bg-primary: #000814;
+  --bg-secondary: #0a1929;
+  --bg-tertiary: #001a3a;
+  --bg-card: #0d1f3a;
+  --accent-gold: #c9a961;
+  --accent-gold-light: #d4b574;
+  --accent-gold-dark: #a8893f;
+  --accent-blue: #2997ff;
+  --accent-blue-hover: #5eb4ff;
+
+  /* Borders & Surfaces */
+  --border-light: rgba(255,255,255,0.08);
+  --border-mid: rgba(255,255,255,0.14);
+  --border-gold: rgba(201,169,97,0.3);
+
+  /* Typography */
+  --font-zh: 'PingFang SC', 'HarmonyOS Sans SC', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-en: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Easing */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-apple: cubic-bezier(0.5, 0, 0, 1);
+
+  /* Duration */
+  --dur-fast: 200ms;
+  --dur-base: 400ms;
+  --dur-slow: 800ms;
+  --dur-cinema: 1500ms;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-zh);
+  background: var(--bg-primary);
+  color: var(--white);
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+img, svg { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+
+/* ============================================================
+   Layout
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+@media (min-width: 1068px) {
+  .container { padding: 0 40px; }
+}
+
+section {
+  position: relative;
+  padding: 96px 0;
+}
+
+@media (min-width: 1068px) {
+  section { padding: 160px 0; }
+}
+
+/* ============================================================
+   Typography Scale (Apple-inspired)
+   ============================================================ */
+.eyebrow {
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--accent-gold);
+}
+
+.display-hero {
+  font-size: clamp(56px, 8vw, 120px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  margin-bottom: 32px;
+}
+
+.display-1 {
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.display-2 {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.headline {
+  font-size: clamp(20px, 2.4vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.subhead {
+  font-size: clamp(17px, 1.5vw, 21px);
+  font-weight: 400;
+  color: var(--gray-400);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  max-width: 720px;
+}
+
+.lead {
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: rgba(255,255,255,0.92);
+  max-width: 880px;
+}
+
+.caption {
+  font-size: 14px;
+  color: var(--gray-400);
+  letter-spacing: 0.02em;
+}
+
+.text-gold { color: var(--accent-gold); }
+.text-blue { color: var(--accent-blue); }
+
+/* ============================================================
+   Nav (Sticky Glass)
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 52px;
+  background: rgba(0, 8, 20, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  transition: background var(--dur-base) var(--ease-apple);
+}
+.nav.scrolled { background: rgba(0, 8, 20, 0.92); }
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav-logo {
+  font-family: var(--font-en);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  box-shadow: 0 0 12px var(--accent-gold);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+.nav-menu {
+  display: none;
+  gap: 28px;
+  flex: 1;
+  justify-content: center;
+}
+.nav-menu a {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.88);
+  transition: opacity var(--dur-fast);
+}
+.nav-menu a:hover { opacity: 0.6; }
+@media (min-width: 1068px) { .nav-menu { display: flex; } }
+.nav-cta {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 980px;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  transition: all var(--dur-fast) var(--ease-apple);
+}
+.nav-cta:hover { background: var(--accent-gold-light); transform: translateY(-1px); }
+
+/* Progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+  z-index: 101;
+  width: 0;
+  transition: width 100ms linear;
+}
+
+/* ============================================================
+   Hero Section
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(201,169,97,0.15), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(41,151,255,0.1), transparent 50%),
+    var(--bg-primary);
+}
+.hero-grid-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+}
+.hero-inner { width: 100%; position: relative; }
+.hero-eyebrow {
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--accent-gold);
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 1s var(--ease-out) 0.2s forwards;
+}
+.hero-title {
+  font-size: clamp(48px, 8.5vw, 128px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin-bottom: 32px;
+}
+.hero-title .line {
+  display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s var(--ease-out) forwards;
+}
+.hero-title .line:nth-child(1) { animation-delay: 0.3s; }
+.hero-title .line:nth-child(2) { animation-delay: 0.5s; color: var(--accent-gold); }
+.hero-title .line:nth-child(3) { animation-delay: 0.7s; }
+.hero-sub {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 400;
+  color: var(--gray-400);
+  max-width: 720px;
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 0.9s forwards;
+}
+.hero-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 1.1s forwards;
+}
+.hero-tagline {
+  margin-top: 64px;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: -0.01em;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 1.3s forwards;
+}
+.hero-version {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-en);
+  font-size: 13px;
+  color: var(--gray-400);
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 1.5s forwards;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: all var(--dur-base) var(--ease-apple);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+}
+.btn-primary:hover {
+  background: var(--accent-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201,169,97,0.3);
+}
+.btn-secondary {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border-mid);
+  color: var(--white);
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.24);
+  transform: translateY(-2px);
+}
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: var(--accent-gold);
+  font-weight: 500;
+  transition: gap var(--dur-base) var(--ease-apple);
+}
+.btn-arrow:hover { gap: 12px; }
+.btn-arrow svg { transition: transform var(--dur-base); }
+.btn-arrow:hover svg { transform: translateX(4px); }
+
+/* ============================================================
+   Section Headers (Apple-style)
+   ============================================================ */
+.section-header {
+  text-align: left;
+  max-width: 980px;
+  margin-bottom: 80px;
+}
+.section-num {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-num::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent-gold);
+}
+.section-title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.section-title .accent { color: var(--accent-gold); }
+.section-subtitle {
+  font-size: clamp(17px, 1.5vw, 21px);
+  color: var(--gray-400);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  max-width: 720px;
+}
+
+/* ============================================================
+   Reveal Animations (IntersectionObserver)
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: 0.01s !important; transition-duration: 0.01s !important; }
+}
+
+/* ============================================================
+   Stats / CountUp Grid (Section 02)
+   ============================================================ */
+.stats {
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  border: 1px solid var(--border-light);
+  padding: 56px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 80px;
+}
+@media (min-width: 1068px) {
+  .stats { grid-template-columns: repeat(4, 1fr); padding: 72px 56px; gap: 48px; }
+}
+.stat-item {
+  text-align: center;
+  position: relative;
+}
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -24px;
+  top: 16px;
+  bottom: 16px;
+  width: 1px;
+  background: var(--border-light);
+}
+@media (max-width: 1067px) {
+  .stat-item:nth-child(2)::after { display: none; }
+}
+.stat-num {
+  font-family: var(--font-en);
+  font-size: clamp(56px, 7vw, 96px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.stat-num .unit {
+  font-size: 0.55em;
+  font-weight: 600;
+  margin-left: 4px;
+  color: var(--white);
+}
+.stat-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-400);
+  letter-spacing: 0.01em;
+}
+
+/* ============================================================
+   Business Tiles (4 cards)
+   ============================================================ */
+.tiles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 734px) { .tiles-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1068px) { .tiles-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+.tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 40px 28px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--dur-slow) var(--ease-out);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  opacity: 0;
+  transition: opacity var(--dur-base);
+}
+.tile:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-gold);
+  background: linear-gradient(180deg, rgba(201,169,97,0.06), var(--bg-card));
+}
+.tile:hover::before { opacity: 1; }
+.tile-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(201,169,97,0.12);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform var(--dur-base) var(--ease-apple);
+}
+.tile:hover .tile-icon { transform: rotate(-8deg) scale(1.08); }
+.tile-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.tile-desc {
+  font-size: 14px;
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+.tile-tag {
+  margin-top: 24px;
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   Market Insight (2×2 Grid with hover)
+   ============================================================ */
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 734px) { .insight-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+.insight-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 48px 36px;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--dur-slow) var(--ease-out);
+}
+.insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+.insight-card:hover { transform: translateY(-4px); border-color: var(--border-gold); }
+.insight-card:hover::before { transform: scaleY(1); }
+.insight-num {
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 24px;
+  letter-spacing: 0.06em;
+}
+.insight-title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.insight-sub {
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-400);
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.insight-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Architecture Layers (4 levels, vertical timeline)
+   ============================================================ */
+.arch {
+  background: var(--bg-secondary);
+  border-radius: 32px;
+  padding: 56px 32px;
+  border: 1px solid var(--border-light);
+}
+@media (min-width: 1068px) { .arch { padding: 72px 56px; } }
+.arch-layer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid var(--border-light);
+  align-items: center;
+  position: relative;
+  transition: all var(--dur-base) var(--ease-out);
+}
+.arch-layer:hover { padding-left: 16px; }
+.arch-layer:first-child { border-top: 0; padding-top: 0; }
+@media (min-width: 1068px) {
+  .arch-layer { grid-template-columns: 120px 1fr 1.2fr; gap: 48px; }
+}
+.arch-badge {
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+.arch-badge.l1 { background: rgba(10,25,41,0.9); color: var(--white); border: 1px solid var(--border-mid); }
+.arch-badge.l2 { background: #1e3a8a; color: var(--white); }
+.arch-badge.l3 { background: var(--accent-gold); color: var(--bg-primary); }
+.arch-badge.l4 { background: #16a34a; color: var(--white); }
+.arch-name {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+.arch-desc {
+  font-size: 16px;
+  color: var(--gray-400);
+  line-height: 1.7;
+}
+.arch-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.arch-tag {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 980px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.72);
+  border: 1px solid var(--border-light);
+}
+
+/* Value chain (5 steps) */
+.value-chain {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 734px) { .value-chain { grid-template-columns: repeat(5, 1fr); } }
+.value-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  position: relative;
+  transition: all var(--dur-base) var(--ease-out);
+}
+.value-step:hover { background: var(--bg-tertiary); border-color: var(--accent-gold); transform: translateY(-4px); }
+.value-step .num {
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.value-step .label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+@media (min-width: 734px) {
+  .value-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-gold);
+    font-size: 18px;
+    z-index: 2;
+  }
+}
+
+/* ============================================================
+   Cases (Tabs)
+   ============================================================ */
+.case-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border-light);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.case-tabs::-webkit-scrollbar { display: none; }
+.case-tab {
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-400);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  transition: all var(--dur-base);
+}
+.case-tab.active { color: var(--white); border-bottom-color: var(--accent-gold); }
+.case-tab:hover { color: var(--white); }
+
+.case-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 48px 40px;
+  display: none;
+  animation: fadeUp 0.6s var(--ease-out);
+}
+.case-card.active { display: grid; gap: 32px; }
+@media (min-width: 1068px) { .case-card.active { grid-template-columns: 1.4fr 1fr; gap: 64px; } }
+.case-meta { font-family: var(--font-en); font-size: 13px; color: var(--gray-400); letter-spacing: 0.04em; margin-bottom: 8px; }
+.case-industry { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 24px; }
+.case-section { margin-bottom: 24px; }
+.case-section-title {
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.case-section-content {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+.case-highlight {
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid var(--border-gold);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.case-highlight-label {
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-400);
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.case-highlight-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.case-highlight-note {
+  font-size: 13px;
+  color: var(--gray-400);
+  font-style: italic;
+}
+
+/* ============================================================
+   Competitive Edge (Comparison Table)
+   ============================================================ */
+.compare-wrap {
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.compare-table th, .compare-table td {
+  padding: 24px 28px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 15px;
+}
+.compare-table th {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--bg-card);
+}
+.compare-table th.hl-col {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  position: relative;
+}
+.compare-table th.hl-col::after {
+  content: '推荐';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 10px;
+  padding: 2px 8px;
+  background: var(--bg-primary);
+  color: var(--accent-gold);
+  border-radius: 980px;
+}
+.compare-table td.hl-col {
+  background: rgba(201,169,97,0.08);
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+.compare-table tr:last-child td { border-bottom: 0; }
+.compare-table tbody tr { transition: background var(--dur-base); }
+.compare-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+.compare-quote {
+  margin-top: 40px;
+  padding: 32px;
+  border-left: 2px solid var(--accent-gold);
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Industry Tabs
+   ============================================================ */
+.industry-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.industry-tab {
+  padding: 16px;
+  text-align: center;
+  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-400);
+  transition: all var(--dur-base);
+}
+.industry-tab.active { background: var(--accent-gold); color: var(--bg-primary); border-color: var(--accent-gold); }
+.industry-tab:hover:not(.active) { color: var(--white); border-color: var(--border-mid); }
+.industry-content {
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  padding: 48px 40px;
+  border: 1px solid var(--border-light);
+  display: none;
+  animation: fadeUp 0.6s var(--ease-out);
+}
+.industry-content.active { display: block; }
+.industry-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 734px) { .industry-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; } }
+.industry-col-title {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.industry-col-body {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+}
+.industry-note {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--gray-400);
+  font-style: italic;
+}
+
+/* ============================================================
+   Pricing (3 tiers)
+   ============================================================ */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 734px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 48px 36px;
+  position: relative;
+  transition: all var(--dur-slow) var(--ease-out);
+  overflow: hidden;
+}
+.pricing-card.featured {
+  border-color: var(--accent-gold);
+  background: linear-gradient(180deg, rgba(201,169,97,0.1) 0%, var(--bg-card) 60%);
+  transform: scale(1.02);
+}
+@media (min-width: 734px) {
+  .pricing-card.featured { transform: scale(1.04); }
+}
+.pricing-card:hover { transform: translateY(-8px) scale(1.02); border-color: var(--accent-gold); }
+.pricing-card.featured:hover { transform: translateY(-8px) scale(1.06); }
+.pricing-tier {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.pricing-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.pricing-price {
+  font-family: var(--font-en);
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.pricing-price .currency { font-size: 0.6em; vertical-align: top; margin-right: 4px; color: var(--gray-400); }
+.pricing-price .period { font-size: 14px; font-weight: 500; color: var(--gray-400); margin-left: 4px; }
+.pricing-features {
+  margin-top: 32px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 24px;
+}
+.pricing-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+}
+.pricing-feature svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent-gold);
+}
+.pricing-cta {
+  margin-top: 32px;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 980px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--dur-base);
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+  border: 1px solid var(--border-mid);
+}
+.pricing-cta:hover { background: var(--accent-gold); color: var(--bg-primary); border-color: var(--accent-gold); }
+.pricing-card.featured .pricing-cta {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+/* ============================================================
+   Commitment (30/60)
+   ============================================================ */
+.commit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 64px;
+}
+@media (min-width: 734px) { .commit-grid { grid-template-columns: repeat(2, 1fr); } }
+.commit-big {
+  background: var(--bg-card);
+  border-radius: 28px;
+  padding: 64px 48px;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+}
+.commit-big.dark { background: var(--bg-tertiary); }
+.commit-big.gold { background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark)); }
+.commit-big.gold .commit-num, .commit-big.gold .commit-label, .commit-big.gold .commit-en { color: var(--bg-primary); }
+.commit-num {
+  font-family: var(--font-en);
+  font-size: clamp(120px, 16vw, 200px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+.commit-label {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
+}
+.commit-en {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 734px) { .service-grid { grid-template-columns: repeat(3, 1fr); } }
+.service-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 36px 28px;
+  transition: all var(--dur-base) var(--ease-out);
+}
+.service-card:hover { transform: translateY(-4px); border-color: var(--border-gold); }
+.service-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--accent-gold);
+}
+.service-list {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ============================================================
+   Team (3 cards)
+   ============================================================ */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 734px) { .team-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.team-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--dur-slow) var(--ease-out);
+}
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-gold);
+}
+.team-card:hover { transform: translateY(-6px); border-color: var(--border-gold); }
+.team-cat {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.team-role {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.team-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.78);
+}
+
+.mission-banner {
+  margin-top: 80px;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 56px 48px;
+  text-align: center;
+}
+.mission-label {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.mission-text {
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  color: var(--white);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   Roadmap (Horizontal Scroll Timeline)
+   ============================================================ */
+.roadmap-wrap {
+  position: relative;
+  margin-top: 64px;
+}
+.roadmap-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 32px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-gold) var(--bg-card);
+}
+.roadmap-track::-webkit-scrollbar { height: 6px; }
+.roadmap-track::-webkit-scrollbar-track { background: var(--bg-card); border-radius: 3px; }
+.roadmap-track::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 3px; }
+.roadmap-step {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all var(--dur-base);
+  cursor: pointer;
+}
+.roadmap-step:hover { transform: translateY(-4px); border-color: var(--accent-gold); }
+.roadmap-step.active { border-color: var(--accent-gold); background: var(--bg-card); }
+.roadmap-head {
+  padding: 24px;
+  text-align: center;
+  position: relative;
+}
+.roadmap-step.m1 .roadmap-head { background: #1e3a8a; }
+.roadmap-step.m2 .roadmap-head { background: var(--bg-tertiary); }
+.roadmap-step.m3 .roadmap-head { background: var(--accent-gold); color: var(--bg-primary); }
+.roadmap-step.m4 .roadmap-head { background: #16a34a; }
+.roadmap-step.m5 .roadmap-head { background: #6b7280; }
+.roadmap-period {
+  font-family: var(--font-en);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.roadmap-phase {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.roadmap-body {
+  padding: 24px;
+}
+.roadmap-list {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.78);
+}
+.roadmap-milestones {
+  margin-top: 48px;
+  background: var(--bg-tertiary);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+}
+.roadmap-milestones-label {
+  font-family: var(--font-en);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.roadmap-milestones-list {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+}
+.roadmap-milestones-list span {
+  margin: 0 16px;
+  color: var(--gray-400);
+}
+
+/* ============================================================
+   CTA Final
+   ============================================================ */
+.cta-final {
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  border-radius: 32px;
+  padding: 80px 48px;
+  text-align: center;
+  border: 1px solid var(--border-gold);
+  position: relative;
+  overflow: hidden;
+}
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(201,169,97,0.08), transparent 40%);
+  animation: rotate 30s linear infinite;
+}
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+.cta-inner { position: relative; z-index: 1; }
+.cta-title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  line-height: 1.05;
+}
+.cta-sub {
+  font-size: clamp(17px, 1.5vw, 22px);
+  color: var(--gray-400);
+  margin-bottom: 56px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.coop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+@media (min-width: 734px) { .coop-grid { grid-template-columns: repeat(3, 1fr); } }
+.coop-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-mid);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: left;
+  transition: all var(--dur-base);
+}
+.coop-card:hover { background: rgba(201,169,97,0.08); border-color: var(--accent-gold); transform: translateY(-4px); }
+.coop-num {
+  font-family: var(--font-en);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.coop-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.coop-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-400);
+}
+.cta-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-light);
+}
+.cta-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  color: var(--white);
+}
+.cta-contact-item svg { color: var(--accent-gold); }
+.cta-tagline {
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--accent-gold);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  border-top: 1px solid var(--border-light);
+  padding: 48px 0;
+  background: var(--bg-primary);
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.footer-text { font-size: 13px; color: var(--gray-400); }
+.footer-logo {
+  font-family: var(--font-en);
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ============================================================
+   Parallax helpers
+   ============================================================ */
+.parallax-slow { will-change: transform; }
+[data-parallax] { transition: transform 200ms linear; }
+
+/* ============================================================
+   Section dividers
+   ============================================================ */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-light);
+  margin: 0;
+}
+
+/* ============================================================
+   Mobile nav fallback
+   ============================================================ */
+@media (max-width: 1067px) {
+  .nav-menu { display: none; }
+  .nav-inner { gap: 12px; }
+  .nav-cta { padding: 7px 14px; font-size: 12px; }
+  .nav-logo { font-size: 15px; }
+}
+
+/* Pricing tilt only on desktop */
+@media (max-width: 1067px) {
+  .pricing-card.featured { transform: scale(1); }
+  .pricing-card:hover, .pricing-card.featured:hover { transform: translateY(-4px); }
+}
+</style>
+</head>
+<body>
+
+<!-- =================== NAV =================== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-logo-dot"></span>
+      HLZD 海联智达
+    </a>
+    <div class="nav-menu">
+      <a href="#overview">方案概览</a>
+      <a href="#market">市场洞察</a>
+      <a href="#solution">解决方案</a>
+      <a href="#cases">客户成功</a>
+      <a href="#pricing">合作模式</a>
+      <a href="#roadmap">路线图</a>
+      <a href="#commit">商务保障</a>
+    </div>
+    <a href="#contact" class="nav-cta">预约演示</a>
+  </div>
+</nav>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- =================== HERO =================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">BUSINESS PRESENTATION · 商务版 · 2026.06</div>
+    <h1 class="hero-title">
+      <span class="line">让中国工厂</span>
+      <span class="line">做全世界的</span>
+      <span class="line">生意。</span>
+    </h1>
+    <p class="hero-sub">
+      海联智达 × 外贸 AI 赋能方案<br>
+      HaiLian ZhiDa · Cross-border Trade AI Platform
+    </p>
+    <div class="hero-cta-row">
+      <a href="#contact" class="btn btn-primary">
+        预约 1v1 演示
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#overview" class="btn btn-secondary">
+        5 分钟读懂海联智达
+      </a>
+    </div>
+    <p class="hero-tagline">大厂做宽，我们做深；大厂卖工具，我们给结果。</p>
+    <div class="hero-version">
+      <span>海联智达 · HLZD</span>
+      <span>Cross-border Trade AI Platform</span>
+      <span>v3.6 · 2026.06</span>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 02 OVERVIEW =================== -->
+<section id="overview">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">01 · EXECUTIVE OVERVIEW</div>
+      <h2 class="section-title">方案概览</h2>
+      <p class="section-subtitle">5 分钟读懂海联智达 — 从数据大脑到上门陪跑，4 大业务板块构建外贸 AI 全链路。</p>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="30">0</span><span class="unit">天</span></div>
+        <div class="stat-label">系统搭建周期</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="60">0</span><span class="unit">天</span></div>
+        <div class="stat-label">首批询盘产出</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="4">0</span><span class="unit">大行业</span></div>
+        <div class="stat-label">机械 / 纺织 / 电子 / 化工</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span class="count" data-target="3">0</span><span class="unit">档套餐</span></div>
+        <div class="stat-label">¥59,800 起</div>
+      </div>
+    </div>
+
+    <div class="tiles-grid">
+      <div class="tile reveal reveal-delay-1">
+        <div>
+          <div class="tile-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="tile-title">数字大脑</h3>
+          <p class="tile-desc">SAG 事件图谱 + 行业 Know-How，持续进化的企业级 AI 中枢。</p>
+        </div>
+        <div class="tile-tag">01 · CORE</div>
+      </div>
+
+      <div class="tile reveal reveal-delay-2">
+        <div>
+          <div class="tile-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><path d="M8 16h.01M16 16h.01"/></svg>
+          </div>
+          <h3 class="tile-title">Bot-Agent</h3>
+          <p class="tile-desc">10-50 个数字员工，7×24 在线，覆盖获客 / 跟进 / 谈判 / 履约全场景。</p>
+        </div>
+        <div class="tile-tag">02 · AGENTS</div>
+      </div>
+
+      <div class="tile reveal reveal-delay-3">
+        <div>
+          <div class="tile-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
+          </div>
+          <h3 class="tile-title">Skills-Map</h3>
+          <p class="tile-desc">企业能力图谱动态编排，按业务需求灵活调度 AI 技能组合。</p>
+        </div>
+        <div class="tile-tag">03 · MAP</div>
+      </div>
+
+      <div class="tile reveal reveal-delay-4">
+        <div>
+          <div class="tile-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-7L9 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4"/></svg>
+          </div>
+          <h3 class="tile-title">上门陪跑</h3>
+          <p class="tile-desc">数据清洗 + Skill 定制 + 工作流落地，工程师 7×24 现场支持。</p>
+        </div>
+        <div class="tile-tag">04 · DELIVERY</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 03 MARKET =================== -->
+<section id="market">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">02 · MARKET INSIGHT</div>
+      <h2 class="section-title">市场洞察</h2>
+      <p class="section-subtitle">外贸行业正在经历 <span class="text-gold">4 大结构性变化</span> — 大厂红利消退，新规则正在重塑出海路径。</p>
+    </div>
+
+    <div class="insight-grid">
+      <div class="insight-card reveal reveal-delay-1">
+        <div class="insight-num">01 / TREND</div>
+        <h3 class="insight-title">生态升级</h3>
+        <div class="insight-sub">B2B → A2A</div>
+        <p class="insight-desc">博弈维度从企业对企业升级为生态对生态，单点能力让位于系统协同。</p>
+      </div>
+
+      <div class="insight-card reveal reveal-delay-2">
+        <div class="insight-num">02 / BARRIER</div>
+        <h3 class="insight-title">合规趋严</h3>
+        <div class="insight-sub">出海难在「进门」</div>
+        <p class="insight-desc">政策、资质、舆情、标准成为核心门槛，硬性合规能力决定能否入场。</p>
+      </div>
+
+      <div class="insight-card reveal reveal-delay-3">
+        <div class="insight-num">03 / DATA</div>
+        <h3 class="insight-title">数据觉醒</h3>
+        <div class="insight-sub">「数据裸奔」终结</div>
+        <p class="insight-desc">80% 工厂仍凭感觉拍板，市场洞察与数据决策成为新瓶颈。</p>
+      </div>
+
+      <div class="insight-card reveal reveal-delay-4">
+        <div class="insight-num">04 / TALENT</div>
+        <h3 class="insight-title">人才稀缺</h3>
+        <div class="insight-sub">招不来 / 留不住 / 用不对</div>
+        <p class="insight-desc">复合型外贸人才成为稀缺资源，组织能力升级势在必行。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 04 SOLUTION =================== -->
+<section id="solution">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">03 · SOLUTION</div>
+      <h2 class="section-title">解决方案</h2>
+      <p class="section-subtitle">数据大脑 + 重交付 = AI 真正落地。4 层能力架构，从底层基建到价值交付全覆盖。</p>
+    </div>
+
+    <div class="arch reveal">
+      <div class="arch-layer">
+        <span class="arch-badge l1">L1 · INFRA</span>
+        <div class="arch-name">基础设施</div>
+        <div>
+          <p class="arch-desc">独立服务器 | 多国节点 | 数据加密，银行级数据安全。</p>
+          <div class="arch-tags">
+            <span class="arch-tag">独立部署</span>
+            <span class="arch-tag">多国节点</span>
+            <span class="arch-tag">AES-256</span>
+            <span class="arch-tag">TLS 1.3</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-layer">
+        <span class="arch-badge l2">L2 · BRAIN</span>
+        <div class="arch-name">数据大脑</div>
+        <div>
+          <p class="arch-desc">SAG 事件图谱 | 行业术语库 | 持续进化，企业级 AI 中枢。</p>
+          <div class="arch-tags">
+            <span class="arch-tag">SAG 多跳推理</span>
+            <span class="arch-tag">行业术语库</span>
+            <span class="arch-tag">持续自进化</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-layer">
+        <span class="arch-badge l3">L3 · AGENTS</span>
+        <div class="arch-name">智能体矩阵</div>
+        <div>
+          <p class="arch-desc">Bot-Agent ×10-50 | 多智能体路由 | Skills-Map 动态编排。</p>
+          <div class="arch-tags">
+            <span class="arch-tag">10-50 数字员工</span>
+            <span class="arch-tag">多智能体路由</span>
+            <span class="arch-tag">Skills-Map</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-layer">
+        <span class="arch-badge l4">L4 · VALUE</span>
+        <div class="arch-name">价值交付</div>
+        <div>
+          <p class="arch-desc">全链路赋能 | 上门陪跑 | 7×24 工程师，效果写进合同。</p>
+          <div class="arch-tags">
+            <span class="arch-tag">全链路赋能</span>
+            <span class="arch-tag">工程师上门</span>
+            <span class="arch-tag">7×24 服务</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div style="margin-top: 80px; margin-bottom: 32px;">
+        <h3 class="display-2">全链路价值赋能</h3>
+        <p class="subhead">从首次询盘到长期复购，覆盖外贸全生命周期 5 大环节。</p>
+      </div>
+      <div class="value-chain">
+        <div class="value-step"><div class="num">01</div><div class="label">获客</div></div>
+        <div class="value-step"><div class="num">02</div><div class="label">跟进</div></div>
+        <div class="value-step"><div class="num">03</div><div class="label">谈判</div></div>
+        <div class="value-step"><div class="num">04</div><div class="label">成单</div></div>
+        <div class="value-step"><div class="num">05</div><div class="label">复购</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 05 CASES =================== -->
+<section id="cases">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">04 · CLIENT SUCCESS</div>
+      <h2 class="section-title">客户成功</h2>
+      <p class="section-subtitle">已服务 20+ 行业头部工厂 — 30 天搭建，60 天首批询盘，详细 ROI 数据需商务洽谈。</p>
+    </div>
+
+    <div class="reveal">
+      <div class="case-tabs" role="tablist">
+        <button class="case-tab active" data-tab="case-a">案例 A · 机械制造</button>
+        <button class="case-tab" data-tab="case-b">案例 B · 纺织服装</button>
+        <button class="case-tab" data-tab="case-c">案例 C · 电子电器</button>
+      </div>
+
+      <div class="case-card active" id="case-a">
+        <div>
+          <div class="case-meta">CASE STUDY · 01</div>
+          <h3 class="case-industry">案例 A · 机械制造</h3>
+          <div class="case-section">
+            <div class="case-section-title">客户规模</div>
+            <div class="case-section-content">年营收 8,000 万<br>主攻欧美市场</div>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">解决方案</div>
+            <div class="case-section-content">AI 数字大脑 + 工程师上门服务</div>
+          </div>
+        </div>
+        <div class="case-highlight">
+          <div class="case-highlight-label">交付周期</div>
+          <div class="case-highlight-value">30 天搭建<br>60 天首批询盘</div>
+          <div class="case-highlight-note">* 详细 ROI 数据商务洽谈时提供</div>
+        </div>
+      </div>
+
+      <div class="case-card" id="case-b">
+        <div>
+          <div class="case-meta">CASE STUDY · 02</div>
+          <h3 class="case-industry">案例 B · 纺织服装</h3>
+          <div class="case-section">
+            <div class="case-section-title">客户规模</div>
+            <div class="case-section-content">年营收 1.2 亿<br>主攻东南亚 / 中东</div>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">解决方案</div>
+            <div class="case-section-content">行业术语库 + 趋势分析</div>
+          </div>
+        </div>
+        <div class="case-highlight">
+          <div class="case-highlight-label">交付周期</div>
+          <div class="case-highlight-value">30 天搭建<br>60 天首批询盘</div>
+          <div class="case-highlight-note">* 详细 ROI 数据商务洽谈时提供</div>
+        </div>
+      </div>
+
+      <div class="case-card" id="case-c">
+        <div>
+          <div class="case-meta">CASE STUDY · 03</div>
+          <h3 class="case-industry">案例 C · 电子电器</h3>
+          <div class="case-section">
+            <div class="case-section-title">客户规模</div>
+            <div class="case-section-content">年营收 5,000 万<br>主攻北美市场</div>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">解决方案</div>
+            <div class="case-section-content">认证标准匹配 + 多语言文档</div>
+          </div>
+        </div>
+        <div class="case-highlight">
+          <div class="case-highlight-label">交付周期</div>
+          <div class="case-highlight-value">30 天搭建<br>60 天首批询盘</div>
+          <div class="case-highlight-note">* 详细 ROI 数据商务洽谈时提供</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 06 COMPETITIVE EDGE =================== -->
+<section id="edge">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">05 · COMPETITIVE EDGE</div>
+      <h2 class="section-title">核心优势</h2>
+      <p class="section-subtitle">5 维竞争壁垒，全面优于通用大厂与通用 SaaS — 不只卖软件，而是「数据基建 + 组织赋能」的全程陪跑服务。</p>
+    </div>
+
+    <div class="compare-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>维度</th>
+            <th class="hl-col">海联智达</th>
+            <th>通用大厂</th>
+            <th>通用 SaaS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>技术架构</td>
+            <td class="hl-col">SAG 多跳推理</td>
+            <td>RAG 单跳</td>
+            <td>营销自动化</td>
+          </tr>
+          <tr>
+            <td>行业深度</td>
+            <td class="hl-col">4 大行业专精</td>
+            <td>通用语料</td>
+            <td>无行业属性</td>
+          </tr>
+          <tr>
+            <td>服务模式</td>
+            <td class="hl-col">重交付 + 上门</td>
+            <td>客户自研</td>
+            <td>文档自助</td>
+          </tr>
+          <tr>
+            <td>数据安全</td>
+            <td class="hl-col">独立部署 + 多国</td>
+            <td>平台统一</td>
+            <td>数据出境风险</td>
+          </tr>
+          <tr>
+            <td>效果承诺</td>
+            <td class="hl-col">30 / 60 写进合同</td>
+            <td>工具上线即结束</td>
+            <td>工具上线即结束</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="compare-quote reveal">—— 我们不只卖软件，而是卖「数据基建 + 组织赋能」的全程陪跑服务。</p>
+  </div>
+</section>
+
+<!-- =================== 07 INDUSTRY =================== -->
+<section id="industry">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">06 · INDUSTRY EXPERTISE</div>
+      <h2 class="section-title">行业专精</h2>
+      <p class="section-subtitle">机械 / 纺织 / 电子 / 化工 4 大行业深度 Know-How — 行业术语库持续迭代，其他行业可定制（约 60 天）。</p>
+    </div>
+
+    <div class="reveal">
+      <div class="industry-tabs">
+        <button class="industry-tab active" data-ind="ind-1">机械制造</button>
+        <button class="industry-tab" data-ind="ind-2">纺织服装</button>
+        <button class="industry-tab" data-ind="ind-3">电子电器</button>
+        <button class="industry-tab" data-ind="ind-4">化工材料</button>
+      </div>
+
+      <div class="industry-content active" id="ind-1">
+        <div class="industry-grid">
+          <div>
+            <div class="industry-col-title">核心场景</div>
+            <div class="industry-col-body">数控机床<br>工业配件<br>定制设备</div>
+          </div>
+          <div>
+            <div class="industry-col-title">专属能力</div>
+            <div class="industry-col-body" style="color: var(--accent-gold);">技术规格翻译<br>CE / UL / RoHS 合规</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-content" id="ind-2">
+        <div class="industry-grid">
+          <div>
+            <div class="industry-col-title">核心场景</div>
+            <div class="industry-col-body">面料辅料<br>成衣定制<br>OEM / ODM</div>
+          </div>
+          <div>
+            <div class="industry-col-title">专属能力</div>
+            <div class="industry-col-body" style="color: var(--accent-gold);">流行趋势分析<br>BSCI / OEKO-TEX 认证</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-content" id="ind-3">
+        <div class="industry-grid">
+          <div>
+            <div class="industry-col-title">核心场景</div>
+            <div class="industry-col-body">消费电子<br>零部件<br>IoT 设备</div>
+          </div>
+          <div>
+            <div class="industry-col-title">专属能力</div>
+            <div class="industry-col-body" style="color: var(--accent-gold);">FCC / CE 认证匹配<br>多语言说明书</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="industry-content" id="ind-4">
+        <div class="industry-grid">
+          <div>
+            <div class="industry-col-title">核心场景</div>
+            <div class="industry-col-body">工业原料<br>添加剂<br>涂料</div>
+          </div>
+          <div>
+            <div class="industry-col-title">专属能力</div>
+            <div class="industry-col-body" style="color: var(--accent-gold);">MSDS 自动生成<br>REACH / 危险品合规</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="industry-note">其他行业可定制（约 60 天）· 行业术语库持续迭代</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 08 PRICING =================== -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">07 · COOPERATION MODEL</div>
+      <h2 class="section-title">合作模式</h2>
+      <p class="section-subtitle">3 档梯度 · 灵活选择 — 从入门版到旗舰版，覆盖不同规模出海企业的 AI 赋能需求。</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <div class="pricing-card">
+        <div class="pricing-tier">STANDARD</div>
+        <div class="pricing-name">入门版</div>
+        <div class="pricing-price"><span class="currency">¥</span>59,800</div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>数字大脑（自进化）</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Bot-Agent × 10 席</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>美国独立网络</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>7×24 专属支持</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>统一登录 / 操作追溯</li>
+        </ul>
+        <a href="#contact" class="pricing-cta">选购入门版</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-tier">PROFESSIONAL · 推荐</div>
+        <div class="pricing-name">基础版</div>
+        <div class="pricing-price"><span class="currency">¥</span>99,800</div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>入门版全部配置</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ 知识冷启动服务</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ 5 国服务器可选</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ Bot-Agent × 25 席</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ 10 人组织</li>
+        </ul>
+        <a href="#contact" class="pricing-cta">选购基础版</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">ENTERPRISE</div>
+        <div class="pricing-name">旗舰版</div>
+        <div class="pricing-price"><span class="currency">¥</span>188,000</div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>基础版全部配置</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ 知识库进阶启动</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ 定制 Skill + 工作流</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ 21 国服务器可选</li>
+          <li class="pricing-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>+ 工程师上门服务</li>
+        </ul>
+        <a href="#contact" class="pricing-cta">选购旗舰版</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 09 COMMITMENT =================== -->
+<section id="commit">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">08 · OUR COMMITMENT</div>
+      <h2 class="section-title">商务保障</h2>
+      <p class="section-subtitle">30 / 60 承诺 + 数据安全 + 7×24 服务 — 不达标免费延期至达标。</p>
+    </div>
+
+    <div class="commit-grid reveal">
+      <div class="commit-big dark">
+        <div class="commit-num"><span class="count-lg" data-target="30">0</span></div>
+        <div class="commit-label">天系统搭建</div>
+        <div class="commit-en">SYSTEM DEPLOYMENT</div>
+      </div>
+      <div class="commit-big gold">
+        <div class="commit-num"><span class="count-lg" data-target="60">0</span></div>
+        <div class="commit-label">天首批询盘</div>
+        <div class="commit-en">FIRST INQUIRIES DELIVERED</div>
+      </div>
+    </div>
+
+    <div class="service-grid reveal">
+      <div class="service-card">
+        <div class="service-title">数据安全</div>
+        <div class="service-list">
+          独立部署<br>
+          TLS 1.3 + AES-256<br>
+          符合 GDPR / 中国法规
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">7×24 工程师</div>
+        <div class="service-list">
+          专属服务群<br>
+          1 小时首次响应<br>
+          月度复盘
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">效果承诺</div>
+        <div class="service-list">
+          30 / 60 写进合同<br>
+          不达标免费延期<br>
+          至达标
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 10 TEAM =================== -->
+<section id="team">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">09 · OUR TEAM</div>
+      <h2 class="section-title">核心团队</h2>
+      <p class="section-subtitle">出海老兵 × 大厂 AI 架构师 × 科学院专家 — 三股力量拧成一股绳。</p>
+    </div>
+
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-cat">创始团队</div>
+        <h3 class="team-role">出海老兵</h3>
+        <p class="team-desc">10+ 年外贸业务经验<br>深耕欧美 / 东南亚 / 中东市场</p>
+      </div>
+      <div class="team-card">
+        <div class="team-cat">技术团队</div>
+        <h3 class="team-role">大厂 AI 架构师</h3>
+        <p class="team-desc">曾任职于头部互联网公司<br>主导过亿级用户 AI 产品</p>
+      </div>
+      <div class="team-card">
+        <div class="team-cat">科研团队</div>
+        <h3 class="team-role">科学院专家</h3>
+        <p class="team-desc">自然语言处理 / 知识图谱<br>前沿 AI 研究能力</p>
+      </div>
+    </div>
+
+    <div class="mission-banner reveal">
+      <div class="mission-label">OUR MISSION · 我们的使命</div>
+      <p class="mission-text">用 AI 把中国工业品产业链上的工厂连成联盟，把新时代市场规则（数据 / 流量 / AI）交到工厂手里。</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 11 ROADMAP =================== -->
+<section id="roadmap">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">10 · ROADMAP</div>
+      <h2 class="section-title">12 个月路线图</h2>
+      <p class="section-subtitle">从签约到规模化的完整路径 — 5 大阶段，每一步都看得见。</p>
+    </div>
+
+    <div class="roadmap-wrap reveal">
+      <div class="roadmap-track" id="roadmapTrack">
+        <div class="roadmap-step m1">
+          <div class="roadmap-head">
+            <div class="roadmap-period">M1</div>
+            <div class="roadmap-phase">启动期</div>
+          </div>
+          <div class="roadmap-body">
+            <ul class="roadmap-list">
+              <li>需求对齐</li>
+              <li>数据清洗</li>
+              <li>系统搭建</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-step m2">
+          <div class="roadmap-head">
+            <div class="roadmap-period">M2</div>
+            <div class="roadmap-phase">冷启动</div>
+          </div>
+          <div class="roadmap-body">
+            <ul class="roadmap-list">
+              <li>首批询盘</li>
+              <li>行业术语库</li>
+              <li>业务流程调优</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-step m3">
+          <div class="roadmap-head">
+            <div class="roadmap-period">M3-M4</div>
+            <div class="roadmap-phase">规模化</div>
+          </div>
+          <div class="roadmap-body">
+            <ul class="roadmap-list">
+              <li>Bot-Agent 扩容</li>
+              <li>跨部门赋能</li>
+              <li>数据闭环</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-step m4">
+          <div class="roadmap-head">
+            <div class="roadmap-period">M5-M6</div>
+            <div class="roadmap-phase">效果验证</div>
+          </div>
+          <div class="roadmap-body">
+            <ul class="roadmap-list">
+              <li>询盘稳定增长</li>
+              <li>ROI 测算</li>
+              <li>案例复制</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-step m5">
+          <div class="roadmap-head">
+            <div class="roadmap-period">M7-M12</div>
+            <div class="roadmap-phase">战略升级</div>
+          </div>
+          <div class="roadmap-body">
+            <ul class="roadmap-list">
+              <li>AI 联盟对接</li>
+              <li>上下游生态</li>
+              <li>全球化布局</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="roadmap-milestones">
+        <div class="roadmap-milestones-label">关键里程碑 · KEY MILESTONES</div>
+        <div class="roadmap-milestones-list">
+          M2 首批询盘 <span>|</span> M4 询盘稳定 <span>|</span> M6 ROI 验证 <span>|</span> M12 战略升级
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 12 CTA =================== -->
+<section id="contact">
+  <div class="container">
+    <div class="cta-final reveal">
+      <div class="cta-inner">
+        <div class="eyebrow">BUSINESS COOPERATION</div>
+        <h2 class="cta-title">开启合作</h2>
+        <p class="cta-sub">让我们用 30 天为您搭建数据大脑，60 天见证首批询盘。<br>期待与您共建国贸 AI 新生态。</p>
+
+        <div class="coop-grid">
+          <div class="coop-card">
+            <div class="coop-num">①</div>
+            <div class="coop-name">直接采购</div>
+            <div class="coop-desc">选购入门版 / 基础版 / 旗舰版，签约即启动</div>
+          </div>
+          <div class="coop-card">
+            <div class="coop-num">②</div>
+            <div class="coop-name">战略合作</div>
+            <div class="coop-desc">联合行业头部工厂，共建国贸 AI 联盟</div>
+          </div>
+          <div class="coop-card">
+            <div class="coop-num">③</div>
+            <div class="coop-name">渠道代理</div>
+            <div class="coop-desc">区域市场代理，享受高额返点</div>
+          </div>
+        </div>
+
+        <div class="cta-contact">
+          <div class="cta-contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            business@hailian-zhida.com
+          </div>
+          <div class="cta-contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            400-XXX-XXXX
+          </div>
+        </div>
+
+        <p class="cta-tagline">期待与您共建国贸 AI 新生态</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <span class="nav-logo-dot"></span>
+      HLZD · 海联智达
+    </div>
+    <div class="footer-text">
+      © 2026 海联智达 · 让中国工厂做全世界的生意 · v3.6 · 商务合作版
+    </div>
+  </div>
+</footer>
+
+<!-- =================== JS =================== -->
+<script>
+/* =========================================================
+   1) IntersectionObserver · Reveal on scroll
+   ========================================================= */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* =========================================================
+   2) CountUp · Numbers animate when in view
+   ========================================================= */
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1600;
+    const startTime = performance.now();
+    const isLarge = el.classList.contains('count-lg');
+
+    function tick(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutExpo
+      const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const value = Math.round(eased * target);
+      el.textContent = value;
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(tick);
+    countObserver.unobserve(el);
+  });
+}, { threshold: 0.4 });
+
+document.querySelectorAll('.count, .count-lg').forEach(el => countObserver.observe(el));
+
+/* =========================================================
+   3) Nav · Scroll progress + scrolled state
+   ========================================================= */
+const nav = document.getElementById('nav');
+const scrollProgress = document.getElementById('scrollProgress');
+
+function onScroll() {
+  const scrollY = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = Math.min(scrollY / docHeight, 1);
+  scrollProgress.style.width = (progress * 100) + '%';
+
+  if (scrollY > 40) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+
+/* =========================================================
+   4) Case tabs interaction
+   ========================================================= */
+document.querySelectorAll('.case-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const targetId = tab.dataset.tab;
+    document.querySelectorAll('.case-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelectorAll('.case-card').forEach(card => {
+      card.classList.toggle('active', card.id === targetId);
+    });
+  });
+});
+
+/* =========================================================
+   5) Industry tabs interaction
+   ========================================================= */
+document.querySelectorAll('.industry-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const targetId = tab.dataset.ind;
+    document.querySelectorAll('.industry-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelectorAll('.industry-content').forEach(c => {
+      c.classList.toggle('active', c.id === targetId);
+    });
+  });
+});
+
+/* =========================================================
+   6) Roadmap · Auto-scroll & highlight on viewport
+   ========================================================= */
+const track = document.getElementById('roadmapTrack');
+let roadmapAutoScroll = true;
+const stepObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: [0.5, 0.8], root: track });
+document.querySelectorAll('.roadmap-step').forEach(s => stepObserver.observe(s));
+
+/* Pause auto-scroll on user interaction */
+track.addEventListener('mouseenter', () => roadmapAutoScroll = false);
+track.addEventListener('mouseleave', () => roadmapAutoScroll = true);
+track.addEventListener('touchstart', () => roadmapAutoScroll = false, { passive: true });
+
+let autoScrollRAF;
+function autoScrollTick() {
+  if (roadmapAutoScroll && isInViewport(track)) {
+    if (track.scrollLeft < track.scrollWidth - track.clientWidth - 2) {
+      track.scrollLeft += 0.6;
+    } else {
+      track.scrollLeft = 0; // loop back
+    }
+  }
+  autoScrollRAF = requestAnimationFrame(autoScrollTick);
+}
+function isInViewport(el) {
+  const r = el.getBoundingClientRect();
+  return r.top < window.innerHeight && r.bottom > 0;
+}
+autoScrollRAF = requestAnimationFrame(autoScrollTick);
+
+/* =========================================================
+   7) Smooth anchor scroll with offset (compensate fixed nav)
+   ========================================================= */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const targetId = a.getAttribute('href');
+    if (targetId === '#' || targetId.length < 2) return;
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    e.preventDefault();
+    const offset = 52; // nav height
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+/* =========================================================
+   8) Mouse parallax on Hero (subtle)
+   ========================================================= */
+const hero = document.querySelector('.hero');
+if (hero && window.matchMedia('(min-width: 1068px)').matches) {
+  const heroTitle = hero.querySelector('.hero-title');
+  const heroBg = hero.querySelector('.hero-bg');
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    if (heroTitle) {
+      heroTitle.style.transform = `translate(${x * -8}px, ${y * -6}px)`;
+    }
+    if (heroBg) {
+      heroBg.style.backgroundPosition = `${50 + x * 8}% ${50 + y * 8}%`;
+    }
+  });
+  hero.addEventListener('mouseleave', () => {
+    if (heroTitle) heroTitle.style.transform = '';
+    if (heroBg) heroBg.style.backgroundPosition = '';
+  });
+}
+
+/* =========================================================
+   9) Pricing card tilt (3D perspective on hover)
+   ========================================================= */
+document.querySelectorAll('.pricing-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    if (window.matchMedia('(max-width: 1067px)').matches) return;
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    const isFeatured = card.classList.contains('featured');
+    const baseScale = isFeatured ? 1.04 : 1;
+    card.style.transform = `translateY(-8px) scale(${baseScale}) rotateY(${x * 4}deg) rotateX(${-y * 4}deg)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    const isFeatured = card.classList.contains('featured');
+    card.style.transform = isFeatured ? 'scale(1.04)' : '';
+  });
+});
+
+/* =========================================================
+   10) Keyboard navigation for tabs (accessibility)
+   ========================================================= */
+function initTabKeyboard(tabsSelector, contentSelector) {
+  const tabs = document.querySelectorAll(tabsSelector);
+  tabs.forEach((tab, idx) => {
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('tabindex', idx === 0 ? '0' : '-1');
+    tab.addEventListener('keydown', e => {
+      let nextIdx = idx;
+      if (e.key === 'ArrowRight') nextIdx = (idx + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + tabs.length) % tabs.length;
+      else return;
+      e.preventDefault();
+      tabs[nextIdx].focus();
+      tabs[nextIdx].click();
+    });
+  });
+}
+initTabKeyboard('.case-tab', '.case-card');
+initTabKeyboard('.industry-tab', '.industry-content');
+
+console.log('%c海联智达 HLZD · v3.6', 'color:#c9a961; font-size:14px; font-weight:bold;');
+console.log('%c让中国工厂做全世界的生意', 'color:#f5f5f7; font-size:12px;');
+</script>
+
+</body>
+</html>
