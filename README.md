@@ -105,6 +105,29 @@ py scripts/inquiry_parser.py --input assets/inquiry_samples/01-saudi-rfq.txt --p
 
 ---
 
+## 5 分钟跑全套 demo
+
+仓库自带 3 个场景可立即演示 9 Skill 全链路行为：
+
+```bash
+git clone https://github.com/Alexxiang2008/hlzd-b2b-export-skills.git
+cd hlzd-b2b-export-skills
+py -m pytest skills/*/tests/ -q          # 验证：336 tests
+py skills-demo/run_full_demo.py --all     # 跑 3 个场景
+```
+
+3 个场景覆盖典型路径：
+
+| Scenario | 路径 | 学到什么 |
+|---|---|---|
+| `scenario-saudi-rfq` | 真询盘 → 4 buyers → **Hezbollah 触发 halt** → 报价 / 让步 skip | 合规护栏 |
+| `scenario-latam-solar` | 真询盘 → 3 buyers → 邮件 → **PV-MODULE-450W-MONO** → FOB $534K margin 15% → **accept_round_3** | 完整 happy path |
+| `scenario-fraud-blocked` | 假询盘 → **Grade D total=20** | 自动淘汰 |
+
+详见 [docs/demo-runbook.md](docs/demo-runbook.md)。每个 scenario 完整 trace 落到 `skills-demo/outputs/`。
+
+---
+
 ## 路线图
 
 | 周次 | 交付 |

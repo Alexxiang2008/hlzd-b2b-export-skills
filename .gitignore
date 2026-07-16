@@ -40,6 +40,9 @@ tmp/
 .log
 *.log
 
+# Demo outputs (run_full_demo 的 trace JSON)
+skills-demo/outputs/*.json
+
 # OS
 *.swp
 *~
