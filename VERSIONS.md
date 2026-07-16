@@ -290,3 +290,29 @@ First major version. Repo bumped 0.9.0 → 1.0.0 (W8 compliance shield ships; pr
 - Auto-classify HS code against ECCN (full CCL mapping)
 - Real time OFAC 50% rule check (secondary sanctions)
 
+## v1.1.0 — 2026-07-16
+
+W4-9 milestone: 8 new Skills shipped (total 18 of 21 roadmap).
+Repo version bumped 1.0.0 → 1.1.0 (8 new Skills, backward-compatible).
+
+### Skills added
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-daily-report` | 0.1.0 | LangBot event capture + LLM summary + Lark card push. 6 tests. |
+| `hlzd-customer-profile` | 0.1.0 | 4-layer customer 360 view + 5-tier grade. 5 tests. |
+| `hlzd-rfp-response` | 0.1.0 | 8-mailbox matrix + Gmail OAuth + Lark setup wizard. 8 tests. |
+| `hlzd-logistics-planner` | 0.1.0 | py3dbp 3D packing + INCOTERMS 2020 + 3-carrier rate. 6 tests. |
+| `hlzd-finance-risk` | 0.1.0 | UCP 600 / ISBP 745 / ISP98 / URDG 758 document review. |
+| `hlzd-data-viz` | 0.1.0 | D3.js v7 + sales funnel + 7 chart types. 96 tests. |
+| `hlzd-product-video-gen` | 0.1.0 | Agnes Video + FFmpeg + 18s multi-segment. |
+| `hlzd-product-image-gen` | 0.1.0 | Agnes Image + rembg + Alibaba main product image. |
+
+### Process notes
+
+- 8 background agent PRs all closed (1 merged via PR #8, 2 via squash after rebase
+  conflict resolution, 5 via direct push to main); 2 were orphaned in branch
+  tips and recovered from /tmp/pr-review-full to working tree.
+- marketplace.json 7 new plugin entries registered (15 → 18).
+- 15/15 Skills pass `validate_skills.py` after final integration.
+

@@ -195,6 +195,97 @@
         "今日工作",
         "明日计划"
       ]
+    },
+    {
+      "name": "hlzd-customer-profile",
+      "description": "B2B customer 360 view - 4-layer field model (basic / transaction / behavior / profile) + AI follow-up suggestions + AI cohort aggregation + 5-tier grade (A/B/C/D).",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-customer-profile",
+      "category": "customer-profile",
+      "keywords": [
+        "b2b",
+        "customer-profile",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-rfp-response",
+      "description": "B2B inquiry / email response automation - 8 mailbox matrix (Gmail/NetEase/QQ/Outlook/Wecom/Lark/Aliyun/self-hosted) + Gmail OAuth + IMAP/IMAPS + credential encryption + Lark card setup wizard.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-rfp-response",
+      "category": "rfp-response",
+      "keywords": [
+        "b2b",
+        "rfp-response",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-logistics-planner",
+      "description": "B2B industrial goods ocean / air / rail container loading planner - py3dbp 3D bin packing + standard container dims + 3-carrier rate comparison + 3D preview + HS classification. INCOTERMS 2020 compatible.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-logistics-planner",
+      "category": "logistics-planner",
+      "keywords": [
+        "b2b",
+        "logistics-planner",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-finance-risk",
+      "description": "B2B Letter of Credit + Standby + Demand Guarantee document review - UCP 600 / ISBP 745 / ISP98 / URDG 758 four-rule-set auto-match, soft-clause + discrepancy + sanctioned-country + bank-country risk CRITICAL alerts.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-finance-risk",
+      "category": "finance-risk",
+      "keywords": [
+        "b2b",
+        "finance-risk",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-data-viz",
+      "description": "B2B sales data interactive visualization - sales funnel / inquiry analytics dashboard / customer geo map / general D3 charts (bar/line/pie/heatmap/scatter/chord/force). D3.js v7 CDN, output self-contained HTML.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-data-viz",
+      "category": "data-viz",
+      "keywords": [
+        "b2b",
+        "data-viz",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-product-video-gen",
+      "description": "B2B industrial marketing video generation - image-to-video (I2V) / multi-segment 18s stitching / BGM / subtitles. Agnes Video V2.0 + FFmpeg. 6 presets (equipment / machinery / materials) + i18n subtitle catalog.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-product-video-gen",
+      "category": "product-video-gen",
+      "keywords": [
+        "b2b",
+        "product-video-gen",
+        "industrial-export"
+      ]
+    },
+    {
+      "name": "hlzd-product-image-gen",
+      "description": "B2B industrial product image generation - text-to-image (T2I) / image-to-image (I2I) / white-bg cutout / Alibaba main product image / batch stylization. Agnes Image 2.1 Flash + rembg. Output PNG + history JSON.",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-product-image-gen",
+      "category": "product-image-gen",
+      "keywords": [
+        "b2b",
+        "product-image-gen",
+        "industrial-export"
+      ]
     }
   ]
 }
