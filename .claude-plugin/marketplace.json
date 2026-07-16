@@ -195,6 +195,42 @@
         "今日工作",
         "明日计划"
       ]
+    },
+    {
+      "name": "hlzd-followup-sequencer",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-followup-sequencer",
+      "category": "followup-sequencer",
+      "description": "See skills/hlzd-followup-sequencer/SKILL.md",
+      "keywords": [
+        "b2b",
+        "followup-sequencer"
+      ]
+    },
+    {
+      "name": "hlzd-knowledge-graph",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-knowledge-graph",
+      "category": "knowledge-graph",
+      "description": "See skills/hlzd-knowledge-graph/SKILL.md",
+      "keywords": [
+        "b2b",
+        "knowledge-graph"
+      ]
+    },
+    {
+      "name": "hlzd-pipeline-viz",
+      "version": "0.1.0",
+      "author": "HLZD",
+      "source": "./skills/hlzd-pipeline-viz",
+      "category": "pipeline-viz",
+      "description": "See skills/hlzd-pipeline-viz/SKILL.md",
+      "keywords": [
+        "b2b",
+        "pipeline-viz"
+      ]
     }
   ]
 }
