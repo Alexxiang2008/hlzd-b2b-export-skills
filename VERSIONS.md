@@ -1,5 +1,22 @@
 # VERSIONS
 
+## v0.10.0 — 2026-07-16
+
+Eighth Skills batch. Added `hlzd-daily-report` (slot 22/21): B2B 业务员日报自动化（事件采集 + LLM 摘要 + 飞书卡片推送 + 次日早会）。
+
+### Skill added
+
+| Skill | Version | Notes |
+|---|---|---|
+| `hlzd-daily-report` | 0.1.0 | NEW. B2B 业务员日报自动化（事件采集 + LLM 摘要 + 飞书卡片推送 + 次日早会）。 |
+
+### Verification
+
+- `py validate_skills.py` → OK
+- `py -m pytest skills/hlzd-daily-report/tests/` → see PR
+
+---
+
 ## v0.9.0 — 2026-07-16
 
 Quotation engine ships: 3 new Skills (solution-match / quotation-gen / negotiation-playbook).
