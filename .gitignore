@@ -43,6 +43,16 @@ tmp/
 # Demo outputs (run_full_demo 的 trace JSON)
 skills-demo/outputs/*.json
 
+# Playwright MCP 调试录制产物 (跟 Skills 无关)
+.playwright-mcp/
+
+# 本地 git status 输出
+.gs_*
+
+# 临时 diff
+*.tmp
+*.bak
+
 # OS
 *.swp
 *~
