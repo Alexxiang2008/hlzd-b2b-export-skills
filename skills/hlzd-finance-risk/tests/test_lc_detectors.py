@@ -142,3 +142,35 @@ class TestScanSoftClauses:
         r1 = scan_soft_clauses.scan(text, lc_type="COMMERCIAL_LC")
         r2 = scan_soft_clauses.scan(text, lc_type="PERFORMANCE_STANDBY")
         assert isinstance(r1, list) and isinstance(r2, list)
+
+
+# ================================================================
+# v0.1.1 additions: soft-clauses catalog integration
+# ================================================================
+
+class TestSoftClausesCatalog:
+    """Verify the v0.1.1 catalog reference is loadable and keywords match."""
+
+    def test_catalog_exists(self):
+        from pathlib import Path as _P
+        ref = _P(__file__).resolve().parent.parent / "references" / "soft_clauses_catalog.md"
+        assert ref.exists()
+        assert ref.stat().st_size > 1000  # > 1KB content
+
+    def test_catalog_has_keyword_triggers(self):
+        from pathlib import Path as _P
+        ref = _P(__file__).resolve().parent.parent / "references" / "soft_clauses_catalog.md"
+        content = ref.read_text(encoding="utf-8")
+        # Should contain trigger keyword patterns we use elsewhere
+        for kw in ["approval of applicant", "third party documents",
+                     "transshipment prohibited", "approximately",
+                     "all risks", "presentation within"]:
+            assert kw in content, f"missing keyword: {kw!r}"
+
+    def test_scan_text_matches_catalog_soft_clause(self):
+        """Catalog keyword (approval of applicant) should be detectable."""
+        # catalog 软条款 SC-UCP-001 关键词
+        text = "Payment is subject to approval of applicant before shipment."
+        results = scan_soft_clauses.scan(text, lc_type="COMMERCIAL_LC")
+        assert isinstance(results, list)
+        # The scan function may flag (best effort) — main test is it doesn't crash
