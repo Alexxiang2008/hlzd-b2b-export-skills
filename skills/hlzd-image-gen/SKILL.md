@@ -1,5 +1,5 @@
 ---
-name: hlzd-product-image-gen
+name: hlzd-image-gen
 description: "B2B 工业品产品图生成 —— 文生图（T2I）/ 图生图（I2I）/ 白底抠图 / 阿里国际站主图 / 批量风格化。Agnes Image 2.1 Flash + rembg。输出 PNG + 历史 JSON。"
 license: MIT
 metadata:

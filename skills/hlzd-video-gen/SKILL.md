@@ -1,5 +1,5 @@
 ---
-name: hlzd-product-video-gen
+name: hlzd-video-gen
 description: "B2B 工业品营销视频生成 —— 图生视频（I2V）/ 多段拼接 18 秒 / BGM / 字幕。Agnes Video V2.0 + FFmpeg。6 种 preset（设备/机械/材料）+ i18n 字幕目录。"
 license: MIT
 metadata:
