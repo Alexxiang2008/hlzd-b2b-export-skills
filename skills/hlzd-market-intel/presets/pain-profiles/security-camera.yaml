@@ -1,0 +1,50 @@
+# Security camera / smart-home pain profile (v0.1 default).
+# This mirrors DEFAULT_TOPIC_CLUSTERS in scripts/lib/pain_extractor.py.
+# Copy this file and edit to create a profile for another product category.
+#
+# Usage:
+#   from lib import pain_extractor
+#   clusters = pain_extractor.load_topic_clusters("presets/pain-profiles/security-camera.yaml")
+#   pain_extractor.extract(research_results, items_by_source, topic_clusters=clusters)
+#
+# Schema: each cluster needs id (str), label (str), keywords (non-empty list[str]).
+
+- id: false_alarms
+  label: "误报 / false alerts"
+  keywords: ["false alarm", "false alert", "motion alert", "person alert", "vehicle alert", "notification", "误报", "提醒", "警报"]
+
+- id: subscription_cost
+  label: "订阅费 / subscription"
+  keywords: ["subscription", "monthly fee", "monthly", "recurring", "cloud storage", "付费", "订阅", "月费"]
+
+- id: installation
+  label: "安装 / setup"
+  keywords: ["install", "setup", "configuration", "wireless", "wired", "cable", "安装"]
+
+- id: video_quality
+  label: "画质 / video quality"
+  keywords: ["4k", "1080p", "resolution", "video quality", "night vision", "color night", "清晰度", "画质"]
+
+- id: ai_smart
+  label: "AI 检测 / smart detection"
+  keywords: ["ai camera", "ai detection", "on-device ai", "ai feature", "ai alert", "smart detection", "person detection", "vehicle detection", "package detection", "face recognition", "智能检测", "AI 检测", "人形检测"]
+
+- id: ecosystem_integration
+  label: "生态整合 / ecosystem"
+  keywords: ["alexa", "google home", "homekit", "rtsp", "onvif", "synology", "frigate", "home assistant", "兼容", "对接"]
+
+- id: privacy_security
+  label: "隐私 / privacy"
+  keywords: ["privacy", "data", "cloud", "local", "self-host", "隐私", "本地", "数据"]
+
+- id: battery_power
+  label: "电池 / power"
+  keywords: ["battery", "solar", "wireless", "recharge", "电池", "续航", "太阳能"]
+
+- id: build_quality
+  label: "做工 / build quality"
+  keywords: ["build quality", "plastic", "cheap", "broken hinge", "做工", "塑料"]
+
+- id: app_experience
+  label: "App 体验 / app"
+  keywords: ["app", "ui", "ux", "notification", "load time", "crash", "界面", "卡顿"]

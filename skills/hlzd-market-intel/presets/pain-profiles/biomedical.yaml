@@ -1,0 +1,45 @@
+# Biomedical / exosomes pain profile.
+# For research-grade exosome products: isolation tools, characterization services,
+# CDMO supply, diagnostic kits. Covers customer pain points discussed on
+# Reddit (r/labrats, r/biotech), LinkedIn, ResearchGate, YouTube.
+#
+# Note: pure-numeric keywords like "-80" MUST be quoted (YAML parses unquoted
+# -80 as int -80, which fails schema validation).
+#
+# Schema: each cluster needs id (str), label (str), keywords (non-empty list[str]).
+
+- id: purity_isolation
+  label: "纯度与分离 / purity & isolation"
+  keywords: ["purity", "isolation", "sec", "size exclusion", "ultracentrifugation", "ultracentrifuge", "precipitation", "tangential flow", "tff", "contaminant", "impurity", "纯度", "分离", "超离", "杂质"]
+
+- id: yield_titer
+  label: "产量与滴度 / yield & titer"
+  keywords: ["yield", "titer", "concentration", "low yield", "particle count", "throughput", "产量", "滴度", "浓度", "产率"]
+
+- id: characterization
+  label: "表征与鉴定 / characterization"
+  keywords: ["characterization", "nta", "nanoparticle tracking", "dls", "dynamic light scattering", "cd63", "cd9", "cd81", "marker", "western blot", "tem", "electron microscopy", "表征", "鉴定", "标记物"]
+
+- id: stability_storage
+  label: "稳定性与储存 / stability & storage"
+  keywords: ["stability", "storage", "freeze-thaw", "freeze thaw", "-80", "cryopreservation", "degradation", "shelf life", "稳定", "储存", "冻融", "降解"]
+
+- id: delivery_targeting
+  label: "递送与靶向 / delivery & targeting"
+  keywords: ["delivery", "targeting", "uptake", "biodistribution", "cargo loading", "encapsulation", "递送", "靶向", "摄取", "载药"]
+
+- id: scaleup_manufacturing
+  label: "规模化与生产 / scale-up & manufacturing"
+  keywords: ["scale-up", "scaleup", "scale up", "manufacturing", "gmp", "production", "batch", "cmo", "cdmo", "规模化", "生产", "GMP", "批次"]
+
+- id: cost_pricing
+  label: "成本与价格 / cost & pricing"
+  keywords: ["expensive", "cost", "price", "pricing", "affordable", "budget", "贵", "成本", "价格"]
+
+- id: qc_reproducibility
+  label: "质控与批次差异 / QC & reproducibility"
+  keywords: ["qc", "quality control", "batch-to-batch", "batch to batch", "reproducibility", "consistency", "variability", "质控", "批次差异", "重复性", "一致性"]
+
+- id: regulatory_compliance
+  label: "合规与监管 / regulatory"
+  keywords: ["fda", "ema", "regulatory", "compliance", "ivd", "clinical grade", "regulatory approval", "合规", "监管", "FDA", "临床级"]
