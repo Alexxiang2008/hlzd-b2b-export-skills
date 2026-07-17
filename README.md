@@ -2,7 +2,7 @@
 
 > Cross-Border B2B Industrial Export Agent Skills for Claude / Codex / Cursor / Windsurf.
 >
-> 由 [海联智达 HLZD](https://hlzd.example.com) 与 [海良数科](https://hlzd.example.com) 团队开发。
+> 由 [海联智达 HLZD](https://hlzd.example.com) 团队开发。
 >
 > 配套战略文档：[docs/出海技能集规划.md](docs/出海技能集规划.md) ·
 > 业务规划：[B2B工业品外贸 AI Sales Agent 全流程设计.md](B2B工业品外贸 AI Sales Agent 全流程设计.md)
